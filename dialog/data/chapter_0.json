@@ -1,0 +1,173 @@
+{
+  "intro_scene": {
+    "background_color": [0.06, 0.07, 0.09, 1.0],
+    "next_chapter": "chapter_1",
+    "splash": {
+      "title": "PROLOGUE",
+      "subtitle": "THE SALTED CROWN"
+    },
+    "lines": [
+      {
+        "panel": "res://dialog/assets/panel_1_gates.svg",
+        "speaker": "Narrator",
+        "text": "Three long years of ash and iron. The Demon Lord's fortress lies in smoldering ruin behind you."
+      },
+      {
+        "speaker": "Vargas",
+        "text": "Look at those golden walls, Commander. I can already taste the southern wine. Thirty years taking blades for the crown... I'm finally buying that orchard."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "You've earned twenty orchards, Vargas. We all have."
+      },
+      {
+        "speaker": "Kaelen",
+        "text": "Squint at the parapets, Commander. Since when do royal welcomes post archers with notched war-bows behind the tapestries?"
+      },
+      {
+        "speaker": "Lyra",
+        "text": "Hush, Kaelen. The Sun Father guided our blades through the dark abyss. The King knows humanity owes us its very dawn."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The massive iron portcullis groans open. Bells toll across the High Citadel as you march inside."
+      },
+      {
+        "panel": "res://dialog/assets/panel_2_banquet.svg",
+        "speaker": "Narrator",
+        "text": "Inside the Great Solarium, silver platters overflow with roasted meats and rare vintages. King Alden descends the dais with open arms."
+      },
+      {
+        "speaker": "King Alden",
+        "text": "\"Our savior! The Sun-Touched who walked into the shadow and brought back our tomorrow!\""
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Your Grace. The demon is dead. The frontier provinces can finally sleep without fear."
+      },
+      {
+        "speaker": "King Alden",
+        "text": "\"Indeed. Peace is a delicate porcelain cup, my brave champion. It shatters so easily under the boots of a living god.\""
+      },
+      {
+        "speaker": "King Alden",
+        "text": "\"To the vanguard! Drink of the Sun vintage—aged fifty years in the vaults of the high lords!\""
+      },
+      {
+        "speaker": "Vargas",
+        "text": "To the realm, and to our commander!"
+      },
+      {
+        "speaker": "Lyra",
+        "text": "To peace."
+      },
+      {
+        "panel": "res://dialog/assets/panel_3_poison.svg",
+        "speaker": "Narrator",
+        "text": "The liquid burns sweet on the tongue... and turns instantly to black frost in your veins.",
+        "shake": true
+      },
+      {
+        "speaker": "The Hero",
+        "text": "N-ngh...! What... what is this...?! My limbs..."
+      },
+      {
+        "speaker": "Kaelen",
+        "text": "Hemlock... nightshade...! It's... poison...!",
+        "shake": true
+      },
+      {
+        "speaker": "King Alden",
+        "text": "\"A realm can only wear one crown, boy. Did you truly believe I would let a squad of invincible martyrs walk my streets?\""
+      },
+      {
+        "panel": "res://dialog/assets/panel_4_halberds.svg",
+        "speaker": "Narrator",
+        "text": "Iron boots thunder across the marble. Royal halberdiers emerge from behind the velvet curtains."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Alden... we... we bled for your people...!"
+      },
+      {
+        "speaker": "Vargas",
+        "text": "Commander... get behind me...!",
+        "shake": true
+      },
+      {
+        "speaker": "Narrator",
+        "text": "CRACK! Three iron halberds punch through Vargas's breastplate. Blood splatters across the feast table.",
+        "shake": true
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The poison claws at your heart. Darkness swallows your vision as cold laughter echoes into the void."
+      },
+      {
+        "panel": "res://dialog/assets/panel_5_trench_despair.svg",
+        "speaker": "Narrator",
+        "text": "Pain. Freezing, putrid mud. The steady percussion of cold rain on your face."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "*Gasp!* ...cough... haah... haah...! Where... where am I...?"
+      },
+      {
+        "speaker": "Narrator",
+        "text": "You claw through rotting corpses, severed limbs, and maggot-eaten mud: The Charnel Trench beneath the palace walls."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Vargas?! Kaelen?! Lyra?!"
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Beside you lies Vargas, his shield snapped in two, dead eyes staring hollowly into the rain. A spear is broken in Kaelen's throat. Lyra's prayer beads are soaked in blackened blood."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "No... no, no, no! Sun Father, hear my prayer! Let your warmth restore them! Take my blood—HEAL THEM!"
+      },
+      {
+        "speaker": "Narrator",
+        "text": "You grasp at the sacred light that once crowned you savior, but the heavens remain deaf. The golden warmth has abandoned you."
+      },
+      {
+        "panel": "res://dialog/assets/panel_6_pale_miracle.svg",
+        "speaker": "Narrator",
+        "text": "In your agony, the power inverts—erupting as a blinding, freezing pale flame across the mud!",
+        "shake": true
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The white flame sinks into cold flesh. Bone knits to shattered bone. Ethereal blue embers ignite in their hollow eye sockets."
+      },
+      {
+        "speaker": "Vargas (Spirit)",
+        "text": "...Commander... our oath... is unbroken..."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Alden discarded us like refuse. But the dead remember. Rise, my friends. We are taking the Citadel."
+      },
+      {
+        "speaker": "System",
+        "text": "[Starter Deck Acquired: The Fallen Vanguard. 10 Cards added to your grimoire.]",
+        "claim_starter_deck": true
+      }
+    ]
+  },
+  "victory_scene": {
+    "background_color": [0.08, 0.12, 0.08, 1.0],
+    "lines": [
+      {
+        "speaker": "The Hero",
+        "text": "The scavengers at the trench edge are cleared. The road to the Citadel begins."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Pale embers illuminate the forgotten graves ahead."
+      }
+    ]
+  }
+}

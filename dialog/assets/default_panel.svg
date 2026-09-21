@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1a1d24" />
+      <stop offset="50%" stop-color="#0d0f14" />
+      <stop offset="100%" stop-color="#050608" />
+    </radialGradient>
+    <radialGradient id="pale_glow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#e2e8f0" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ground_fog" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10" stop-opacity="0" />
+      <stop offset="100%" stop-color="#030406" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Atmosphere Background -->
+  <rect width="1280" height="720" fill="url(#vignette)" />
+  <circle cx="640" cy="320" r="380" fill="url(#pale_glow)" />
+  
+  <!-- Subtle Ruin / Citadel Silhouettes -->
+  <polygon points="120,480 180,240 240,480" fill="#0c0e13" opacity="0.6"/>
+  <polygon points="210,480 270,290 320,480" fill="#090b0f" opacity="0.7"/>
+  <polygon points="980,480 1060,260 1140,480" fill="#0c0e13" opacity="0.6"/>
+  <polygon points="1030,480 1100,310 1180,480" fill="#090b0f" opacity="0.7"/>
+  
+  <!-- Distant Pale Moon / Broken Sun -->
+  <circle cx="640" cy="220" r="70" fill="#334155" opacity="0.3"/>
+  <circle cx="640" cy="220" r="60" fill="#1e293b" opacity="0.5"/>
+  
+  <!-- Foreground Ground & Fog -->
+  <rect x="0" y="420" width="1280" height="300" fill="url(#ground_fog)" />
+  
+  <!-- Pale Embers / Spirits -->
+  <circle cx="580" cy="380" r="3" fill="#cbd5e1" opacity="0.6"/>
+  <circle cx="690" cy="350" r="2" fill="#cbd5e1" opacity="0.5"/>
+  <circle cx="620" cy="310" r="4" fill="#f8fafc" opacity="0.7"/>
+  <circle cx="740" cy="400" r="2.5" fill="#94a3b8" opacity="0.4"/>
+</svg>

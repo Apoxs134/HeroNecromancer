@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="trench_fog" cx="50%" cy="60%" r="65%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#050811" />
+      <stop offset="100%" stop-color="#020305" />
+    </radialGradient>
+    <radialGradient id="pale_miracle" cx="50%" cy="65%" r="45%">
+      <stop offset="0%" stop-color="#f8fafc" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="mud_slope" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+  </defs>
+
+  <!-- The Charnel Trench Atmosphere & Mud Walls -->
+  <rect width="1280" height="720" fill="url(#trench_fog)" />
+
+  <!-- Ravine Mud Slopes -->
+  <polygon points="0,280 420,720 0,720" fill="url(#mud_slope)" />
+  <polygon points="1280,280 860,720 1280,720" fill="url(#mud_slope)" />
+
+  <!-- Discarded Bones & Broken Weapons in the Pit -->
+  <!-- Crossbow & Spears sticking from corpses -->
+  <line x1="280" y1="560" x2="330" y2="430" stroke="#475569" stroke-width="4" />
+  <line x1="960" y1="540" x2="920" y2="440" stroke="#475569" stroke-width="4" />
+  <!-- Ribcages & Skulls -->
+  <circle cx="340" cy="560" r="16" fill="#94a3b8" opacity="0.6" />
+  <path d="M 320 585 C 330 570, 360 570, 370 585" stroke="#94a3b8" stroke-width="4" fill="none" opacity="0.6" />
+  <circle cx="940" cy="540" r="15" fill="#94a3b8" opacity="0.6" />
+
+  <!-- The Inverted Miracle / Pale Necromancy Flame Eruption -->
+  <circle cx="640" cy="510" r="260" fill="url(#pale_miracle)" />
+  <!-- Flame Tendrils -->
+  <path d="M 640 540 C 600 420, 680 340, 640 260 C 660 330, 690 410, 640 540 Z" fill="#e0f2fe" opacity="0.8" />
+  <path d="M 610 530 C 560 440, 590 360, 570 300 C 600 360, 610 430, 610 530 Z" fill="#7dd3fc" opacity="0.6" />
+  <path d="M 670 530 C 720 440, 690 360, 710 300 C 680 360, 670 430, 670 530 Z" fill="#7dd3fc" opacity="0.6" />
+
+  <!-- The Hero on Knees (Channeling the Pale Flame) -->
+  <circle cx="640" cy="460" r="24" fill="#f8fafc" /> <!-- Head looking up -->
+  <polygon points="610,480 670,480 680,570 600,570" fill="#0284c7" /> <!-- Warped Armor -->
+  <!-- Hands raised outwards with white flame sparks -->
+  <line x1="620" y1="500" x2="550" y2="470" stroke="#f8fafc" stroke-width="5" />
+  <line x1="660" y1="500" x2="730" y2="470" stroke="#f8fafc" stroke-width="5" />
+  <circle cx="545" cy="465" r="8" fill="#38bdf8" />
+  <circle cx="735" cy="465" r="8" fill="#38bdf8" />
+
+  <!-- Vargas & Squad Rising as Undead Sentinels (Spectral Blue Embers in Eyes) -->
+  <!-- Vargas Skeleton Silhouette -->
+  <polygon points="430,470 490,470 510,570 410,570" fill="#1e293b" />
+  <circle cx="460" cy="445" r="18" fill="#cbd5e1" />
+  <circle cx="455" cy="443" r="4" fill="#38bdf8" /> <!-- Spectral Eye -->
+  <circle cx="467" cy="443" r="4" fill="#38bdf8" />
+  <rect x="390" y="470" width="30" height="75" rx="5" fill="#64748b" /> <!-- Tower Shield -->
+
+  <!-- Kaelen Ghost Silhouette -->
+  <polygon points="790,480 840,480 850,560 780,560" fill="#1e293b" opacity="0.85" />
+  <circle cx="815" cy="455" r="15" fill="#cbd5e1" />
+  <circle cx="812" cy="453" r="3" fill="#38bdf8" />
+  <circle cx="822" cy="453" r="3" fill="#38bdf8" />
+
+  <!-- Scene Caption Tag -->
+  <rect x="40" y="40" width="340" height="38" rx="6" fill="#000000" opacity="0.65" />
+  <text x="55" y="65" fill="#38bdf8" font-family="sans-serif" font-size="16" font-weight="bold">ACT 0 — 4. THE CHARNEL RESURRECTION</text>
+</svg>

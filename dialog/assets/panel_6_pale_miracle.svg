@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="trench_night" cx="50%" cy="60%" r="65%">
+      <stop offset="0%" stop-color="#082f49" />
+      <stop offset="60%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+    <radialGradient id="pale_miracle_burst" cx="50%" cy="65%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Night Trench Darkness -->
+  <rect width="1280" height="720" fill="url(#trench_night)" />
+
+  <!-- Massive Pale Flame Eruption Aura -->
+  <circle cx="640" cy="500" r="340" fill="url(#pale_miracle_burst)" />
+
+  <!-- Frost / Spectral Flame Tendrils -->
+  <path d="M 640 520 C 580 360, 680 260, 640 180 C 670 260, 710 370, 640 520 Z" fill="#f0f9ff" opacity="0.9" />
+  <path d="M 590 510 C 520 390, 560 300, 540 220 C 580 290, 600 390, 590 510 Z" fill="#7dd3fc" opacity="0.7" />
+  <path d="M 690 510 C 760 390, 720 300, 740 220 C 700 290, 680 390, 690 510 Z" fill="#7dd3fc" opacity="0.7" />
+
+  <!-- Bone Shards Re-knitting (White Floating Shards) -->
+  <polygon points="560,380 575,370 570,390" fill="#f8fafc" />
+  <polygon points="720,360 735,350 730,375" fill="#f8fafc" />
+  <polygon points="620,320 635,310 630,335" fill="#f8fafc" />
+
+  <!-- The Hero Stands Tall (Arms Ablaze with Pale Fire) -->
+  <circle cx="640" cy="420" r="26" fill="#f8fafc" /> <!-- Head with white hair aura -->
+  <polygon points="600,450 680,450 695,620 585,620" fill="#0369a1" /> <!-- Hero Plate Armor glowing cyan -->
+  <!-- Arms Ablaze with White Flame -->
+  <line x1="600" y1="465" x2="520" y2="440" stroke="#f0f9ff" stroke-width="8" />
+  <circle cx="510" cy="435" r="14" fill="#38bdf8" />
+  <line x1="680" y1="465" x2="760" y2="440" stroke="#f0f9ff" stroke-width="8" />
+  <circle cx="770" cy="435" r="14" fill="#38bdf8" />
+
+  <!-- Vargas Risen as Undead Iron Bastion (Left) -->
+  <circle cx="430" cy="425" r="22" fill="#cbd5e1" /> <!-- Skull -->
+  <circle cx="423" cy="423" r="5" fill="#38bdf8" /> <!-- Ethereal Cyan Eye -->
+  <circle cx="437" cy="423" r="5" fill="#38bdf8" />
+  <polygon points="380,455 470,455 490,620 360,620" fill="#1e293b" />
+  <!-- Reformed Tower Shield Glowing with Pale Sigils -->
+  <rect x="330" y="440" width="45" height="150" rx="6" fill="#334155" stroke="#38bdf8" stroke-width="4" />
+
+  <!-- Kaelen & Lyra Rising as Bound Spirits (Right) -->
+  <circle cx="850" cy="430" r="18" fill="#cbd5e1" opacity="0.9" /> <!-- Kaelen Skull -->
+  <circle cx="845" cy="428" r="4" fill="#38bdf8" />
+  <circle cx="857" cy="428" r="4" fill="#38bdf8" />
+  <polygon points="810,455 890,455 905,600 795,600" fill="#1e293b" opacity="0.85" />
+
+  <circle cx="950" cy="470" r="16" fill="#cbd5e1" opacity="0.8" /> <!-- Lyra Spirit -->
+  <circle cx="946" cy="468" r="3.5" fill="#38bdf8" />
+  <circle cx="956" cy="468" r="3.5" fill="#38bdf8" />
+
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="energy_glow" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#38bdf8" />
+      <stop offset="70%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0c4a6e" />
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Shadow & Gold Ring -->
+  <circle cx="32" cy="32" r="30" fill="#0f172a" stroke="#d97706" stroke-width="3" />
+  <!-- Radiant Energy Core -->
+  <polygon points="32,6 54,20 54,44 32,58 10,44 10,20" fill="url(#energy_glow)" />
+  <!-- Inner Highlight Facet -->
+  <polygon points="32,12 46,22 46,40 32,50 18,40 18,22" fill="#e0f2fe" opacity="0.3" />
+</svg>

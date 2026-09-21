@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="ambush_shadow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#450a0a" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#18181b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#020202" />
+    </radialGradient>
+    <linearGradient id="blood_slash" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#7f1d1d" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Ambush Darkness & Blood Backdrop -->
+  <rect width="1280" height="720" fill="url(#ambush_shadow)" />
+
+  <!-- King Alden on Distant Dais (Cold Observer) -->
+  <polygon points="610,120 670,120 690,260 590,260" fill="#27272a" />
+  <circle cx="640" cy="100" r="14" fill="#ca8a04" /> <!-- Crown -->
+
+  <!-- Vargas Intercepting with Shield (Center Foreground) -->
+  <polygon points="540,320 660,320 680,620 520,620" fill="#334155" /> <!-- Vargas Body -->
+  <circle cx="600" cy="280" r="28" fill="#64748b" /> <!-- Vargas Head -->
+  <!-- Tower Shield Cracked -->
+  <rect x="440" y="340" width="90" height="240" rx="8" fill="#475569" stroke="#94a3b8" stroke-width="4" />
+  <!-- Shield Crack Line -->
+  <path d="M 480 340 L 495 440 L 470 480 L 500 580" stroke="#0f172a" stroke-width="5" fill="none" />
+
+  <!-- Royal Halberdiers Thrusting Inward -->
+  <!-- Spear 1 (From Left punching into Vargas) -->
+  <line x1="180" y1="260" x2="520" y2="420" stroke="#e2e8f0" stroke-width="8" />
+  <polygon points="500,410 560,430 515,445" fill="#f8fafc" />
+  <!-- Spear 2 (From Right piercing chest) -->
+  <line x1="1080" y1="240" x2="620" y2="400" stroke="#e2e8f0" stroke-width="8" />
+  <polygon points="640,390 590,410 635,425" fill="#f8fafc" />
+  <!-- Spear 3 (Center Downward Thrust) -->
+  <line x1="840" y1="160" x2="640" y2="360" stroke="#e2e8f0" stroke-width="8" />
+  <polygon points="660,345 615,380 655,385" fill="#f8fafc" />
+
+  <!-- Blood Impact Splatters -->
+  <path d="M 580 410 Q 640 440 680 430 Q 720 460 760 480" stroke="url(#blood_slash)" stroke-width="12" fill="none" />
+  <circle cx="620" cy="430" r="16" fill="#b91c1c" />
+  <circle cx="680" cy="460" r="10" fill="#b91c1c" />
+  <circle cx="540" cy="450" r="12" fill="#991b1b" />
+
+  <!-- The Hero Collapsed in Shadows Behind Vargas -->
+  <circle cx="360" cy="490" r="24" fill="#1e293b" />
+  <polygon points="320,530 400,530 420,640 300,640" fill="#0f172a" />
+  <!-- Reaching Arm (Helpless) -->
+  <line x1="390" y1="520" x2="480" y2="490" stroke="#475569" stroke-width="6" />
+
+</svg>

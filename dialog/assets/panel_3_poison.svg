@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="poison_blur" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#1e1b4b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    <radialGradient id="hemlock_spill" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.9" />
+    </radialGradient>
+  </defs>
+
+  <!-- Distorted Hall & Poison Blur -->
+  <rect width="1280" height="720" fill="url(#poison_blur)" />
+
+  <!-- Blurring Pillars -->
+  <rect x="180" y="0" width="100" height="600" fill="#0f172a" opacity="0.6" />
+  <rect x="1000" y="0" width="100" height="600" fill="#0f172a" opacity="0.6" />
+
+  <!-- Poison Vignette & Spilled Chalice in Foreground -->
+  <ellipse cx="640" cy="540" rx="360" ry="120" fill="url(#hemlock_spill)" />
+  
+  <!-- Fallen Golden Cup Rolling on Marble -->
+  <polygon points="580,510 650,480 670,530 600,550" fill="#ca8a04" />
+  <ellipse cx="585" cy="530" rx="14" ry="24" fill="#854d0e" />
+  <!-- Hemlock Liquid Veins -->
+  <path d="M 600 550 Q 560 620 480 650 Q 420 660 360 670" stroke="#10b981" stroke-width="8" fill="none" opacity="0.8" />
+  <path d="M 620 540 Q 690 600 760 620 Q 820 640 880 645" stroke="#10b981" stroke-width="6" fill="none" opacity="0.7" />
+
+  <!-- Hero Clutches Throat (Numbness & Poison) -->
+  <circle cx="640" cy="340" r="32" fill="#94a3b8" />
+  <polygon points="590,380 690,380 710,500 570,500" fill="#1e293b" />
+  <!-- Shaking Hand to Neck -->
+  <line x1="620" y1="360" x2="650" y2="350" stroke="#f1f5f9" stroke-width="6" />
+
+  <!-- Squad Collapsing in Shadows -->
+  <circle cx="420" cy="380" r="22" fill="#64748b" opacity="0.7" /> <!-- Vargas Slumping -->
+  <polygon points="380,410 460,410 440,490 390,490" fill="#334155" opacity="0.7" />
+  <circle cx="860" cy="390" r="20" fill="#64748b" opacity="0.7" /> <!-- Kaelen Gaggers -->
+
+</svg>

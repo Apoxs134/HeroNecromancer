@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="torchlight" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#291505" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0a0502" />
+    </radialGradient>
+    <linearGradient id="carpet_red" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#450a0a" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Banquet Hall Backdrop -->
+  <rect width="1280" height="720" fill="url(#torchlight)" />
+
+  <!-- Stone Pillars -->
+  <rect x="160" y="0" width="90" height="580" fill="#1c1917" />
+  <rect x="1030" y="0" width="90" height="580" fill="#1c1917" />
+
+  <!-- Torches & Glow -->
+  <circle cx="205" cy="220" r="45" fill="#f59e0b" opacity="0.25" />
+  <polygon points="195,230 205,180 215,230" fill="#f59e0b" />
+  <circle cx="1075" cy="220" r="45" fill="#f59e0b" opacity="0.25" />
+  <polygon points="1065,230 1075,180 1085,230" fill="#f59e0b" />
+
+  <!-- Royal Dais & Throne -->
+  <rect x="440" y="240" width="400" height="260" fill="#292524" />
+  <polygon points="560,160 720,160 760,340 520,340" fill="#1c1917" /> <!-- Throne Silhouette -->
+
+  <!-- Red Velvet Carpet -->
+  <polygon points="540,500 740,500 840,720 440,720" fill="url(#carpet_red)" />
+
+  <!-- King Alden (Offering the Poisoned Toast) -->
+  <polygon points="610,210 670,210 700,380 580,380" fill="#713f12" /> <!-- King Robes -->
+  <circle cx="640" cy="180" r="16" fill="#ca8a04" /> <!-- Golden Crown -->
+  <line x1="680" y1="240" x2="730" y2="210" stroke="#facc15" stroke-width="5" /> <!-- Raised Chalice Arm -->
+  <polygon points="720,210 745,210 735,230 730,230" fill="#facc15" /> <!-- Chalice -->
+  <circle cx="732" cy="205" r="5" fill="#84cc16" opacity="0.8" /> <!-- Subtle Poison Glint -->
+
+  <!-- The Banquet Table & The Vanguard (Silhouetted in foreground) -->
+  <rect x="220" y="470" width="840" height="45" rx="5" fill="#44403c" /> <!-- Long Feast Table -->
+  <circle cx="360" cy="430" r="22" fill="#cbd5e1" /> <!-- Hero Head -->
+  <polygon points="330,450 390,450 400,530 320,530" fill="#3b82f6" opacity="0.7" /> <!-- Hero Plate Armor -->
+
+  <circle cx="460" cy="445" r="18" fill="#94a3b8" /> <!-- Vargas -->
+  <circle cx="820" cy="445" r="18" fill="#94a3b8" /> <!-- Kaelen -->
+  <circle cx="920" cy="445" r="18" fill="#94a3b8" /> <!-- Lyra -->
+
+</svg>

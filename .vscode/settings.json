@@ -1,0 +1,7 @@
+{
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.extension.toc.levels": "2..3"
+}

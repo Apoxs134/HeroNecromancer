@@ -1,0 +1,46 @@
+{
+  "intro_scene": {
+    "background_color": [0.08, 0.09, 0.08, 1.0],
+    "next_state": "BATTLEFIELD",
+    "encounter_id": "peasant_militia",
+    "splash": {
+      "title": "CHAPTER 1",
+      "subtitle": "THE BREAD & THE SCYTHE"
+    },
+    "lines": [
+      {
+        "panel": "res://dialog/assets/default_panel.svg",
+        "speaker": "Narrator",
+        "text": "The wind howls across the agrarian lowlands of Oakhaven. Golden wheat bends beneath dark gathering stormclouds."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Keep low. The Citadel walls are behind us, but the criers have already ridden ahead."
+      },
+      {
+        "speaker": "Vargas (Spirit)",
+        "text": "...Commander... I smell grease-torches and steel ahead. Voices in the granary..."
+      },
+      {
+        "speaker": "Angry Peasant",
+        "text": "There! The church bells were right! Look at the fiend's hands—corpse light! He's defiling the dead!"
+      },
+      {
+        "speaker": "Peasant Militia",
+        "text": "Stay back, monster! For King Alden! Protect the harvest! Slay the butcher!"
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Wait! Listen to me! I am the one who felled the demon lord! We bled for you...!"
+      },
+      {
+        "speaker": "Peasant Militia",
+        "text": "Lies from a demon's mouth! Draw the scythes! Kill the witch before he takes our sons!"
+      },
+      {
+        "speaker": "Vargas (Spirit)",
+        "text": "...Commander... their terror has made them deaf. Form the line. We must defend ourselves..."
+      }
+    ]
+  }
+}
