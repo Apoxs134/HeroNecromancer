@@ -1,16 +1,14 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://ci4do5l8o0hkk"]
 
-[ext_resource type="Script" path="res://core/cards/card_data.gd" id="1_card"]
+[ext_resource type="Script" uid="uid://e7c4twm2nvj1" path="res://core/cards/card_data.gd" id="1_card"]
+[ext_resource type="Texture2D" uid="uid://c3v5f3yse3ibx" path="res://battlefield/assets/cards/grave_ward.webp" id="2_art"]
 
 [resource]
 script = ExtResource("1_card")
 id = "grave_ward"
 title = "Grave Ward"
-description = "Gain 5 Block."
-cost = 1
+description = "Gain 7 Block."
 card_type = 1
 target_type = 2
-rarity = 0
-damage = 0
-block = 5
-summon_id = ""
+block = 7
+art = ExtResource("2_art")

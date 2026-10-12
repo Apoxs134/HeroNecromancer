@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://test_sim_suite_01"]
+
+[ext_resource type="Script" path="res://core/simulation/test_simulation_suite.gd" id="1_test"]
+
+[node name="TestSimulationSuite" type="Node"]
+script = ExtResource("1_test")

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_citadel_streets.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch3_elite_battle"
+title = "ROYAL CAPTAIN OF THE HALBERD"
+difficulty = "Elite"
+bg_texture = ExtResource("2_bg")
+enemies = ["Captain Lorian of the Guard", "Golden Templar Champion", "Grand Justiciar Golem", "Royal Arbalestier"]
+tutorial_dialog = [{
+"speaker": "Captain Lorian",
+"text": "You were my superior once, Commander. But you traded your soul to the charnel grave. Die with honor!"
+}, {
+"speaker": "The Hero",
+"text": "Honor was poisoned in our cups, Lorian. I gave you a chance to flee."
+}]
+next_state = 1
+next_dialog_id = ""
+next_encounter_tres = ""
+return_to_map = true

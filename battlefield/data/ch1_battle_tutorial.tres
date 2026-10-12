@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_lowlands_battlefield.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch1_battle_tutorial"
+title = "TUTORIAL: DEFEND THE SCYTHE"
+difficulty = "Tutorial"
+bg_texture = ExtResource("2_bg")
+enemies = ["Peasant Militia Scout", "Enraged Farmer"]
+tutorial_dialog = [{
+"speaker": "Vargas (Spirit)",
+"text": "Commander! They are charging with scythes. Draw your cards and summon the Vanguard to hold the line!"
+}, {
+"speaker": "Tutorial",
+"text": "Tactical Tip: Play 'Vargas Bulwark' to taunt enemies and soak damage, then cast 'Pale Smite' to eliminate threats."
+}, {
+"speaker": "The Hero",
+"text": "Steady... remember who we fight for. Do not falter."
+}]
+next_state = 1
+next_dialog_id = ""
+next_encounter_tres = ""
+return_to_map = false
+can_retreat = false

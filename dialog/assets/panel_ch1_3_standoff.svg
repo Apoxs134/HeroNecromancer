@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="sky_clash" x1="0%" y1="0%" x2="100%" y2="0%">
+      <!-- Cold necromantic left, raging fire right -->
+      <stop offset="0%" stop-color="#03254c" />
+      <stop offset="45%" stop-color="#090d16" />
+      <stop offset="75%" stop-color="#431407" />
+      <stop offset="100%" stop-color="#1c1917" />
+    </linearGradient>
+    <radialGradient id="vargas_shield_shockwave" cx="40%" cy="75%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.85" />
+      <stop offset="65%" stop-color="#0369a1" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="mob_flame_glare" cx="80%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fed7aa" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#ea580c" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky (Clash of Ice & Fire) -->
+  <rect width="1280" height="720" fill="url(#sky_clash)" />
+
+  <!-- Background Smoke & Mist -->
+  <circle cx="980" cy="380" r="300" fill="url(#mob_flame_glare)" />
+  <circle cx="480" cy="520" r="360" fill="url(#vargas_shield_shockwave)" />
+
+  <!-- Ground Plane (Trampled Wheat & Wet Dirt) -->
+  <polygon points="0,520 1280,500 1280,720 0,720" fill="#080706" />
+
+  <!-- Frost Ground Rifts (Radiating from Vargas's Shield Slam) -->
+  <path d="M 480 650 L 320 690 M 480 650 L 260 630 M 480 650 L 390 600 M 480 650 L 590 680" stroke="#38bdf8" stroke-width="4" fill="none" opacity="0.9" />
+  <path d="M 480 650 L 340 685 M 480 650 L 280 625" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.95" />
+
+  <!-- ================= LEFT: UNDEAD VANGUARD BATTLE LINE ================= -->
+  <!-- 1. The Hero (Drawing Pale Holy/Death Blade) -->
+  <polygon points="260,420 330,420 350,650 240,650" fill="#020617" />
+  <circle cx="295" cy="380" r="22" fill="#f8fafc" /> <!-- Head with Pale Crown light -->
+  <!-- Hero's Drawn Blade Gleaming with Cyan/White Fire -->
+  <line x1="330" y1="440" x2="430" y2="340" stroke="#38bdf8" stroke-width="8" />
+  <line x1="330" y1="440" x2="430" y2="340" stroke="#ffffff" stroke-width="4" />
+  <polygon points="420,330 450,320 440,350" fill="#ffffff" /> <!-- Blade tip glint -->
+
+  <!-- 2. Vargas (The Risen Bastion - Stepping Forward in Stance) -->
+  <polygon points="430,370 540,370 570,660 410,660" fill="#0f172a" />
+  <circle cx="485" cy="330" r="26" fill="#cbd5e1" /> <!-- Iron Skull Helm -->
+  <circle cx="476" cy="328" r="5" fill="#38bdf8" /> <!-- Eye of Pale Vengeance -->
+  <circle cx="494" cy="328" r="5" fill="#38bdf8" />
+  <!-- Massive Risen Tower Shield Planted into Mud -->
+  <rect x="510" y="380" width="70" height="270" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="5" />
+  <line x1="545" y1="400" x2="545" y2="630" stroke="#38bdf8" stroke-width="3" />
+  <polygon points="530,510 560,510 545,470" fill="#38bdf8" /> <!-- Runed Shield Emblem -->
+
+  <!-- 3. Kaelen & Lyra Spirits (Backing Line) -->
+  <polygon points="170,440 220,440 230,640 160,640" fill="#090d16" opacity="0.85" />
+  <circle cx="195" cy="410" r="16" fill="#94a3b8" />
+  <circle cx="193" cy="408" r="3" fill="#38bdf8" />
+  <!-- Bow Drawn with Ethereal Arrow -->
+  <line x1="215" y1="430" x2="310" y2="410" stroke="#38bdf8" stroke-width="3" />
+
+  <!-- ================= RIGHT: PEASANT MILITIA CHARGE ================= -->
+  <!-- Front Peasant with Raised Scythe Lunging -->
+  <polygon points="860,430 940,410 970,660 850,660" fill="#292524" />
+  <circle cx="890" cy="385" r="24" fill="#44403c" />
+  <!-- Scythe Slashing Downward -->
+  <line x1="910" y1="390" x2="810" y2="280" stroke="#78350f" stroke-width="7" />
+  <path d="M 810 280 C 760 220, 680 270, 640 330 C 700 290, 770 280, 810 280 Z" fill="#f1f5f9" stroke="#94a3b8" stroke-width="3" />
+
+  <!-- Torchbearer Charging Behind (Wild Fire) -->
+  <circle cx="1020" cy="330" r="120" fill="url(#mob_flame_glare)" />
+  <line x1="1020" y1="330" x2="1000" y2="520" stroke="#78350f" stroke-width="6" />
+  <polygon points="980,440 1050,440 1070,660 960,660" fill="#1c1917" />
+  <circle cx="1015" cy="405" r="22" fill="#292524" />
+
+  <!-- Pitchfork Peasant (Right) -->
+  <line x1="1120" y1="470" x2="980" y2="350" stroke="#78350f" stroke-width="5" />
+  <polygon points="980,350 960,330 990,340" fill="#cbd5e1" />
+  <polygon points="1070,450 1140,450 1160,670 1060,670" fill="#1c1917" />
+  <circle cx="1105" cy="415" r="20" fill="#44403c" />
+
+  <!-- Distant Mob Pitchforks & Torches Silhouettes -->
+  <line x1="1190" y1="450" x2="1160" y2="280" stroke="#292524" stroke-width="4" />
+  <circle cx="1220" cy="360" r="70" fill="url(#mob_flame_glare)" />
+  <line x1="1220" y1="360" x2="1210" y2="520" stroke="#78350f" stroke-width="5" />
+
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="occult_parchment" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1c1618" />
+      <stop offset="50%" stop-color="#141014" />
+      <stop offset="85%" stop-color="#0a080c" />
+      <stop offset="100%" stop-color="#040305" />
+    </radialGradient>
+    <radialGradient id="red_ritual_glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#7f1d1d" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="crusade_grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="30" cy="30" r="1.5" fill="#475569" opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- Parchment Base -->
+  <rect width="1280" height="720" fill="url(#occult_parchment)" />
+  <rect width="1280" height="720" fill="url(#crusade_grid)" />
+
+  <!-- Occult Ritual Aura Centers -->
+  <circle cx="640" cy="360" r="320" fill="url(#red_ritual_glow)" />
+
+  <!-- Outer Stylized Frame / Runic Border -->
+  <rect x="24" y="24" width="1232" height="672" rx="14" fill="none" stroke="#332427" stroke-width="3" opacity="0.7" />
+  <rect x="32" y="32" width="1216" height="656" rx="10" fill="none" stroke="#211719" stroke-width="1.5" opacity="0.5" />
+
+  <!-- Corner Ornamental Knots -->
+  <polygon points="24,60 60,24 75,39 39,75" fill="#451a1e" opacity="0.7" />
+  <polygon points="1256,60 1220,24 1205,39 1241,75" fill="#451a1e" opacity="0.7" />
+  <polygon points="24,660 60,696 75,681 39,645" fill="#451a1e" opacity="0.7" />
+  <polygon points="1256,660 1220,696 1205,681 1241,645" fill="#451a1e" opacity="0.7" />
+
+  <!-- Cult Runic Circle Watermark in Center (Cult of the Lamb Style) -->
+  <g transform="translate(640, 380)" opacity="0.12">
+    <circle cx="0" cy="0" r="240" fill="none" stroke="#f43f5e" stroke-width="2" stroke-dasharray="12,18" />
+    <circle cx="0" cy="0" r="190" fill="none" stroke="#f43f5e" stroke-width="1.5" />
+    <polygon points="0,-190 164,95 -164,95" fill="none" stroke="#f43f5e" stroke-width="2" />
+    <polygon points="0,190 164,-95 -164,-95" fill="none" stroke="#f43f5e" stroke-width="2" />
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#f43f5e" stroke-width="2" stroke-dasharray="8,8" />
+  </g>
+
+  <!-- Top Crowned Eye Watermark (Granary Zenith) -->
+  <g transform="translate(640, 100)" opacity="0.35">
+    <polygon points="0,-25 15,0 35,-15 25,18 -25,18 -35,-15 -15,0" fill="#f59e0b" />
+    <ellipse cx="0" cy="35" rx="35" ry="18" fill="none" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="0" cy="35" r="8" fill="#ef4444" />
+  </g>
+
+  <!-- Tier Watermark Indicators -->
+  <text x="70" y="625" fill="#475569" font-family="sans-serif" font-size="12" letter-spacing="3" opacity="0.5">TIER 0 : THRESHOLD</text>
+  <text x="70" y="475" fill="#475569" font-family="sans-serif" font-size="12" letter-spacing="3" opacity="0.5">TIER 1 : HARVEST FIELDS</text>
+  <text x="70" y="315" fill="#475569" font-family="sans-serif" font-size="12" letter-spacing="3" opacity="0.5">TIER 2 : INQUISITION ROAD</text>
+  <text x="70" y="155" fill="#475569" font-family="sans-serif" font-size="12" letter-spacing="3" opacity="0.5">TIER 3 : GRANARY GARRISON</text>
+
+  <!-- Dark Vignette Overlay -->
+  <rect width="1280" height="720" fill="black" opacity="0.25" />
+</svg>

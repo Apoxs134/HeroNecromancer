@@ -1,0 +1,405 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://credits/credits.gd" id="1_credits_gd"]
+[ext_resource type="Texture2D" uid="uid://dksk8wxxpg334" path="res://ui/cover_logo_ui.webp" id="2_cover_logo"]
+[ext_resource type="FontFile" uid="uid://c8m3isspuo012" path="res://ui/fonts/Cinzel/static/Cinzel-Bold.ttf" id="3_cinzel_bold"]
+[ext_resource type="FontFile" uid="uid://dsktu75j0p314" path="res://ui/fonts/Cinzel/static/Cinzel-SemiBold.ttf" id="4_cinzel_semibold"]
+[ext_resource type="FontFile" uid="uid://cor178qbqtib2" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-MediumItalic.ttf" id="5_crimson_italic"]
+[ext_resource type="Texture2D" uid="uid://8qecqrlxsthj" path="res://ui/button_state_normal_ui.webp" id="6_btn_normal"]
+[ext_resource type="Texture2D" uid="uid://ciloubrkxahvw" path="res://ui/button_state_hover_ui.webp" id="7_btn_hover"]
+[ext_resource type="Texture2D" uid="uid://u0fhxr0fwan0" path="res://ui/button_state_press_ui.webp" id="8_btn_press"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_sec_normal"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("6_btn_normal")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_sec_hover"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("7_btn_hover")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_sec_pressed"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("8_btn_press")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_credits_gd")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.025, 0.025, 0.035, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Content" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(1280, 2200)
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 0
+
+[node name="TopSpacer" type="Control" parent="ScrollContainer/Content"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="TitleSection" type="VBoxContainer" parent="ScrollContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Logo" type="TextureRect" parent="ScrollContainer/Content/TitleSection"]
+custom_minimum_size = Vector2(450, 271)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_cover_logo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GameSubtitle" type="Label" parent="ScrollContainer/Content/TitleSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22, 0.74, 0.97, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 18
+text = "THE CHRONICLES OF THE PALE FLAME"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="ScrollContainer/Content"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="StudioSection" type="VBoxContainer" parent="ScrollContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="StudioName" type="Label" parent="ScrollContainer/Content/StudioSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98, 0.8, 0.3, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 28
+text = "SWIFTRAL"
+horizontal_alignment = 1
+
+[node name="StudioUrl" type="Label" parent="ScrollContainer/Content/StudioSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.55, 0.65, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+text = "www.swiftral.com"
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="ScrollContainer/Content"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="AuthorSection" type="VBoxContainer" parent="ScrollContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="AuthorPrefix" type="Label" parent="ScrollContainer/Content/AuthorSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.65, 0.75, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 17
+text = "A GAME BY"
+horizontal_alignment = 1
+
+[node name="AuthorName" type="Label" parent="ScrollContainer/Content/AuthorSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 30
+text = "Abel Paredes (Apoxs)"
+horizontal_alignment = 1
+
+[node name="Spacer3" type="Control" parent="ScrollContainer/Content"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="RolesSection" type="VBoxContainer" parent="ScrollContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Role1" type="VBoxContainer" parent="ScrollContainer/Content/RolesSection"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RoleTitle" type="Label" parent="ScrollContainer/Content/RolesSection/Role1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22, 0.74, 0.97, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+text = "GAME DESIGN & SYSTEMS ARCHITECTURE"
+horizontal_alignment = 1
+
+[node name="RolePerson" type="Label" parent="ScrollContainer/Content/RolesSection/Role1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 20
+text = "Abel Paredes"
+horizontal_alignment = 1
+
+[node name="Role2" type="VBoxContainer" parent="ScrollContainer/Content/RolesSection"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RoleTitle" type="Label" parent="ScrollContainer/Content/RolesSection/Role2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22, 0.74, 0.97, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+text = "GAMEPLAY & CORE PROGRAMMING"
+horizontal_alignment = 1
+
+[node name="RolePerson" type="Label" parent="ScrollContainer/Content/RolesSection/Role2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 20
+text = "Abel Paredes"
+horizontal_alignment = 1
+
+[node name="Role3" type="VBoxContainer" parent="ScrollContainer/Content/RolesSection"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RoleTitle" type="Label" parent="ScrollContainer/Content/RolesSection/Role3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22, 0.74, 0.97, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+text = "NARRATIVE DESIGN & DIALOGUE SCRIPT"
+horizontal_alignment = 1
+
+[node name="RolePerson" type="Label" parent="ScrollContainer/Content/RolesSection/Role3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 20
+text = "Abel Paredes"
+horizontal_alignment = 1
+
+[node name="Role4" type="VBoxContainer" parent="ScrollContainer/Content/RolesSection"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RoleTitle" type="Label" parent="ScrollContainer/Content/RolesSection/Role4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22, 0.74, 0.97, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+text = "VECTOR ILLUSTRATIONS & CUTSCENE ART"
+horizontal_alignment = 1
+
+[node name="RolePerson" type="Label" parent="ScrollContainer/Content/RolesSection/Role4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 20
+text = "Abel Paredes"
+horizontal_alignment = 1
+
+[node name="Role5" type="VBoxContainer" parent="ScrollContainer/Content/RolesSection"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RoleTitle" type="Label" parent="ScrollContainer/Content/RolesSection/Role5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22, 0.74, 0.97, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+text = "USER INTERFACE & EXPERIENCE"
+horizontal_alignment = 1
+
+[node name="RolePerson" type="Label" parent="ScrollContainer/Content/RolesSection/Role5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 20
+text = "Abel Paredes"
+horizontal_alignment = 1
+
+[node name="Spacer4" type="Control" parent="ScrollContainer/Content"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TechSection" type="VBoxContainer" parent="ScrollContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TechTitle" type="Label" parent="ScrollContainer/Content/TechSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.55, 0.65, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+text = "POWERED BY"
+horizontal_alignment = 1
+
+[node name="TechName" type="Label" parent="ScrollContainer/Content/TechSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.75, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 22
+text = "GODOT ENGINE 4"
+horizontal_alignment = 1
+
+[node name="Spacer5" type="Control" parent="ScrollContainer/Content"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="ThanksSection" type="VBoxContainer" parent="ScrollContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ThanksTitle" type="Label" parent="ScrollContainer/Content/ThanksSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.85, 0.45, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 22
+text = "SPECIAL THANKS"
+horizontal_alignment = 1
+
+[node name="ThanksBody" type="Label" parent="ScrollContainer/Content/ThanksSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.88, 0.92, 1)
+theme_override_fonts/font = ExtResource("5_crimson_italic")
+theme_override_font_sizes/font_size = 20
+text = "Dedicated to all who stood against King Alden
+and walked the dark road of the Pale Flame."
+horizontal_alignment = 1
+
+[node name="BottomSpacer" type="Control" parent="ScrollContainer/Content"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="FinishOverlay" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.015, 0.015, 0.02, 0.96)
+
+[node name="FinishLogo" type="TextureRect" parent="FinishOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -210.0
+offset_right = 200.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cover_logo")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="FinishLabel" type="Label" parent="FinishOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = 45.0
+offset_right = 350.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.85, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 24
+text = "Thank you for playing HeroNecromancer."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReturnPrompt" type="Label" parent="FinishOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.22, 0.74, 0.97, 0.8)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 16
+text = "[ Tap anywhere to return to Main Menu ]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkipButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -140.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 68.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.85, 0.82, 0.9, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_sec_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_sec_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_sec_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "SKIP >>"

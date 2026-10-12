@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="heavySlashCore" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#38bdf8"/>
+      <stop offset="45%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#e0f2fe"/>
+      <stop offset="80%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glowBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Broad outer crescent glow -->
+  <path d="M12 18 C65 48 112 95 148 148 C102 118 55 70 12 18 Z" fill="url(#heavySlashCore)" opacity="0.6"/>
+  <!-- Primary razor sharp blade arc -->
+  <path d="M18 24 Q80 72 142 142" fill="none" stroke="url(#heavySlashCore)" stroke-width="9" stroke-linecap="round" filter="url(#glowBlur)"/>
+  <!-- Pure incandescent white core ribbon -->
+  <path d="M26 28 Q80 68 134 134" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Secondary violent cross-slice -->
+  <path d="M138 28 Q84 76 26 136" fill="none" stroke="url(#heavySlashCore)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M130 34 Q84 74 34 128" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="defShield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield Contour -->
+  <path d="M16 4 L26 8 L24 20 Q16 28 16 28 Q16 28 8 20 L6 8 Z" fill="url(#defShield)" stroke="#bae6fd" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Inner Rim -->
+  <path d="M16 8 L22 11 L20 18 Q16 24 16 24 Q16 24 12 18 L10 11 Z" fill="#0f172a" stroke="#7dd3fc" stroke-width="1.2"/>
+  <circle cx="16" cy="14" r="2.5" fill="#f0f9ff"/>
+</svg>

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_granary_boss.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch1_boss_battle"
+title = "BOSS: GARRISON OF THE GRANARY"
+difficulty = "Boss"
+bg_texture = ExtResource("2_bg")
+enemies = ["Garrison Captain Boros", "Tower Halberdiers", "Militia Bowman"]
+tutorial_dialog = [{
+"speaker": "Captain Boros",
+"text": "Bar the doors! The necromancer will not claim the harvest for his demon horde!"
+}, {
+"speaker": "The Hero",
+"text": "I came for supplies, not your blood, Captain. Yield the granary!"
+}]
+next_state = 3
+next_dialog_id = "ending_scene"
+next_encounter_tres = ""
+return_to_map = false

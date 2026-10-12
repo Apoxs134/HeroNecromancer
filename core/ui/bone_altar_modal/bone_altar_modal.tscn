@@ -1,0 +1,1001 @@
+[gd_scene load_steps=24 format=3]
+
+[ext_resource type="Texture2D" uid="uid://7y6rcc2hhpew" path="res://ui/dialog_v2_ui.webp" id="2_dialog_v2"]
+[ext_resource type="FontFile" uid="uid://c8m3isspuo012" path="res://ui/fonts/Cinzel/static/Cinzel-Bold.ttf" id="3_cinzel_bold"]
+[ext_resource type="FontFile" uid="uid://dsktu75j0p314" path="res://ui/fonts/Cinzel/static/Cinzel-SemiBold.ttf" id="4_cinzel_semibold"]
+[ext_resource type="FontFile" uid="uid://k3ndgelr61lv" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-Regular.ttf" id="5_crimson_regular"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_modal"]
+content_margin_left = 34.0
+content_margin_top = 26.0
+content_margin_right = 34.0
+content_margin_bottom = 26.0
+texture = ExtResource("2_dialog_v2")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_heal_normal"]
+bg_color = Color(0.07, 0.11, 0.12, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.28, 0.65, 0.42, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_heal_hover"]
+bg_color = Color(0.1, 0.16, 0.17, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.42, 0.95, 0.62, 0.95)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.15, 0.7, 0.35, 0.28)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_purge_normal"]
+bg_color = Color(0.12, 0.08, 0.08, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.45, 0.25, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_purge_hover"]
+bg_color = Color(0.17, 0.11, 0.1, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1.0, 0.65, 0.35, 0.95)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.9, 0.45, 0.2, 0.28)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upgrade_normal"]
+bg_color = Color(0.1, 0.08, 0.14, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.65, 0.4, 0.85, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upgrade_hover"]
+bg_color = Color(0.14, 0.11, 0.19, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.85, 0.6, 1.0, 0.95)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.7, 0.35, 0.9, 0.28)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card_disabled"]
+bg_color = Color(0.05, 0.06, 0.08, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.28, 0.34, 0.35)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_badge"]
+bg_color = Color(0.07, 0.09, 0.14, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.6, 0.75, 0.5)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drop_normal"]
+bg_color = Color(0.07, 0.09, 0.13, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.5, 0.7, 0.45)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drop_active"]
+bg_color = Color(0.12, 0.16, 0.22, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1.0, 0.78, 0.3, 0.95)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.9, 0.7, 0.2, 0.35)
+shadow_size = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_popup_panel"]
+bg_color = Color(0.06, 0.08, 0.12, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.45, 0.55, 0.75, 0.85)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.7)
+shadow_size = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pri_normal"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.18, 0.13, 0.08, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.75, 0.58, 0.32, 0.95)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pri_hover"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.28, 0.2, 0.12, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.95, 0.8, 0.45, 1.0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pri_pressed"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.14, 0.1, 0.06, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.45, 0.25, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_sec_normal"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.1, 0.12, 0.18, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.45, 0.65, 0.75)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_sec_hover"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.15, 0.19, 0.28, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.7, 0.95, 0.95)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_sec_pressed"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.07, 0.09, 0.14, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.45, 0.7, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_danger_normal"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.2, 0.08, 0.08, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.85, 0.35, 0.35, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_danger_hover"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.28, 0.1, 0.1, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1.0, 0.5, 0.5, 1.0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_danger_pressed"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.14, 0.05, 0.05, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7, 0.25, 0.25, 0.85)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="BoneAltarModal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_altar_script")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.03, 0.05, 0.88)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -320.0
+offset_right = 560.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_modal")
+
+[node name="TitleLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 22.0
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.98, 0.88, 0.55, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.95)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 24
+text = "THE BONE ALTAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 56.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.88, 0.86, 0.92, 1)
+theme_override_fonts/font = ExtResource("5_crimson_regular")
+theme_override_font_sizes/font_size = 16
+text = "Ancient souls whisper from the crypt. Choose your sacred ritual:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -150.0
+offset_right = -40.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="HealCard" type="Button" parent="Panel/ChoiceContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_heal_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_heal_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_heal_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_card_disabled")
+focus_mode = 0
+
+[node name="Icon" type="Label" parent="Panel/ChoiceContainer/HealCard"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 22.0
+offset_bottom = 66.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 36
+text = "🩸"
+horizontal_alignment = 1
+
+[node name="OptTitle" type="Label" parent="Panel/ChoiceContainer/HealCard"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 74.0
+offset_bottom = 102.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.4, 0.88, 0.6, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+text = "COMMUNE & REST"
+horizontal_alignment = 1
+
+[node name="OptDesc" type="Label" parent="Panel/ChoiceContainer/HealCard"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = -32.0
+offset_right = -18.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.82, 0.82, 0.88, 1)
+theme_override_fonts/font = ExtResource("5_crimson_regular")
+theme_override_font_sizes/font_size = 14
+text = "Channel bone marrow energy to mend mortal wounds. Restores +14 HP to your hero."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ActionBadge" type="Panel" parent="Panel/ChoiceContainer/HealCard"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -54.0
+offset_right = -24.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_badge")
+
+[node name="BadgeLabel" type="Label" parent="Panel/ChoiceContainer/HealCard/ActionBadge"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.5, 1.0, 0.7, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 13
+text = "Heal +14 HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PurgeCard" type="Button" parent="Panel/ChoiceContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_purge_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_purge_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_purge_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_card_disabled")
+focus_mode = 0
+
+[node name="Icon" type="Label" parent="Panel/ChoiceContainer/PurgeCard"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 22.0
+offset_bottom = 66.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 36
+text = "🔥"
+horizontal_alignment = 1
+
+[node name="OptTitle" type="Label" parent="Panel/ChoiceContainer/PurgeCard"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 74.0
+offset_bottom = 102.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.72, 0.35, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+text = "SOUL SACRIFICE"
+horizontal_alignment = 1
+
+[node name="OptDesc" type="Label" parent="Panel/ChoiceContainer/PurgeCard"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = -32.0
+offset_right = -18.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.82, 0.82, 0.88, 1)
+theme_override_fonts/font = ExtResource("5_crimson_regular")
+theme_override_font_sizes/font_size = 14
+text = "Burn an unworthy soul to cinder. Permanently removes a chosen card from your deck (Min 10 cards required)."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ActionBadge" type="Panel" parent="Panel/ChoiceContainer/PurgeCard"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -54.0
+offset_right = -24.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_badge")
+
+[node name="BadgeLabel" type="Label" parent="Panel/ChoiceContainer/PurgeCard/ActionBadge"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.78, 0.45, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 13
+text = "Sacrifice Card"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeCard" type="Button" parent="Panel/ChoiceContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_upgrade_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_upgrade_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_upgrade_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_card_disabled")
+focus_mode = 0
+
+[node name="Icon" type="Label" parent="Panel/ChoiceContainer/UpgradeCard"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 22.0
+offset_bottom = 66.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 36
+text = "⚡"
+horizontal_alignment = 1
+
+[node name="OptTitle" type="Label" parent="Panel/ChoiceContainer/UpgradeCard"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 74.0
+offset_bottom = 102.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.85, 0.65, 1.0, 1)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+text = "SOUL TRANSMUTATION"
+horizontal_alignment = 1
+
+[node name="OptDesc" type="Label" parent="Panel/ChoiceContainer/UpgradeCard"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = -32.0
+offset_right = -18.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.82, 0.82, 0.88, 1)
+theme_override_fonts/font = ExtResource("5_crimson_regular")
+theme_override_font_sizes/font_size = 14
+text = "Sacrifice 1 card as fuel to permanently upgrade (+) another card to its empowered form."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ActionBadge" type="Panel" parent="Panel/ChoiceContainer/UpgradeCard"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -54.0
+offset_right = -24.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_badge")
+
+[node name="BadgeLabel" type="Label" parent="Panel/ChoiceContainer/UpgradeCard/ActionBadge"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.9, 0.75, 1.0, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 13
+text = "Sacrifice & Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardsScroll" type="ScrollContainer" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = -50.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 1
+
+[node name="MarginBox" type="MarginContainer" parent="Panel/CardsScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_right = 36
+
+[node name="CardsContainer" type="GridContainer" parent="Panel/CardsScroll/MarginBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/h_separation = 18
+theme_override_constants/v_separation = 18
+columns = 5
+
+[node name="NavButtons" type="HBoxContainer" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -58.0
+offset_right = 260.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="ReturnButton" type="Button" parent="Panel/NavButtons"]
+visible = false
+custom_minimum_size = Vector2(190, 42)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_sec_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_sec_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_sec_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+theme_override_colors/font_color = Color(0.85, 0.9, 1.0, 1.0)
+text = "« Reselect Fuel Card"
+
+[node name="BackButton" type="Button" parent="Panel/NavButtons"]
+custom_minimum_size = Vector2(170, 42)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_sec_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_sec_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_sec_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+theme_override_colors/font_color = Color(0.85, 0.9, 1.0, 1.0)
+text = "« Back to Choices"
+
+[node name="SingleCardPopup" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="SingleCardPopup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.02, 0.03, 0.88)
+
+[node name="PopupPanel" type="Panel" parent="SingleCardPopup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -280.0
+offset_right = 260.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_modal")
+
+[node name="Title" type="Label" parent="SingleCardPopup/PopupPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.98, 0.88, 0.45, 1.0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 18
+text = "CONFIRM SELECTION"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="SingleCardPopup/PopupPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 20.0
+offset_top = 50.0
+offset_right = -20.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.85, 0.82, 0.9, 1.0)
+theme_override_fonts/font = ExtResource("5_crimson_regular")
+theme_override_font_sizes/font_size = 14
+text = "Details about this ritual action"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CardSlot" type="Control" parent="SingleCardPopup/PopupPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -170.0
+offset_right = 120.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ButtonsHBox" type="HBoxContainer" parent="SingleCardPopup/PopupPanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -62.0
+offset_right = -30.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="ConfirmBtn" type="Button" parent="SingleCardPopup/PopupPanel/ButtonsHBox"]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_pri_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pri_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+theme_override_colors/font_color = Color(1.0, 0.92, 0.6, 1.0)
+theme_override_font_sizes/font_size = 14
+text = "Confirm"
+
+[node name="CancelBtn" type="Button" parent="SingleCardPopup/PopupPanel/ButtonsHBox"]
+custom_minimum_size = Vector2(130, 42)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_sec_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_sec_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_sec_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+theme_override_colors/font_color = Color(0.85, 0.9, 1.0, 1.0)
+theme_override_font_sizes/font_size = 14
+text = "✕ Cancel"
+
+[node name="TransmutePopup" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="TransmutePopup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.02, 0.03, 0.88)
+
+[node name="PopupPanel" type="Panel" parent="TransmutePopup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -280.0
+offset_right = 360.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_modal")
+
+[node name="Title" type="Label" parent="TransmutePopup/PopupPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.98, 0.88, 0.45, 1.0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 18
+text = "CONFIRM SOUL TRANSMUTATION"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="TransmutePopup/PopupPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 24.0
+offset_top = 50.0
+offset_right = -24.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.85, 0.82, 0.9, 1.0)
+theme_override_fonts/font = ExtResource("5_crimson_regular")
+theme_override_font_sizes/font_size = 14
+text = "Sacrifice the fuel card on the left to empower the card on the right (+)."
+horizontal_alignment = 1
+
+[node name="CardsComparison" type="HBoxContainer" parent="TransmutePopup/PopupPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -170.0
+offset_right = 310.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="FuelBox" type="VBoxContainer" parent="TransmutePopup/PopupPanel/CardsComparison"]
+layout_mode = 2
+alignment = 1
+
+[node name="FuelTag" type="Label" parent="TransmutePopup/PopupPanel/CardsComparison/FuelBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.0, 0.65, 0.4, 1.0)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 13
+text = "🔥 FUEL (SACRIFICED)"
+horizontal_alignment = 1
+
+[node name="FuelSlot" type="Control" parent="TransmutePopup/PopupPanel/CardsComparison/FuelBox"]
+custom_minimum_size = Vector2(216, 306)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ArrowLabel" type="Label" parent="TransmutePopup/PopupPanel/CardsComparison"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.7, 1.0, 0.9)
+theme_override_font_sizes/font_size = 32
+text = "➔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TargetBox" type="VBoxContainer" parent="TransmutePopup/PopupPanel/CardsComparison"]
+layout_mode = 2
+alignment = 1
+
+[node name="TargetTag" type="Label" parent="TransmutePopup/PopupPanel/CardsComparison/TargetBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.95, 0.7, 1.0)
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
+theme_override_font_sizes/font_size = 13
+text = "✨ EMPOWERED (+)"
+horizontal_alignment = 1
+
+[node name="TargetSlot" type="Control" parent="TransmutePopup/PopupPanel/CardsComparison/TargetBox"]
+custom_minimum_size = Vector2(216, 306)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ButtonsHBox" type="HBoxContainer" parent="TransmutePopup/PopupPanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -62.0
+offset_right = -40.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ConfirmBtn" type="Button" parent="TransmutePopup/PopupPanel/ButtonsHBox"]
+custom_minimum_size = Vector2(230, 42)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_pri_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pri_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+theme_override_colors/font_color = Color(1.0, 0.92, 0.6, 1.0)
+theme_override_font_sizes/font_size = 14
+text = "✨ Complete Transmutation"
+
+[node name="CancelBtn" type="Button" parent="TransmutePopup/PopupPanel/ButtonsHBox"]
+custom_minimum_size = Vector2(140, 42)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_sec_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_sec_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_sec_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+theme_override_colors/font_color = Color(0.85, 0.9, 1.0, 1.0)
+theme_override_font_sizes/font_size = 14
+text = "✕ Cancel"

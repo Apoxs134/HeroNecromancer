@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="sky_inquisition" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020409" />
+      <stop offset="40%" stop-color="#111827" />
+      <stop offset="80%" stop-color="#451a03" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+    <linearGradient id="gate_iron" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <radialGradient id="torch_fire" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fed7aa" stop-opacity="1" />
+      <stop offset="30%" stop-color="#f97316" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#b45309" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="sun_banner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="60%" stop-color="#9f1239" />
+      <stop offset="100%" stop-color="#4c0519" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky & Fiery Torchlit Atmosphere -->
+  <rect width="1280" height="720" fill="url(#sky_inquisition)" />
+
+  <!-- Mountain Flanks Bracketing the Gate -->
+  <polygon points="0,0 360,0 280,480 0,600" fill="#030712" />
+  <polygon points="920,0 1280,0 1280,600 1000,480" fill="#030712" />
+
+  <!-- High Mountain Bastion Wall & Battlements -->
+  <rect x="280" y="220" width="720" height="380" fill="url(#gate_iron)" stroke="#020617" stroke-width="4" />
+  
+  <!-- Battlements Teeth -->
+  <g fill="#0f172a">
+    <rect x="300" y="180" width="50" height="40" />
+    <rect x="390" y="180" width="50" height="40" />
+    <rect x="480" y="180" width="50" height="40" />
+    <rect x="570" y="180" width="50" height="40" />
+    <rect x="660" y="180" width="50" height="40" />
+    <rect x="750" y="180" width="50" height="40" />
+    <rect x="840" y="180" width="50" height="40" />
+    <rect x="930" y="180" width="50" height="40" />
+  </g>
+
+  <!-- Massive Fortified Iron Portcullis -->
+  <path d="M 520 600 L 520 380 Q 640 330, 760 380 L 760 600 Z" fill="#020408" stroke="#334155" stroke-width="4" />
+  <!-- Portcullis Grate Bars -->
+  <g stroke="#1e293b" stroke-width="4">
+    <line x1="560" y1="365" x2="560" y2="600" />
+    <line x1="600" y1="350" x2="600" y2="600" />
+    <line x1="640" y1="345" x2="640" y2="600" />
+    <line x1="680" y1="350" x2="680" y2="600" />
+    <line x1="720" y1="365" x2="720" y2="600" />
+    <line x1="520" y1="420" x2="760" y2="420" />
+    <line x1="520" y1="480" x2="760" y2="480" />
+    <line x1="520" y1="540" x2="760" y2="540" />
+  </g>
+
+  <!-- Hanging Inquisitorial Banners -->
+  <path d="M 370 240 L 430 240 L 430 460 L 400 490 L 370 460 Z" fill="url(#sun_banner)" />
+  <!-- Golden Sun-Cross Symbol on Banner -->
+  <circle cx="400" cy="330" r="16" fill="#fbbf24" opacity="0.9" />
+  <line x1="400" y1="290" x2="400" y2="370" stroke="#fbbf24" stroke-width="3" />
+  <line x1="360" y1="330" x2="440" y2="330" stroke="#fbbf24" stroke-width="3" />
+
+  <path d="M 850 240 L 910 240 L 910 460 L 880 490 L 850 460 Z" fill="url(#sun_banner)" />
+  <circle cx="880" cy="330" r="16" fill="#fbbf24" opacity="0.9" />
+  <line x1="880" y1="290" x2="880" y2="370" stroke="#fbbf24" stroke-width="3" />
+  <line x1="840" y1="330" x2="920" y2="330" stroke="#fbbf24" stroke-width="3" />
+
+  <!-- Wall Braziers & Torches -->
+  <circle cx="460" cy="280" r="45" fill="url(#torch_fire)" />
+  <circle cx="820" cy="280" r="45" fill="url(#torch_fire)" />
+
+  <!-- Grand Judiciar Vane & Heavy Templars on the Rampart (Silhouettes) -->
+  <!-- Grand Judiciar Vane (Center above gate) -->
+  <g transform="translate(640, 160)">
+    <!-- Plate Armor & Cape -->
+    <path d="M -22 60 L -12 -10 Q 0 -22, 12 -10 L 22 60 Z" fill="#020617" />
+    <circle cx="0" cy="-22" r="12" fill="#fbbf24" stroke="#0f172a" stroke-width="2" />
+    <!-- Golden Halo / Crown-Helm -->
+    <polygon points="-8,-34 0,-44 8,-34" fill="#fbbf24" />
+    <!-- Towering Executioner Greatsword Point Down -->
+    <line x1="20" y1="0" x2="20" y2="60" stroke="#f1f5f9" stroke-width="3" />
+    <line x1="10" y1="12" x2="30" y2="12" stroke="#fbbf24" stroke-width="3" />
+  </g>
+
+  <!-- Templar Halberdiers Flanking Below -->
+  <g transform="translate(420, 500)">
+    <path d="M -15 120 L -8 30 Q 0 15, 8 30 L 15 120 Z" fill="#030712" />
+    <circle cx="0" cy="18" r="9" fill="#0f172a" />
+    <!-- Halberd Pole -->
+    <line x1="16" y1="-40" x2="16" y2="120" stroke="#020617" stroke-width="3" />
+    <!-- Axe Blade -->
+    <polygon points="16,-30 35,-15 16,0" fill="#cbd5e1" stroke="#020617" stroke-width="1.5" />
+  </g>
+
+  <g transform="translate(860, 500)">
+    <path d="M -15 120 L -8 30 Q 0 15, 8 30 L 15 120 Z" fill="#030712" />
+    <circle cx="0" cy="18" r="9" fill="#0f172a" />
+    <line x1="-16" y1="-40" x2="-16" y2="120" stroke="#020617" stroke-width="3" />
+    <polygon points="-16,-30 -35,-15 -16,0" fill="#cbd5e1" stroke="#020617" stroke-width="1.5" />
+  </g>
+
+  <!-- Foreground Dark Ground -->
+  <path d="M 0 640 L 1280 620 L 1280 720 L 0 720 Z" fill="#020408" />
+</svg>

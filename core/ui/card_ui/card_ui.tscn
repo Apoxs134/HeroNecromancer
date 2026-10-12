@@ -1,19 +1,20 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://ca3xj0jlt157y"]
 
-[ext_resource type="Script" path="res://core/ui/card_ui/card_ui.gd" id="1_card_ui"]
-[ext_resource type="Texture2D" path="res://core/ui/card_ui/assets/card_frame.svg" id="2_frame"]
-[ext_resource type="Texture2D" path="res://core/ui/card_ui/assets/energy_gem.svg" id="3_gem"]
+[ext_resource type="Script" uid="uid://ckt35yocmqjn4" path="res://core/ui/card_ui/card_ui.gd" id="1_card_ui"]
+[ext_resource type="Texture2D" uid="uid://dcxgaxyle8g07" path="res://core/ui/card_ui/assets/card_frame.svg" id="2_frame"]
+[ext_resource type="Texture2D" uid="uid://ca7uy672x8b4r" path="res://core/ui/card_ui/assets/energy_gem.svg" id="3_gem"]
 
-[node name="CardUI" type="Control"]
-custom_minimum_size = Vector2(220, 310)
+[node name="CardUI" type="Control" unique_id=1069574961]
+custom_minimum_size = Vector2(240, 340)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 220.0
-offset_bottom = 310.0
-mouse_filter = 0
+offset_right = 240.0
+offset_bottom = 340.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_card_ui")
 
-[node name="Frame" type="TextureRect" parent="."]
+[node name="Frame" type="TextureRect" parent="." unique_id=569121533]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,24 +24,25 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_frame")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 0
 
-[node name="ArtRect" type="TextureRect" parent="."]
+[node name="ArtRect" type="TextureRect" parent="." unique_id=1033628805]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 46.0
-offset_right = 202.0
-offset_bottom = 164.0
+offset_left = 20.0
+offset_top = 52.0
+offset_right = 220.0
+offset_bottom = 178.0
 mouse_filter = 2
 expand_mode = 1
 stretch_mode = 6
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="TitleLabel" type="Label" parent="." unique_id=886694521]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 38.0
 offset_top = 16.0
-offset_right = 200.0
-offset_bottom = 40.0
+offset_right = 216.0
+offset_bottom = 44.0
+mouse_filter = 2
 theme_override_colors/font_color = Color(0.95, 0.95, 0.98, 1)
 theme_override_font_sizes/font_size = 14
 text = "Card Title"
@@ -48,49 +50,52 @@ horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
-[node name="TypeLabel" type="Label" parent="."]
+[node name="TypeLabel" type="Label" parent="." unique_id=727031338]
 layout_mode = 0
 offset_left = 40.0
-offset_top = 170.0
-offset_right = 180.0
-offset_bottom = 190.0
+offset_top = 186.0
+offset_right = 200.0
+offset_bottom = 208.0
+mouse_filter = 2
 theme_override_colors/font_color = Color(0.56, 0.79, 0.98, 1)
 theme_override_font_sizes/font_size = 11
 text = "ATTACK"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DescLabel" type="Label" parent="."]
+[node name="DescLabel" type="Label" parent="." unique_id=545354610]
 layout_mode = 0
-offset_left = 22.0
-offset_top = 198.0
-offset_right = 198.0
-offset_bottom = 292.0
+offset_left = 24.0
+offset_top = 218.0
+offset_right = 216.0
+offset_bottom = 304.0
+mouse_filter = 2
 theme_override_colors/font_color = Color(0.9, 0.92, 0.95, 1)
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 12
 text = "Deal 6 damage."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="CostBadge" type="TextureRect" parent="."]
+[node name="CostBadge" type="TextureRect" parent="." unique_id=2098477013]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 4.0
-offset_right = 42.0
-offset_bottom = 44.0
+offset_right = 44.0
+offset_bottom = 46.0
 mouse_filter = 2
 texture = ExtResource("3_gem")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CostLabel" type="Label" parent="CostBadge"]
+[node name="CostLabel" type="Label" parent="CostBadge" unique_id=551627089]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
 theme_override_constants/shadow_offset_x = 1

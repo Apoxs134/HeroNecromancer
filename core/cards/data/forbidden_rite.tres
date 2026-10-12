@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://core/cards/card_data.gd" id="1_card"]
+
+[ext_resource type="Texture2D" path="res://battlefield/assets/cards/forbidden_rite.webp" id="2_art"]
+
+[resource]
+script = ExtResource("1_card")
+art = ExtResource("2_art")
+id = "forbidden_rite"
+title = "Forbidden Rite"
+description = "Lose 3 HP. Gain 2 Energy. Draw 2 cards."
+cost = 0
+card_type = 4
+target_type = 2
+rarity = 2
+damage = 0
+block = 0
+summon_id = ""
+heal = 0
+strength_buff = 0
+apply_vulnerable = 0
+apply_weak = 0
+apply_bleed = 0
+cleanse_debuffs = false
+thorns_buff = 0

@@ -1,16 +1,13 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://ccugmmhd57sig"]
 
-[ext_resource type="Script" path="res://core/cards/card_data.gd" id="1_card"]
+[ext_resource type="Script" uid="uid://e7c4twm2nvj1" path="res://core/cards/card_data.gd" id="1_card"]
+[ext_resource type="Texture2D" uid="uid://dyvrqrbooi7vv" path="res://battlefield/assets/cards/pale_smite.webp" id="2_art"]
 
 [resource]
 script = ExtResource("1_card")
 id = "pale_smite"
 title = "Pale Smite"
-description = "Deal 6 damage."
-cost = 1
-card_type = 0
-target_type = 0
-rarity = 0
-damage = 6
-block = 0
-summon_id = ""
+description = "Deal 7 damage. Fatal: Refund 1 Energy."
+damage = 7
+fatal_energy_refund = 1
+art = ExtResource("2_art")

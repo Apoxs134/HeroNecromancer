@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://battlefield/vfx/damage_impact/damage_impact.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://battlefield/vfx/damage_impact/shockwave_ring.svg" id="2_shockwave"]
+[ext_resource type="Texture2D" path="res://battlefield/vfx/damage_impact/slash_heavy.svg" id="3_slash"]
+[ext_resource type="Texture2D" path="res://battlefield/vfx/damage_impact/spark_particle.svg" id="4_spark"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_add"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_spark_scale"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.2, 0.0, 0, 0]
+point_count = 2
+
+[node name="DamageImpact" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="ShockwaveRing" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_add")
+custom_minimum_size = Vector2(128, 128)
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("2_shockwave")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlashSprite" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_add")
+custom_minimum_size = Vector2(160, 160)
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = 80.0
+pivot_offset = Vector2(80, 80)
+texture = ExtResource("3_slash")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SparkParticles" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_add")
+emitting = false
+amount = 12
+lifetime = 0.35
+one_shot = true
+explosiveness = 1.0
+texture = ExtResource("4_spark")
+spread = 180.0
+gravity = Vector2(0, 180)
+initial_velocity_min = 140.0
+initial_velocity_max = 240.0
+damping_min = 40.0
+damping_max = 80.0
+scale_amount_min = 0.5
+scale_amount_max = 1.0
+scale_amount_curve = SubResource("Curve_spark_scale")

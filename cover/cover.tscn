@@ -1,8 +1,105 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=19 format=3 uid="uid://du43mpwmkbseu"]
 
-[ext_resource type="Script" path="res://cover/cover.gd" id="1_cover_gd"]
+[ext_resource type="Script" uid="uid://st1iiusrk6xh" path="res://cover/cover.gd" id="1_cover_gd"]
+[ext_resource type="PackedScene" path="res://core/ui/options_modal/options_modal.tscn" id="2_options_modal_tscn"]
+[ext_resource type="Texture2D" uid="uid://bnhlwqf71mc64" path="res://dialog/assets/bg_cover.webp" id="3_bg_cover"]
+[ext_resource type="Texture2D" uid="uid://dgofyqvrf24gi" path="res://ui/ultra_header_ui.webp" id="4_ultra_header"]
+[ext_resource type="Texture2D" uid="uid://dksk8wxxpg334" path="res://ui/cover_logo_ui.webp" id="5_cover_logo"]
+[ext_resource type="Texture2D" uid="uid://8qecqrlxsthj" path="res://ui/button_state_normal_ui.webp" id="6_btn_normal"]
+[ext_resource type="Texture2D" uid="uid://ciloubrkxahvw" path="res://ui/button_state_hover_ui.webp" id="7_btn_hover"]
+[ext_resource type="Texture2D" uid="uid://u0fhxr0fwan0" path="res://ui/button_state_press_ui.webp" id="8_btn_press"]
+[ext_resource type="Texture2D" uid="uid://7y6rcc2hhpew" path="res://ui/dialog_v2_ui.webp" id="9_dialog_v2"]
+[ext_resource type="Texture2D" uid="uid://b8keu6ea68fo2" path="res://ui/chain_ui.webp" id="10_chain_ui"]
+[ext_resource type="FontFile" uid="uid://c8m3isspuo012" path="res://ui/fonts/Cinzel/static/Cinzel-Bold.ttf" id="11_cinzel_bold"]
 
-[node name="Cover" type="Control"]
+[sub_resource type="Gradient" id="Gradient_ashes"]
+offsets = PackedFloat32Array(0, 0.2, 0.75, 1)
+colors = PackedColorArray(0.75, 0.8, 0.9, 0, 0.85, 0.9, 0.96, 0.6, 0.78, 0.82, 0.9, 0.45, 0.65, 0.7, 0.8, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_menu"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+texture = ExtResource("9_dialog_v2")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_normal"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("6_btn_normal")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_hover"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("7_btn_hover")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pressed"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("8_btn_press")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_disabled"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("6_btn_normal")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+modulate_color = Color(0.4, 0.4, 0.4, 0.45)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_cta_normal"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("7_btn_hover")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_cta_hover"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("7_btn_hover")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+modulate_color = Color(1.2, 1.15, 1.05, 1)
+
+[node name="Cover" type="Control" unique_id=463680619]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,55 +108,200 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cover_gd")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1812223367]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.12, 0.08, 0.15, 1)
+color = Color(0.05, 0.04, 0.06, 1)
 
-[node name="Title" type="Label" parent="."]
+[node name="BackgroundTexture" type="TextureRect" parent="." unique_id=2025405588]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_bg_cover")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="OverlayVignette" type="ColorRect" parent="." unique_id=1372470334]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.03, 0.05, 0.45)
+
+[node name="AshParticles" type="CPUParticles2D" parent="." unique_id=1582930123]
+position = Vector2(640, 360)
+amount = 45
+lifetime = 6.5
+preprocess = 6.5
+emission_shape = 3
+emission_rect_extents = Vector2(640, 360)
+direction = Vector2(-0.25, -1)
+spread = 28.0
+gravity = Vector2(0, -9)
+initial_velocity_min = 14.0
+initial_velocity_max = 34.0
+scale_amount_min = 1.5
+scale_amount_max = 3.5
+color_ramp = SubResource("Gradient_ashes")
+
+[node name="ChainLeft" type="TextureRect" parent="." unique_id=172839101]
+layout_mode = 0
+offset_left = 64.0
+offset_top = -10.0
+offset_right = 114.0
+offset_bottom = 240.0
+texture = ExtResource("10_chain_ui")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="ChainRight" type="TextureRect" parent="." unique_id=172839102]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -114.0
+offset_top = -10.0
+offset_right = -64.0
+offset_bottom = 240.0
+grow_horizontal = 0
+texture = ExtResource("10_chain_ui")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="TopHeaderBar" type="TextureRect" parent="." unique_id=892341029]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 122.0
+grow_horizontal = 2
+texture = ExtResource("4_ultra_header")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Logo" type="TextureRect" parent="." unique_id=674330658]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
-offset_top = 100.0
-offset_right = 200.0
-offset_bottom = 160.0
+offset_left = -265.0
+offset_top = 56.0
+offset_right = 265.0
+offset_bottom = 375.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 40
-text = "HERO NECROMANCER"
-horizontal_alignment = 1
+texture = ExtResource("5_cover_logo")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MenuPanel" type="PanelContainer" parent="." unique_id=1462842194]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -20.0
-offset_right = 100.0
-offset_bottom = 120.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 15
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -368.0
+offset_right = -90.0
+offset_bottom = -60.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_menu")
 
-[node name="NewGameButton" type="Button" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPanel"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "New Game"
+theme_override_constants/separation = 12
 
-[node name="LoadGameButton" type="Button" parent="VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="MenuPanel/VBoxContainer" unique_id=69229105]
+modulate = Color(1, 1, 1, 0.45)
+custom_minimum_size = Vector2(260, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "Load Game"
+focus_mode = 0
+theme_override_colors/font_color = Color(0.85, 0.82, 0.9, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_colors/font_disabled_color = Color(0.5, 0.48, 0.55, 0.45)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_btn_disabled")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+disabled = true
+action_mode = 0
+text = "CONTINUE"
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="MenuPanel/VBoxContainer" unique_id=304240176]
+custom_minimum_size = Vector2(260, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "Options"
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 0.95, 0.85, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_cta_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_cta_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_btn_disabled")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "NEW GAME"
+
+[node name="OptionsButton" type="Button" parent="MenuPanel/VBoxContainer" unique_id=1479626920]
+custom_minimum_size = Vector2(260, 50)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.85, 0.82, 0.9, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_btn_disabled")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "OPTIONS"
+
+[node name="CreditsButton" type="Button" parent="MenuPanel/VBoxContainer" unique_id=1243556415]
+custom_minimum_size = Vector2(260, 50)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.85, 0.82, 0.9, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_btn_disabled")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "CREDITS"
+
+[node name="OptionsModal" parent="." unique_id=1518046545 instance=ExtResource("2_options_modal_tscn")]
+layout_mode = 1

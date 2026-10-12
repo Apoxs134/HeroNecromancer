@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_inquisition_boss.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch2_boss_battle"
+title = "BOSS: HIGH INQUISITOR MALAKOR"
+difficulty = "Boss"
+bg_texture = ExtResource("2_bg")
+enemies = ["High Inquisitor Malakor", "Sanctified Golem", "Sun-Oath Executioners", "Templar Halberdier"]
+tutorial_dialog = [{
+"speaker": "High Inquisitor Malakor",
+"text": "The Sun-Light will burn the pale rot from this mountain! Kneel and burn!"
+}, {
+"speaker": "The Hero",
+"text": "Your Sun-Light is dead, Malakor. You follow a king who buys crowns with poisoned wine."
+}]
+next_state = 3
+next_dialog_id = "ending_scene"
+next_encounter_tres = ""
+return_to_map = false

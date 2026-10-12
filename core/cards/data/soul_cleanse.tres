@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://core/cards/card_data.gd" id="1_card"]
+
+[ext_resource type="Texture2D" path="res://battlefield/assets/cards/soul_cleanse.webp" id="2_art"]
+
+[resource]
+script = ExtResource("1_card")
+art = ExtResource("2_art")
+id = "soul_cleanse"
+title = "Soul Cleanse"
+description = "Cleanse all debuffs. Gain 5 Block."
+cost = 1
+card_type = 1
+target_type = 2
+rarity = 1
+damage = 0
+block = 5
+summon_id = ""
+heal = 0
+strength_buff = 0
+apply_vulnerable = 0
+apply_weak = 0
+apply_bleed = 0
+cleanse_debuffs = true
+thorns_buff = 0

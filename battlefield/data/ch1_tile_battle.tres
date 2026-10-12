@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_lowlands_battlefield.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch1_tile_battle"
+title = "OUTPOST SKIRMISH: GRANARY ROAD"
+difficulty = "Moderate"
+bg_texture = ExtResource("2_bg")
+enemies = ["Militia Vanguard", "Armed Townspersons", "Hound of Oakhaven"]
+tutorial_dialog = [{
+"speaker": "Peasant Vanguard",
+"text": "Halt! You will not reach the granary, butcher!"
+}, {
+"speaker": "The Hero",
+"text": "Break their formation quickly. Disarm them and press forward."
+}]
+next_state = 1
+next_dialog_id = ""
+next_encounter_tres = ""
+return_to_map = true

@@ -1,0 +1,850 @@
+[gd_scene load_steps=25 format=3]
+
+[ext_resource type="Script" path="res://battlefield/battle_arena/battle_arena.gd" id="1_arena_gd"]
+[ext_resource type="PackedScene" path="res://core/ui/card_ui/card_ui.tscn" id="2_card_ui"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/hero_necromancer.svg" id="3_hero_tex"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/minion_vargas.svg" id="4_vargas_tex"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/enemy_peasant_scout.svg" id="5_scout_tex"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/enemy_enraged_farmer.svg" id="6_farmer_tex"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/vfx_slash.svg" id="7_slash_tex"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/ground_shadow.svg" id="8_shadow_tex"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/soul_crucible_orb.svg" id="9_crucible_tex"]
+[ext_resource type="PackedScene" path="res://core/ui/claim_card_modal/claim_card_modal.tscn" id="10_claim_modal"]
+[ext_resource type="PackedScene" path="res://battlefield/battle_arena/battle_formation/battle_formation.tscn" id="11_formation"]
+[ext_resource type="Texture2D" uid="uid://7y6rcc2hhpew" path="res://ui/dialog_v2_ui.webp" id="12_dialog_frame"]
+[ext_resource type="FontFile" uid="uid://c8m3isspuo012" path="res://ui/fonts/Cinzel/static/Cinzel-Bold.ttf" id="13_cinzel_bold"]
+[ext_resource type="FontFile" uid="uid://k3ndgelr61lv" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-Regular.ttf" id="14_crimson_regular"]
+[ext_resource type="FontFile" uid="uid://dsktu75j0p314" path="res://ui/fonts/Cinzel/static/Cinzel-SemiBold.ttf" id="15_cinzel_semibold"]
+[ext_resource type="Texture2D" uid="uid://ciloubrkxahvw" path="res://ui/button_state_hover_ui.webp" id="16_nameplate_tex"]
+[ext_resource type="Texture2D" uid="uid://cimgbhen5kymc" path="res://ui/header_v2_ui.webp" id="17_header_v2"]
+[ext_resource type="Texture2D" uid="uid://8qecqrlxsthj" path="res://ui/button_state_normal_ui.webp" id="18_btn_normal"]
+[ext_resource type="Texture2D" uid="uid://u0fhxr0fwan0" path="res://ui/button_state_press_ui.webp" id="19_btn_press"]
+[ext_resource type="FontFile" uid="uid://cor178qbqtib2" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-MediumItalic.ttf" id="20_crimson_italic"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header"]
+bg_color = Color(0.06, 0.05, 0.08, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.36, 0.58, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stage_pod"]
+bg_color = Color(0.03, 0.03, 0.05, 0.7)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.25, 0.4, 0.5)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_bg"]
+bg_color = Color(0.12, 0.1, 0.15, 0.9)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_fill_hero"]
+bg_color = Color(0.18, 0.72, 0.42, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_fill_enemy"]
+bg_color = Color(0.85, 0.28, 0.28, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tutorial"]
+bg_color = Color(0.07, 0.06, 0.12, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.85, 0.7, 0.3, 0.9)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_size = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dialog"]
+content_margin_left = 32.0
+content_margin_top = 18.0
+content_margin_right = 32.0
+content_margin_bottom = 18.0
+texture = ExtResource("12_dialog_frame")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nameplate"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+texture = ExtResource("16_nameplate_tex")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pri"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+texture = ExtResource("18_btn_normal")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pri_hover"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+texture = ExtResource("16_nameplate_tex")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pri_press"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+texture = ExtResource("19_btn_press")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_sec"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 14.0
+content_margin_bottom = 8.0
+texture = ExtResource("18_btn_normal")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+modulate_color = Color(0.85, 0.85, 0.9, 0.9)
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_dbg"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(0.25, 0.08, 0.08, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.85, 0.35, 0.35, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guide_title"]
+content_margin_left = 20.0
+content_margin_top = 8.0
+content_margin_right = 20.0
+content_margin_bottom = 8.0
+bg_color = Color(0.08, 0.07, 0.11, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.74, 0.6, 0.35, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guide_img"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.04, 0.035, 0.06, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.38, 0.55, 0.7)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guide_content"]
+content_margin_left = 18.0
+content_margin_top = 14.0
+content_margin_right = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.06, 0.05, 0.08, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.38, 0.32, 0.45, 0.65)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_combat_log"]
+content_margin_left = 22.0
+content_margin_top = 6.0
+content_margin_right = 22.0
+content_margin_bottom = 6.0
+bg_color = Color(0.05, 0.045, 0.07, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.52, 0.3, 0.75)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_size = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[node name="BattleArena" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_arena_gd")
+card_scene = ExtResource("2_card_ui")
+scout_texture = ExtResource("5_scout_tex")
+farmer_texture = ExtResource("6_farmer_tex")
+slash_texture = ExtResource("7_slash_tex")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.025, 0.035, 1)
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CombatUI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderPanel" type="TextureRect" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -390.0
+offset_top = 8.0
+offset_right = 390.0
+offset_bottom = 88.0
+grow_horizontal = 2
+texture = ExtResource("17_header_v2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="CombatUI/HeaderPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -14.0
+offset_right = 440.0
+offset_bottom = 16.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.97, 0.91, 0.76, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.95)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("13_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+text = "TUTORIAL: DEFEND THE SCYTHE"
+vertical_alignment = 1
+
+[node name="DeckPilesLabel" type="Label" parent="CombatUI/HeaderPanel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -14.0
+offset_right = -64.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.88, 0.85, 0.95, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.95)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("15_cinzel_semibold")
+theme_override_font_sizes/font_size = 13
+text = "🎴 Draw: 6  |  🪦 Discard: 0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SideBattleField" type="Control" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = -280.0
+offset_right = 580.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BattleFormation" parent="CombatUI/SideBattleField" instance=ExtResource("11_formation")]
+layout_mode = 1
+
+[node name="CombatLogBanner" type="PanelContainer" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 62.0
+offset_right = 300.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_combat_log")
+
+[node name="CombatLogLabel" type="Label" parent="CombatUI/CombatLogBanner"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.92, 0.82, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.95)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("15_cinzel_semibold")
+theme_override_font_sizes/font_size = 14
+text = "Select a card from your hand to attack or defend."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HandArea" type="Control" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -550.0
+offset_top = -260.0
+offset_right = 550.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SoulCrucible" type="Control" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -530.0
+offset_top = -215.0
+offset_right = -410.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(60, 60)
+mouse_filter = 2
+
+[node name="OrbTexture" type="TextureRect" parent="CombatUI/SoulCrucible"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_crucible_tex")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EnergyNumLabel" type="Label" parent="CombatUI/SoulCrucible"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.99, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.01, 0.5, 0.78, 0.95)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("13_cinzel_bold")
+theme_override_font_sizes/font_size = 28
+text = "3/3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnergySubLabel" type="Label" parent="CombatUI/SoulCrucible"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.55, 0.85, 1, 0.85)
+theme_override_fonts/font = ExtResource("15_cinzel_semibold")
+theme_override_font_sizes/font_size = 10
+text = "SOUL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomControls" type="HBoxContainer" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -54.0
+offset_right = -30.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HelpButton" type="Button" parent="CombatUI/BottomControls"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.92, 0.88, 0.98, 1)
+theme_override_fonts/font = ExtResource("15_cinzel_semibold")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_sec")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pri_press")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "📖 Tutorial Guide"
+
+[node name="Spacer" type="Control" parent="CombatUI/BottomControls"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AutoBattleButton" type="Button" parent="CombatUI/BottomControls"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.4, 0.9, 0.6, 1)
+theme_override_fonts/font = ExtResource("15_cinzel_semibold")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_sec")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pri_press")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "🤖 Auto: OFF"
+
+[node name="SpeedButton" type="Button" parent="CombatUI/BottomControls"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_fonts/font = ExtResource("15_cinzel_semibold")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_sec")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pri_press")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "⚡ 1x"
+
+[node name="EndTurnButton" type="Button" parent="CombatUI/BottomControls"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.97, 0.92, 0.82, 1)
+theme_override_fonts/font = ExtResource("13_cinzel_bold")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_pri")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pri_press")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "END TURN ❯"
+
+[node name="DebugSkipButton" type="Button" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_top = 14.0
+offset_right = -30.0
+offset_bottom = 54.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 0.8, 0.8, 0.95)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_dbg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "⚡ Skip (Debug)"
+
+[node name="VFXLayer" type="Control" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TutorialOverlay" type="ColorRect" parent="."]
+visible = false
+z_index = 95
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="TutorialGuidePanel" type="Panel" parent="TutorialOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -210.0
+offset_right = 380.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dialog")
+
+[node name="TitleSection" type="PanelContainer" parent="TutorialOverlay/TutorialGuidePanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 28.0
+offset_top = 16.0
+offset_right = -28.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_guide_title")
+
+[node name="GuideTitle" type="Label" parent="TutorialOverlay/TutorialGuidePanel/TitleSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98, 0.9, 0.65, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("13_cinzel_bold")
+theme_override_font_sizes/font_size = 18
+text = "⚔ HOW TO PLAY: COMBAT TUTORIAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BodySection" type="HBoxContainer" parent="TutorialOverlay/TutorialGuidePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 74.0
+offset_right = -28.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="ImageFrame" type="PanelContainer" parent="TutorialOverlay/TutorialGuidePanel/BodySection"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_guide_img")
+
+[node name="GuideImage" type="TextureRect" parent="TutorialOverlay/TutorialGuidePanel/BodySection/ImageFrame"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextFrame" type="PanelContainer" parent="TutorialOverlay/TutorialGuidePanel/BodySection"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_guide_content")
+
+[node name="GuideContent" type="Label" parent="TutorialOverlay/TutorialGuidePanel/BodySection/TextFrame"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.93, 0.91, 0.88, 1)
+theme_override_fonts/font = ExtResource("14_crimson_regular")
+theme_override_font_sizes/font_size = 18
+text = "• 1. ENERGY: You have 3 Soul Energy per turn to play cards.
+• 2. VANGUARD: Play 'Vargas Bulwark' to summon your defender.
+• 3. ATTACK: Cast 'Pale Smite' to eliminate hostile enemies."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GuideButtons" type="HBoxContainer" parent="TutorialOverlay/TutorialGuidePanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -62.0
+offset_right = -28.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="NextGuideButton" type="Button" parent="TutorialOverlay/TutorialGuidePanel/GuideButtons"]
+custom_minimum_size = Vector2(170, 46)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.92, 0.88, 0.98, 1)
+theme_override_fonts/font = ExtResource("15_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_sec")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pri_press")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "Next Tip ▶"
+
+[node name="CloseGuideButton" type="Button" parent="TutorialOverlay/TutorialGuidePanel/GuideButtons"]
+custom_minimum_size = Vector2(220, 46)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.97, 0.92, 0.82, 1)
+theme_override_fonts/font = ExtResource("13_cinzel_bold")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_pri")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pri_press")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "Got It! Start Playing"
+
+[node name="EventOverlay" type="ColorRect" parent="."]
+visible = false
+z_index = 90
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.65)
+
+[node name="Panel" type="Panel" parent="EventOverlay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -380.0
+offset_top = -180.0
+offset_right = 380.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dialog")
+
+[node name="Nameplate" type="Panel" parent="EventOverlay/Panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -20.0
+offset_right = 250.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nameplate")
+
+[node name="SpeakerLabel" type="Label" parent="EventOverlay/Panel/Nameplate"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.96, 0.88, 0.65, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.95)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("13_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+text = "Speaker"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="EventOverlay/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 28.0
+offset_right = -32.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.94, 0.92, 0.9, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/line_spacing = 3
+theme_override_fonts/font = ExtResource("14_crimson_regular")
+theme_override_font_sizes/font_size = 19
+text = "Dialog line..."
+autowrap_mode = 2
+
+[node name="ContinueHint" type="Label" parent="EventOverlay/Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -32.0
+offset_right = -32.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.68, 0.7, 0.8, 0.9)
+theme_override_fonts/font = ExtResource("15_cinzel_semibold")
+theme_override_font_sizes/font_size = 12
+text = "Tap or click anywhere to continue ▶"
+horizontal_alignment = 2
+
+[node name="VictoryOverlay" type="ColorRect" parent="."]
+visible = false
+z_index = 100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+
+[node name="VictoryPanel" type="Panel" parent="VictoryOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -130.0
+offset_right = 280.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dialog")
+
+[node name="VictoryTitle" type="Label" parent="VictoryOverlay/VictoryPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 22.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.98, 0.88, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("13_cinzel_bold")
+theme_override_font_sizes/font_size = 24
+text = "VICTORY ACHIEVED"
+horizontal_alignment = 1
+
+[node name="VictorySubtitle" type="Label" parent="VictoryOverlay/VictoryPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 62.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9, 0.88, 0.94, 1)
+theme_override_fonts/font = ExtResource("14_crimson_regular")
+theme_override_font_sizes/font_size = 17
+text = "The enemy forces have broken. The Vanguard stands."
+horizontal_alignment = 1
+
+[node name="VictoryButton" type="Button" parent="VictoryOverlay/VictoryPanel"]
+custom_minimum_size = Vector2(180, 44)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -62.0
+offset_right = 90.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.97, 0.92, 0.82, 1)
+theme_override_fonts/font = ExtResource("13_cinzel_bold")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_pri")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pri_press")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "Claim Victory"
+
+[node name="ClaimCardModal" parent="." instance=ExtResource("10_claim_modal")]
+visible = false
+z_index = 120
+layout_mode = 1

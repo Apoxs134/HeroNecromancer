@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://battlefield/vfx/summon_burst/summon_burst.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://battlefield/vfx/summon_burst/summon_seal.svg" id="2_seal"]
+[ext_resource type="Texture2D" path="res://battlefield/vfx/soul_harvest/soul_mote.svg" id="3_mote"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_add"]
+blend_mode = 1
+
+[node name="SummonBurst" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="SealSprite" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_add")
+custom_minimum_size = Vector2(160, 160)
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = 80.0
+pivot_offset = Vector2(80, 80)
+texture = ExtResource("2_seal")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="WispsParticles" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_add")
+emitting = false
+amount = 16
+lifetime = 0.45
+one_shot = true
+explosiveness = 0.8
+texture = ExtResource("3_mote")
+direction = Vector2(0, -1)
+spread = 45.0
+gravity = Vector2(0, -90)
+initial_velocity_min = 100.0
+initial_velocity_max = 220.0
+damping_min = 20.0
+damping_max = 50.0
+scale_amount_min = 0.25
+scale_amount_max = 0.6

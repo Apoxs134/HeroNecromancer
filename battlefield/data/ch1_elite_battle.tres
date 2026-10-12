@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_lowlands_battlefield.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch1_elite_battle"
+title = "ELITE: INQUISITION PATROL"
+difficulty = "Elite"
+bg_texture = ExtResource("2_bg")
+enemies = ["Zealot Templar", "Holy Warhound", "Pyre Crossbowman"]
+tutorial_dialog = [{
+"speaker": "Zealot Templar",
+"text": "By the Sun's Grace, burn the defiler! Slay his walking dead!"
+}, {
+"speaker": "The Hero",
+"text": "The Church of Alden... already hunting. Stand fast, Vanguard!"
+}]
+next_state = 1
+next_dialog_id = ""
+next_encounter_tres = ""
+return_to_map = true

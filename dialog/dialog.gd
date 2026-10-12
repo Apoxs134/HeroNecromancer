@@ -3,7 +3,7 @@ extends Control
 @onready var bg_rect: ColorRect = $Background
 @onready var illustration_rect: TextureRect = $IllustrationRect
 @onready var dialog_panel: Panel = $DialogPanel
-@onready var speaker_label: Label = $DialogPanel/SpeakerLabel
+@onready var speaker_label: Label = find_child("SpeakerLabel", true, false) as Label
 @onready var message_label: Label = $DialogPanel/MessageLabel
 @onready var next_button: Button = $DialogPanel/NextButton
 @onready var skip_button: Button = $SkipButton
@@ -54,14 +54,16 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+	var is_tap = (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT) or (event is InputEventScreenTouch and event.pressed)
+	if is_tap:
+		var tap_pos: Vector2 = event.position if event is InputEventScreenTouch else event.global_position
 		if system_popup.visible:
-			if popup_button.get_global_rect().has_point(event.global_position):
+			if popup_button.get_global_rect().has_point(tap_pos):
 				return
 			return
-		if skip_button.get_global_rect().has_point(event.global_position):
+		if skip_button.get_global_rect().has_point(tap_pos):
 			return
-		if next_button.get_global_rect().has_point(event.global_position):
+		if next_button.get_global_rect().has_point(tap_pos):
 			return
 		_on_next_pressed()
 
@@ -333,6 +335,8 @@ func _advance_to_next_sequence() -> void:
 	var next_ch: String = _current_dialog.get("next_chapter", "")
 	if not next_ch.is_empty():
 		print("Advancing to next chapter: %s" % next_ch)
+		GameManager.crusade_chapter_key = next_ch
+		GameManager.reset_crusade()
 		transition_to_dialog(next_ch, "intro_scene")
 		return
 		
@@ -343,19 +347,28 @@ func _advance_to_next_sequence() -> void:
 			print("Advancing to BATTLEFIELD encounter...")
 			GameManager.switch_state(GameManager.GameState.BATTLEFIELD, {
 				"chapter": _active_chapter,
-				"encounter_id": _current_dialog.get("encounter_id", "skirmish_1")
+				"encounter_id": _current_dialog.get("encounter_id", "skirmish_1"),
+				"encounter_tres": _current_dialog.get("encounter_tres", "")
 			})
 			return
 		"COVER":
 			GameManager.switch_state(GameManager.GameState.COVER)
 			return
+		"CREDITS":
+			GameManager.switch_state(GameManager.GameState.CREDITS, {"game_completed": true})
+			return
 		"WORLD_MAP":
-			GameManager.switch_state(GameManager.GameState.WORLD_MAP)
+			var ch_map = "res://world_map/data/%s_map_data.tres" % _active_chapter.replace("chapter_", "ch")
+			GameManager.switch_state(GameManager.GameState.WORLD_MAP, {
+				"chapter": _active_chapter,
+				"map_data_tres": ch_map
+			})
 			return
 			
 	# 3. Default fallback
 	print("Dialogue completed. Returning to World Map.")
-	GameManager.switch_state(GameManager.GameState.WORLD_MAP)
-
-
-
+	var fallback_map = "res://world_map/data/%s_map_data.tres" % _active_chapter.replace("chapter_", "ch")
+	GameManager.switch_state(GameManager.GameState.WORLD_MAP, {
+		"chapter": _active_chapter,
+		"map_data_tres": fallback_map
+	})

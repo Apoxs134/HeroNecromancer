@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="sky_skirmish" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#02040a" />
+      <stop offset="50%" stop-color="#180e0c" />
+      <stop offset="80%" stop-color="#431407" />
+      <stop offset="100%" stop-color="#1c1917" />
+    </linearGradient>
+    <radialGradient id="fire_glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffedd5" stop-opacity="1" />
+      <stop offset="30%" stop-color="#ea580c" stop-opacity="0.8" />
+      <stop offset="65%" stop-color="#7c2d12" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1280" height="720" fill="url(#sky_skirmish)" />
+
+  <!-- Cloud Smoke Strata -->
+  <path d="M 0 140 C 300 80, 500 200, 800 120 C 1050 60, 1150 160, 1280 100 L 1280 0 L 0 0 Z" fill="#0f0705" opacity="0.9" />
+
+  <!-- Distant Hilltops -->
+  <polygon points="0,420 220,360 480,410 740,350 990,400 1280,340 1280,500 0,500" fill="#0d0909" />
+
+  <!-- Dirt Field -->
+  <rect y="460" width="1280" height="260" fill="#140f0c" />
+
+  <!-- Overturned Burning Supply Wagon (Mid-Left) -->
+  <circle cx="420" cy="460" r="110" fill="url(#fire_glow)" />
+  <!-- Broken Wagon Body -->
+  <polygon points="340,510 490,480 470,440 330,460" fill="#2d1a0e" />
+  <polygon points="350,510 390,440 405,445 365,515" fill="#1b1008" />
+  <!-- Broken Wagon Wheel -->
+  <circle cx="340" cy="520" r="38" stroke="#452712" stroke-width="8" fill="none" />
+  <line x1="340" y1="482" x2="340" y2="558" stroke="#452712" stroke-width="4" />
+  <line x1="302" y1="520" x2="378" y2="520" stroke="#452712" stroke-width="4" />
+
+  <!-- Flames on Wagon -->
+  <polygon points="410,450 430,380 445,430 460,370 475,440" fill="#f97316" />
+  <polygon points="420,440 435,395 448,435 455,400 465,440" fill="#fde047" />
+
+  <!-- Hostile Militia Pitchforks Staked in Mud -->
+  <line x1="880" y1="580" x2="860" y2="440" stroke="#475569" stroke-width="5" />
+  <line x1="850" y1="450" x2="870" y2="450" stroke="#475569" stroke-width="5" />
+  <line x1="850" y1="450" x2="850" y2="415" stroke="#94a3b8" stroke-width="4" />
+  <line x1="860" y1="440" x2="860" y2="410" stroke="#94a3b8" stroke-width="4" />
+  <line x1="870" y1="450" x2="870" y2="415" stroke="#94a3b8" stroke-width="4" />
+
+  <!-- Second Scythe / Halberd -->
+  <line x1="950" y1="590" x2="940" y2="430" stroke="#475569" stroke-width="5" />
+  <path d="M 940 430 Q 980 420 970 450" stroke="#94a3b8" stroke-width="6" fill="none" />
+
+  <!-- Ground Shadows and Scrim -->
+  <ellipse cx="640" cy="670" rx="600" ry="120" fill="#080606" opacity="0.6" />
+</svg>

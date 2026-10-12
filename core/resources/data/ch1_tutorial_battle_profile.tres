@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AreaProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://core/resources/area_profile.gd" id="1_prof"]
+[ext_resource type="Resource" path="res://core/cards/data/starter_vanguard_deck.tres" id="2_deck"]
+
+[resource]
+script = ExtResource("1_prof")
+zone = 1
+chapter = 1
+target_state = 2
+dialog_id = 0
+custom_dialog_id = ""
+encounter_index = 0
+deck = ExtResource("2_deck")
+map_data_tres = ""
+encounter_tres = "res://battlefield/data/ch1_battle_tutorial.tres"

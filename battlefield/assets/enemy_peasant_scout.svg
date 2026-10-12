@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" width="160" height="220">
+  <defs>
+    <radialGradient id="scoutGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#450a0a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tunicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#57534e"/>
+      <stop offset="100%" stop-color="#292524"/>
+    </linearGradient>
+    <linearGradient id="spearGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="30%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Shadow -->
+  <ellipse cx="80" cy="205" rx="55" ry="12" fill="#0c0a09" opacity="0.6"/>
+  <!-- Threat Aura -->
+  <circle cx="80" cy="110" r="75" fill="url(#scoutGlow)"/>
+
+  <!-- Left-Facing Silhouette: Peasant Militia Scout -->
+  <!-- Legs -->
+  <rect x="62" y="150" width="12" height="50" rx="3" fill="#1c1917"/>
+  <rect x="84" y="150" width="12" height="50" rx="3" fill="#1c1917"/>
+  <!-- Boots -->
+  <path d="M56 195 L76 195 L76 205 L52 205 Z" fill="#292524"/>
+  <path d="M78 195 L98 195 L98 205 L74 205 Z" fill="#292524"/>
+
+  <!-- Torso / Tattered Militia Tunic -->
+  <path d="M55 90 L105 85 L115 155 L45 155 Z" fill="url(#tunicGrad)" stroke="#1c1917" stroke-width="2"/>
+  <path d="M50 145 L60 160 L75 145 L90 160 L105 145 L115 155" fill="none" stroke="#1c1917" stroke-width="2"/>
+
+  <!-- Leather Chest Harness / Rope -->
+  <line x1="58" y1="92" x2="102" y2="148" stroke="#78350f" stroke-width="3"/>
+  <line x1="102" y1="92" x2="58" y2="148" stroke="#78350f" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Head / Peasant Hood (Facing Left) -->
+  <path d="M60 48 C60 30 75 22 95 24 C112 26 118 42 114 62 C110 76 96 82 75 80 C62 78 58 64 60 48 Z" fill="#44403c" stroke="#1c1917" stroke-width="2"/>
+  <!-- Face shadow cutout -->
+  <path d="M62 45 C66 40 76 40 78 52 C78 62 70 66 64 64 Z" fill="#1c1917"/>
+  <!-- Glaring angry eye -->
+  <ellipse cx="69" cy="50" rx="3" ry="1.8" fill="#ef4444"/>
+  <circle cx="69" cy="50" r="1" fill="#fef2f2"/>
+
+  <!-- Hands / Arms -->
+  <path d="M95 95 L110 120 L85 130" fill="none" stroke="#44403c" stroke-width="9" stroke-linecap="round"/>
+  <!-- Front Arm holding weapon thrusting left -->
+  <path d="M65 95 L40 120 L30 115" fill="none" stroke="#57534e" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Improvised Spear / Pitchfork Pole (Facing Left) -->
+  <line x1="20" y1="20" x2="105" y2="210" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+  <!-- Iron Spear Head / Sickle blade -->
+  <path d="M12 10 L28 35 L18 42 Z" fill="url(#spearGrad)" stroke="#0f172a" stroke-width="1.5"/>
+  <path d="M14 12 Q2 28 8 46" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Bloodstain on tip -->
+  <path d="M12 10 L18 22 L14 24 Z" fill="#991b1b"/>
+</svg>

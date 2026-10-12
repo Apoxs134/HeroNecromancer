@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="sky_storm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="40%" stop-color="#0f172a" />
+      <stop offset="70%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#2d2218" />
+    </linearGradient>
+    <linearGradient id="wheat_field" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#451a03" />
+      <stop offset="40%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+    <radialGradient id="pale_glow_vargas" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="torch_distant" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fed7aa" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#f97316" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#7c2d12" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky & Gathering Stormclouds -->
+  <rect width="1280" height="720" fill="url(#sky_storm)" />
+
+  <!-- Heavy Storm Cloud Masses -->
+  <path d="M 0 160 C 200 120, 380 200, 600 140 C 820 80, 1060 160, 1280 120 L 1280 0 L 0 0 Z" fill="#0b1329" opacity="0.9" />
+  <path d="M 0 240 C 240 180, 480 260, 720 200 C 960 150, 1120 230, 1280 180 L 1280 0 L 0 0 Z" fill="#030712" opacity="0.7" />
+
+  <!-- Distant Granary & Windmill Ridge Silhouette -->
+  <path d="M 0 450 C 350 430, 700 400, 1280 430 L 1280 720 L 0 720 Z" fill="#141a1c" />
+  <!-- Windmill & Granary Silhouette on Hill -->
+  <rect x="940" y="320" width="60" height="90" fill="#090d10" />
+  <polygon points="930,320 970,270 1010,320" fill="#090d10" />
+  <!-- Mill Blades -->
+  <line x1="970" y1="280" x2="920" y2="230" stroke="#090d10" stroke-width="4" />
+  <line x1="970" y1="280" x2="1020" y2="330" stroke="#090d10" stroke-width="4" />
+  <line x1="970" y1="280" x2="920" y2="330" stroke="#090d10" stroke-width="4" />
+  <line x1="970" y1="280" x2="1020" y2="230" stroke="#090d10" stroke-width="4" />
+
+  <!-- Distant Granary Torches Flickering -->
+  <circle cx="880" cy="380" r="28" fill="url(#torch_distant)" />
+  <circle cx="910" cy="390" r="22" fill="url(#torch_distant)" />
+  <circle cx="1030" cy="385" r="25" fill="url(#torch_distant)" />
+
+  <!-- Midground Rolling Wheat Fields -->
+  <path d="M 0 500 C 400 480, 800 460, 1280 500 L 1280 720 L 0 720 Z" fill="#2e1b0c" />
+  <path d="M 0 540 C 300 520, 700 530, 1280 510 L 1280 720 L 0 720 Z" fill="url(#wheat_field)" opacity="0.9" />
+
+  <!-- Wind-bent Wheat Grass Lines -->
+  <path d="M 40 540 Q 60 510, 90 500 M 120 550 Q 140 520, 180 510 M 220 530 Q 250 500, 290 495" stroke="#f59e0b" stroke-width="3" fill="none" opacity="0.75" />
+  <path d="M 400 530 Q 430 500, 470 490 M 560 540 Q 590 510, 640 505 M 720 525 Q 760 495, 800 490" stroke="#f59e0b" stroke-width="3" fill="none" opacity="0.7" />
+  <path d="M 1040 535 Q 1070 505, 1120 500 M 1180 545 Q 1210 515, 1260 510" stroke="#f59e0b" stroke-width="3" fill="none" opacity="0.6" />
+
+  <!-- Foreground Dark Path & Field Edge -->
+  <path d="M 0 600 C 350 590, 800 580, 1280 610 L 1280 720 L 0 720 Z" fill="#0b0f19" />
+
+  <!-- The Hero & Undead Sworn Vanguard Moving Through Grain -->
+  <!-- Vargas Spirit Aura -->
+  <circle cx="280" cy="530" r="140" fill="url(#pale_glow_vargas)" />
+
+  <!-- Vargas (Undead Tower Bastion) -->
+  <polygon points="230,510 320,510 340,680 210,680" fill="#0f172a" />
+  <circle cx="275" cy="480" r="22" fill="#cbd5e1" /> <!-- Helm / Skull -->
+  <circle cx="268" cy="478" r="4" fill="#38bdf8" /> <!-- Glowing Cyan Eye -->
+  <circle cx="282" cy="478" r="4" fill="#38bdf8" />
+  <!-- Great Tower Shield with Cyan Trim -->
+  <rect x="180" y="490" width="50" height="170" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="3" />
+
+  <!-- The Hero (Commander in Dark Tattered Cloak) -->
+  <polygon points="360,500 430,500 450,680 340,680" fill="#020617" />
+  <circle cx="395" cy="470" r="20" fill="#f8fafc" />
+  <!-- Hero's Left Hand glowing with Pale Flame -->
+  <circle cx="450" cy="550" r="16" fill="#38bdf8" opacity="0.8" />
+  <circle cx="450" cy="550" r="7" fill="#ffffff" />
+  <!-- Sheathed Blade on Hip -->
+  <line x1="360" y1="520" x2="330" y2="640" stroke="#94a3b8" stroke-width="4" />
+
+  <!-- Kaelen Undead Silhouette (Right Scout) -->
+  <polygon points="490,520 540,520 555,670 480,670" fill="#0f172a" opacity="0.9" />
+  <circle cx="515" cy="495" r="16" fill="#94a3b8" />
+  <circle cx="512" cy="493" r="3" fill="#38bdf8" />
+  <!-- War Bow on Back -->
+  <path d="M 545 470 Q 565 540, 545 610" stroke="#475569" stroke-width="4" fill="none" />
+
+</svg>

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_citadel_streets.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch3_tile_battle"
+title = "CITADEL GUARD: AVENUE OF KINGS"
+difficulty = "Hard"
+bg_texture = ExtResource("2_bg")
+enemies = ["Citadel Halberdier", "Royal Arbalestier", "Palace Gilded Knight", "Citadel Halberdier"]
+tutorial_dialog = [{
+"speaker": "Citadel Halberdier",
+"text": "The gate has fallen! Barricade the grand avenue! Protect the King!"
+}, {
+"speaker": "The Hero",
+"text": "Your King gave you hollow coin to die for his crimes. Yield or join the line."
+}]
+next_state = 1
+next_dialog_id = ""
+next_encounter_tres = ""
+return_to_map = true

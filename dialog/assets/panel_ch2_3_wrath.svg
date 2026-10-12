@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg_wrath" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#02040a" />
+      <stop offset="45%" stop-color="#080e1a" />
+      <stop offset="80%" stop-color="#0c1929" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <radialGradient id="pale_wrath_core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="eye_flare" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Dark Atmospheric Background -->
+  <rect width="1280" height="720" fill="url(#bg_wrath)" />
+
+  <!-- Ghostly Phantoms of the Fallen Vanguard Behind Him -->
+  <!-- Vargas's Spectral Visage (Left) -->
+  <g transform="translate(320, 260)" opacity="0.35">
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="10,14" />
+    <!-- Helmet Silhouette -->
+    <path d="M -45 50 L -40 -30 Q 0 -60, 40 -30 L 45 50 Z" fill="#030712" stroke="#38bdf8" stroke-width="2" />
+    <!-- Glowing Visor Slit -->
+    <line x1="-25" y1="-5" x2="25" y2="-5" stroke="#7dd3fc" stroke-width="3" />
+  </g>
+
+  <!-- Lyra's Priestess Phantom (Right) -->
+  <g transform="translate(960, 270)" opacity="0.35">
+    <circle cx="0" cy="0" r="95" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="8,12" />
+    <!-- Veiled Hood Silhouette -->
+    <path d="M -40 60 Q 0 -60, 40 60 Z" fill="#030712" stroke="#38bdf8" stroke-width="2" />
+    <!-- Hollow Eye Points -->
+    <circle cx="-12" cy="0" r="3" fill="#7dd3fc" />
+    <circle cx="12" cy="0" r="3" fill="#7dd3fc" />
+  </g>
+
+  <!-- Center Pale Necromantic Eruption -->
+  <circle cx="640" cy="460" r="380" fill="url(#pale_wrath_core)" />
+
+  <!-- The Hero Bust Silhouette (Center-Right Heavy) -->
+  <g transform="translate(640, 220)">
+    <!-- Shoulders & Heavy Tattered Paladin Pauldron (Right Shoulder Desecrated) -->
+    <path d="M -180 500 L -120 220 L -60 170 L 60 170 L 140 230 L 220 500 Z" fill="#020408" />
+    
+    <!-- Spiked Pauldron Details -->
+    <polygon points="-120,220 -150,160 -100,180" fill="#020408" stroke="#38bdf8" stroke-width="1.5" />
+    <polygon points="140,230 180,170 120,190" fill="#020408" stroke="#38bdf8" stroke-width="1.5" />
+
+    <!-- Necrotic Veins Branching on Armor / Neck -->
+    <path d="M -15 150 Q -30 180, -45 220 M -20 195 Q -5 210, 0 240 M 15 155 Q 30 190, 40 230" stroke="#38bdf8" stroke-width="2.5" fill="none" opacity="0.9" />
+
+    <!-- Cowl / Hood Silhouette -->
+    <path d="M -70 170 Q 0 40, 70 170 Q 0 150, -70 170 Z" fill="#020408" />
+    <!-- Inner Dark Face Shadow -->
+    <ellipse cx="0" cy="115" rx="36" ry="48" fill="#010204" />
+
+    <!-- Blazing Soul Eyes (Piercing Blue Corpse Flame) -->
+    <circle cx="-16" cy="108" r="6" fill="url(#eye_flare)" />
+    <circle cx="16" cy="108" r="6" fill="url(#eye_flare)" />
+    <circle cx="-16" cy="108" r="2.5" fill="#ffffff" />
+    <circle cx="16" cy="108" r="2.5" fill="#ffffff" />
+
+    <!-- Corpse Flame Wisps Escaping From Eyes -->
+    <path d="M -16 105 Q -32 80, -28 50 Q -42 70, -22 100" fill="#38bdf8" opacity="0.8" />
+    <path d="M 16 105 Q 32 80, 28 50 Q 42 70, 22 100" fill="#38bdf8" opacity="0.8" />
+
+    <!-- Gauntlet Raised with Blazing Pale Flame -->
+    <g transform="translate(0, 310)">
+      <!-- Clenched Iron Fist -->
+      <path d="M -40 40 L -30 -20 L 30 -20 L 40 40 Z" fill="#020408" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="0" cy="0" r="32" fill="url(#eye_flare)" />
+      <!-- Crackling Magic Tendrils -->
+      <path d="M -20 -10 Q -50 -50, -25 -80 M 20 -10 Q 55 -55, 30 -85 M 0 -20 Q -10 -70, 0 -110" stroke="#ffffff" stroke-width="2" fill="none" />
+    </g>
+  </g>
+
+  <!-- Ambient Ash / Soul Embers Rising -->
+  <circle cx="480" cy="380" r="2.5" fill="#7dd3fc" opacity="0.7" />
+  <circle cx="530" cy="290" r="3.5" fill="#38bdf8" opacity="0.9" />
+  <circle cx="710" cy="320" r="2.0" fill="#ffffff" opacity="0.8" />
+  <circle cx="780" cy="240" r="3.0" fill="#7dd3fc" opacity="0.6" />
+  <circle cx="420" cy="480" r="2.0" fill="#38bdf8" opacity="0.5" />
+  <circle cx="850" cy="440" r="2.5" fill="#ffffff" opacity="0.7" />
+</svg>

@@ -4,6 +4,7 @@
 * **The Protagonist (The Sun-Touched / The Bonachón)**: Once a beloved, genial hero chosen by the Sun Citadel. After felling the Demon Lord alongside his sworn squad, he returned not to a crown, but to poisoned chalices and royal halberds.
 * **The Betrayal**: King Alden feared that a living god-slayer commander would render the royal bloodline obsolete. The vanguard was butchered in the banquet hall; their corpses were dumped into the Charnel Trench.
 * **The Inversion**: In grief and despair, the Hero's pure Holy Light inverted. Unable to heal mortal flesh, his light now rebinds souls to bone—creating **Pale Necromancy** (radiant white flames binding loyal spirits).
+* **The Weapon (The Pale Scythe)**: The Hero's gilded Sun-Citadel broadsword was snapped and stolen at the feast. Awakening in the trench, he bound snapped iron and charnel bone into the **Pale Scythe**—the tool to harvest broken oaths and reap judgment upon the Crown.
 
 ---
 

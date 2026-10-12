@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="throne_room_bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020306" />
+      <stop offset="40%" stop-color="#090b14" />
+      <stop offset="80%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020408" />
+    </linearGradient>
+    <radialGradient id="pale_halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#0369a1" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="mirror_glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3" />
+      <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Throne Room Vault -->
+  <rect width="1280" height="720" fill="url(#throne_room_bg)" />
+
+  <!-- Grand Pillars of the Throne Dais -->
+  <rect x="180" y="0" width="70" height="560" fill="#0b0f19" />
+  <rect x="1030" y="0" width="70" height="560" fill="#0b0f19" />
+
+  <!-- Multi-Tiered Stone Dais Steps -->
+  <polygon points="260,560 1020,560 1060,600 220,600" fill="#070a12" stroke="#1e293b" stroke-width="1.5" />
+  <polygon points="220,600 1060,600 1100,640 180,640" fill="#05080e" stroke="#1e293b" stroke-width="1.5" />
+  <polygon points="180,640 1100,640 1140,720 140,720" fill="#030509" />
+
+  <!-- Massive Gilded Bone Throne at Center -->
+  <path d="M 520 540 L 530 220 Q 640 160, 750 220 L 760 540 Z" fill="#020408" stroke="#334155" stroke-width="3" />
+  <!-- Spiked Throne Crest (Crown of Thorns/Bone) -->
+  <polygon points="530,220 510,140 560,190 600,110 640,180 680,110 720,190 770,140 750,220" fill="#060912" stroke="#38bdf8" stroke-width="2" />
+
+  <!-- Pale Glow Surrounding the Throne -->
+  <circle cx="640" cy="340" r="260" fill="url(#pale_halo)" />
+
+  <!-- The Hero Seated Upon the Throne -->
+  <g transform="translate(640, 360)">
+    <!-- Seated Armor & Flowing Dark Robe Across Dais -->
+    <path d="M -70 180 L -50 -10 Q 0 -30, 50 -10 L 70 180 Z" fill="#020407" />
+    <!-- Cloak draping off arms and throne sides -->
+    <path d="M -80 60 L -120 180 L -60 180 Z" fill="#040710" />
+    <path d="M 80 60 L 120 180 L 60 180 Z" fill="#040710" />
+
+    <!-- Shoulders & Bone Pauldrons -->
+    <polygon points="-70,20 -100,-10 -55,0" fill="#060912" stroke="#38bdf8" stroke-width="1.5" />
+    <polygon points="70,20 100,-10 55,0" fill="#060912" stroke="#38bdf8" stroke-width="1.5" />
+
+    <!-- Resting Head in Gauntleted Hand / Cold Sovereign Posture -->
+    <circle cx="0" cy="-55" r="24" fill="#010204" />
+    
+    <!-- Sunken Skull-like Visage Details -->
+    <!-- Piercing Blue Hollow Sockets -->
+    <circle cx="-8" cy="-54" r="3.5" fill="#38bdf8" />
+    <circle cx="8" cy="-54" r="3.5" fill="#38bdf8" />
+
+    <!-- Crown of Runic Iron atop Hood -->
+    <polygon points="-16,-75 -8,-90 0,-78 8,-90 16,-75" fill="#090d16" stroke="#38bdf8" stroke-width="2" />
+
+    <!-- Pale Greatsword Resting Upright Between Knees -->
+    <line x1="0" y1="-20" x2="0" y2="180" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" />
+    <circle cx="0" cy="-20" r="12" fill="#7dd3fc" opacity="0.9" />
+  </g>
+
+  <!-- Risen Sentry: King Alden (Right Flank - Undead Halberdier Thrall) -->
+  <g transform="translate(860, 430)">
+    <path d="M -20 130 L -12 30 Q 0 15, 12 30 L 20 130 Z" fill="#020408" />
+    <!-- Rags of Torn Royal Crimson Ermine Cloak -->
+    <path d="M -22 45 L -35 125 L -18 120 Z" fill="#4c0519" opacity="0.6" />
+    <circle cx="0" cy="18" r="10" fill="#050811" />
+    <!-- Cold Undead Eye -->
+    <circle cx="-3" cy="17" r="1.5" fill="#38bdf8" />
+    <!-- Halberd Held in Rigid Guard Stance -->
+    <line x1="14" y1="-50" x2="14" y2="130" stroke="#1e293b" stroke-width="3" />
+    <polygon points="14,-40 32,-25 14,-10" fill="#38bdf8" opacity="0.7" />
+  </g>
+
+  <!-- Risen Sentry: Vargas (Left Flank - Sentinel) -->
+  <g transform="translate(420, 420)">
+    <path d="M -25 140 L -20 35 Q 0 20, 20 35 L 25 140 Z" fill="#020408" />
+    <circle cx="0" cy="22" r="11" fill="#050811" />
+    <!-- Tower Shield Locked Down -->
+    <polygon points="-35,30 -5,25 -10,135 -40,130" fill="#090d16" stroke="#38bdf8" stroke-width="1.5" />
+  </g>
+
+  <!-- Gilded Mirror on Left Wall Reflecting the Demon Lord Visage -->
+  <g transform="translate(100, 260)">
+    <!-- Ornate Gilded Mirror Frame -->
+    <ellipse cx="0" cy="100" rx="60" ry="140" fill="#040711" stroke="#fbbf24" stroke-width="3" />
+    <ellipse cx="0" cy="100" rx="52" ry="130" fill="url(#mirror_glass)" />
+    <!-- In the Mirror: Horned Demonic Crown Silhouette Overlay -->
+    <g transform="translate(0, 70)" opacity="0.5">
+      <ellipse cx="0" cy="0" rx="20" ry="26" fill="#020408" stroke="#ef4444" stroke-width="1" />
+      <circle cx="-7" cy="-2" r="2.5" fill="#ef4444" />
+      <circle cx="7" cy="-2" r="2.5" fill="#ef4444" />
+      <!-- Demon Horns branching into Pale Flame -->
+      <path d="M -15 -18 Q -30 -50, -25 -70 M 15 -18 Q 30 -50, 25 -70" stroke="#ef4444" stroke-width="2" fill="none" />
+    </g>
+  </g>
+
+  <!-- Cold Embers Drifting Across the Empty Throne Room -->
+  <circle cx="580" cy="480" r="2" fill="#7dd3fc" opacity="0.8" />
+  <circle cx="680" cy="440" r="2.5" fill="#38bdf8" opacity="0.7" />
+  <circle cx="620" cy="280" r="2" fill="#ffffff" opacity="0.9" />
+  <circle cx="740" cy="320" r="3" fill="#7dd3fc" opacity="0.6" />
+</svg>

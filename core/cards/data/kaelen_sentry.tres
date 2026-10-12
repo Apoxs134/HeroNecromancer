@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dow4uwj1h02oa"]
+
+[ext_resource type="Script" uid="uid://e7c4twm2nvj1" path="res://core/cards/card_data.gd" id="1_card"]
+[ext_resource type="Texture2D" uid="uid://dqcit867oix5v" path="res://battlefield/assets/cards/kaelen_sentry.webp" id="2_art"]
+
+[resource]
+script = ExtResource("1_card")
+id = "kaelen_sentry"
+title = "Kaelen's Sentry"
+description = "Summon Kaelen (Fires 4 Dmg each turn). (Burst: 14 AOE Dmg)."
+card_type = 3
+target_type = 2
+damage = 4
+summon_id = "kaelen_spirit"
+burst_damage = 14
+art = ExtResource("2_art")

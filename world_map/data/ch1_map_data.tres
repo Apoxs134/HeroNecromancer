@@ -1,0 +1,260 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=29 format=3]
+
+[ext_resource type="Script" path="res://world_map/map_node_data.gd" id="1_node_script"]
+[ext_resource type="Script" path="res://world_map/map_data.gd" id="2_map_script"]
+[ext_resource type="Texture2D" uid="uid://brq4nwawg6es7" path="res://battlefield/assets/lowlands_map.webp" id="3_bg"]
+[ext_resource type="Resource" path="res://battlefield/data/ch1_tile_battle.tres" id="4_battle"]
+[ext_resource type="Resource" path="res://battlefield/data/ch1_elite_battle.tres" id="5_elite"]
+[ext_resource type="Resource" path="res://battlefield/data/ch1_boss_battle.tres" id="6_boss"]
+
+[sub_resource type="Resource" id="sub_node_0"]
+script = ExtResource("1_node_script")
+id = "node_0_start"
+title = "Citadel Outskirts"
+node_type = 0
+tier = 0
+position = Vector2(640, 1720)
+connected_node_ids = ["node_1_left", "node_1_right"]
+cleared = true
+
+[sub_resource type="Resource" id="sub_node_1_l"]
+script = ExtResource("1_node_script")
+id = "node_1_left"
+title = "Peasant Outpost"
+node_type = 1
+tier = 1
+position = Vector2(460, 1540)
+connected_node_ids = ["node_2_left", "node_2_mid"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_1_r"]
+script = ExtResource("1_node_script")
+id = "node_1_right"
+title = "Granary Lowlands"
+node_type = 1
+tier = 1
+position = Vector2(820, 1540)
+connected_node_ids = ["node_2_mid", "node_2_right"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_2_l"]
+script = ExtResource("1_node_script")
+id = "node_2_left"
+title = "Militia Patrol"
+node_type = 1
+tier = 2
+position = Vector2(360, 1370)
+connected_node_ids = ["node_3_left"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_2_m"]
+script = ExtResource("1_node_script")
+id = "node_2_mid"
+title = "Grimoire Shrine"
+node_type = 3
+tier = 2
+position = Vector2(640, 1370)
+connected_node_ids = ["node_3_left", "node_3_right"]
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_2_r"]
+script = ExtResource("1_node_script")
+id = "node_2_right"
+title = "Soul Crypt"
+node_type = 4
+tier = 2
+position = Vector2(920, 1370)
+connected_node_ids = ["node_3_right"]
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_3_l"]
+script = ExtResource("1_node_script")
+id = "node_3_left"
+title = "Scout Ambush"
+node_type = 1
+tier = 3
+position = Vector2(480, 1200)
+connected_node_ids = ["node_4_left", "node_4_right"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_3_r"]
+script = ExtResource("1_node_script")
+id = "node_3_right"
+title = "Burning Mill Patrol"
+node_type = 1
+tier = 3
+position = Vector2(800, 1200)
+connected_node_ids = ["node_4_right", "node_4_altar"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_4_l"]
+script = ExtResource("1_node_script")
+id = "node_4_left"
+title = "Templar Inquisitor"
+node_type = 2
+tier = 4
+position = Vector2(380, 1030)
+connected_node_ids = ["node_5_left", "node_5_mid"]
+encounter = ExtResource("5_elite")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_4_r"]
+script = ExtResource("1_node_script")
+id = "node_4_right"
+title = "Forgotten Crypt"
+node_type = 3
+tier = 4
+position = Vector2(640, 1030)
+connected_node_ids = ["node_5_mid", "node_5_right"]
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_4_a"]
+script = ExtResource("1_node_script")
+id = "node_4_altar"
+title = "Sacrificial Altar"
+node_type = 4
+tier = 4
+position = Vector2(900, 1030)
+connected_node_ids = ["node_5_right"]
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_5_l"]
+script = ExtResource("1_node_script")
+id = "node_5_left"
+title = "Field Hospital"
+node_type = 4
+tier = 5
+position = Vector2(420, 860)
+connected_node_ids = ["node_6_left"]
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_5_m"]
+script = ExtResource("1_node_script")
+id = "node_5_mid"
+title = "Inquisition Garrison"
+node_type = 1
+tier = 5
+position = Vector2(640, 860)
+connected_node_ids = ["node_6_left", "node_6_right"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_5_r"]
+script = ExtResource("1_node_script")
+id = "node_5_right"
+title = "Grain Wagon Convoy"
+node_type = 1
+tier = 5
+position = Vector2(860, 860)
+connected_node_ids = ["node_6_right"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_6_l"]
+script = ExtResource("1_node_script")
+id = "node_6_left"
+title = "Crusader Vanguard"
+node_type = 2
+tier = 6
+position = Vector2(480, 690)
+connected_node_ids = ["node_7_left", "node_7_mid"]
+encounter = ExtResource("5_elite")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_6_r"]
+script = ExtResource("1_node_script")
+id = "node_6_right"
+title = "Forbidden Reliquary"
+node_type = 3
+tier = 6
+position = Vector2(800, 690)
+connected_node_ids = ["node_7_mid", "node_7_right"]
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_7_l"]
+script = ExtResource("1_node_script")
+id = "node_7_left"
+title = "Church Watchtower"
+node_type = 1
+tier = 7
+position = Vector2(380, 520)
+connected_node_ids = ["node_8_left"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_7_m"]
+script = ExtResource("1_node_script")
+id = "node_7_mid"
+title = "Consecrated Shrine"
+node_type = 4
+tier = 7
+position = Vector2(640, 520)
+connected_node_ids = ["node_8_left", "node_8_right"]
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_7_r"]
+script = ExtResource("1_node_script")
+id = "node_7_right"
+title = "Militia Reserve"
+node_type = 1
+tier = 7
+position = Vector2(900, 520)
+connected_node_ids = ["node_8_right"]
+encounter = ExtResource("4_battle")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_8_l"]
+script = ExtResource("1_node_script")
+id = "node_8_left"
+title = "Granary Gate Guard"
+node_type = 2
+tier = 8
+position = Vector2(500, 350)
+connected_node_ids = ["node_9_boss"]
+encounter = ExtResource("5_elite")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_8_r"]
+script = ExtResource("1_node_script")
+id = "node_8_right"
+title = "Fortified Bastion"
+node_type = 2
+tier = 8
+position = Vector2(780, 350)
+connected_node_ids = ["node_9_boss"]
+encounter = ExtResource("5_elite")
+cleared = false
+
+[sub_resource type="Resource" id="sub_node_9_b"]
+script = ExtResource("1_node_script")
+id = "node_9_boss"
+title = "Oakhaven Granary Garrison"
+node_type = 5
+tier = 9
+position = Vector2(640, 180)
+connected_node_ids = []
+encounter = ExtResource("6_boss")
+cleared = false
+
+[resource]
+script = ExtResource("2_map_script")
+map_id = "oakhaven_crusade"
+map_name = "OAKHAVEN LOWLANDS - CRUSADE"
+bg_texture = ExtResource("3_bg")
+tutorial_title = "CRUSADE MAP NAVIGATION"
+tutorial_text = "Ascend through the lowlands toward the Granary:
+- Choose your path upwards along connected routes.
+- ⚔️ Skirmish: Battle militia scouts for souls.
+- 💀 Elite: Face dangerous Templar inquisitors.
+- 📜 Grimoire Shrine: Claim forbidden spells.
+- 🕯️ Bone Altar: Sacrifice, Transmute, or Heal.
+- 👑 Granary: Breaching the fortress completes Chapter 1."
+nodes = [SubResource("sub_node_0"), SubResource("sub_node_1_l"), SubResource("sub_node_1_r"), SubResource("sub_node_2_l"), SubResource("sub_node_2_m"), SubResource("sub_node_2_r"), SubResource("sub_node_3_l"), SubResource("sub_node_3_r"), SubResource("sub_node_4_l"), SubResource("sub_node_4_r"), SubResource("sub_node_4_a"), SubResource("sub_node_5_l"), SubResource("sub_node_5_m"), SubResource("sub_node_5_r"), SubResource("sub_node_6_l"), SubResource("sub_node_6_r"), SubResource("sub_node_7_l"), SubResource("sub_node_7_m"), SubResource("sub_node_7_r"), SubResource("sub_node_8_l"), SubResource("sub_node_8_r"), SubResource("sub_node_9_b")]
+start_node_id = "node_0_start"
+end_dialog_id = "ending_scene"
+chapter_key = "chapter_1"

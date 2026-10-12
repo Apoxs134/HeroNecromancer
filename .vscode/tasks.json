@@ -1,0 +1,63 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Combat Simulator (Headless Analytics)",
+			"type": "shell",
+			"command": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"args": [
+				"--headless",
+				"res://core/simulation/balance_simulator.tscn",
+				"--",
+				"--runs=100",
+				"--bot=balanced"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated",
+				"clear": true,
+				"showReuseMessage": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Launch Auto-Battler Colosseum (Spectator Mode)",
+			"type": "shell",
+			"command": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"args": [
+				"res://core/simulation/simulation_colosseum.tscn"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated",
+				"clear": true,
+				"showReuseMessage": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Chapter 1 Pipeline Test",
+			"type": "shell",
+			"command": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"args": [
+				"--headless",
+				"res://core/tests/test_chapter_1_pipeline.tscn"
+			],
+			"group": "test",
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated",
+				"clear": true
+			},
+			"problemMatcher": []
+		}
+	]
+}

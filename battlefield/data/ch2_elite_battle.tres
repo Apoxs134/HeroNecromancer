@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_crags.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch2_elite_battle"
+title = "INQUISITION JUDICIAR HOST"
+difficulty = "Elite"
+bg_texture = ExtResource("2_bg")
+enemies = ["Grand Judiciar Vane", "Purifying Templars", "Iron Maiden Vanguard", "Inquisition Crossbowman"]
+tutorial_dialog = [{
+"speaker": "Grand Judiciar Vane",
+"text": "Your pale witchcraft ends in this pass, traitor. Your bones will burn to cinders."
+}, {
+"speaker": "The Hero",
+"text": "I bled for the Sun while you sat in cathedral halls, Vane. Face judgment."
+}]
+next_state = 1
+next_dialog_id = ""
+next_encounter_tres = ""
+return_to_map = true

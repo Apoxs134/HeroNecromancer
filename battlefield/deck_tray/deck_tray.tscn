@@ -1,0 +1,268 @@
+[gd_scene load_steps=13 format=3 uid="uid://c6q7w8decktray"]
+
+[ext_resource type="Script" path="res://battlefield/deck_tray/deck_tray.gd" id="1_tray_gd"]
+[ext_resource type="Texture2D" uid="uid://7y6rcc2hhpew" path="res://ui/dialog_v2_ui.webp" id="2_dialog_v2"]
+[ext_resource type="Texture2D" uid="uid://8qecqrlxsthj" path="res://ui/button_state_normal_ui.webp" id="3_btn_normal"]
+[ext_resource type="Texture2D" uid="uid://ciloubrkxahvw" path="res://ui/button_state_hover_ui.webp" id="4_btn_hover"]
+[ext_resource type="Texture2D" uid="uid://u0fhxr0fwan0" path="res://ui/button_state_press_ui.webp" id="5_btn_press"]
+[ext_resource type="FontFile" uid="uid://c8m3isspuo012" path="res://ui/fonts/Cinzel/static/Cinzel-Bold.ttf" id="6_cinzel_bold"]
+[ext_resource type="FontFile" uid="uid://cor178qbqtib2" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-MediumItalic.ttf" id="7_crimson_italic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_modal_panel"]
+content_margin_left = 34.0
+content_margin_top = 26.0
+content_margin_right = 34.0
+content_margin_bottom = 26.0
+texture = ExtResource("2_dialog_v2")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_title_plate"]
+content_margin_left = 20.0
+content_margin_top = 8.0
+content_margin_right = 20.0
+content_margin_bottom = 8.0
+bg_color = Color(0.08, 0.07, 0.11, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.74, 0.6, 0.35, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_count_plate"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+bg_color = Color(0.06, 0.08, 0.12, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.42, 0.55, 0.72, 0.75)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close_normal"]
+bg_color = Color(0.38, 0.08, 0.1, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.85, 0.3, 0.35, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close_hover"]
+bg_color = Color(0.58, 0.12, 0.16, 0.96)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.48, 0.48, 0.95)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close_pressed"]
+bg_color = Color(0.24, 0.04, 0.06, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7, 0.22, 0.25, 0.9)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="DeckTray" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tray_gd")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.03, 0.82)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -320.0
+offset_right = 560.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_modal_panel")
+
+[node name="HeaderBar" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 32.0
+offset_top = 16.0
+offset_right = -32.0
+offset_bottom = 66.0
+grow_horizontal = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="TitleSection" type="PanelContainer" parent="Panel/HeaderBar"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_title_plate")
+
+[node name="TitleLabel" type="Label" parent="Panel/HeaderBar/TitleSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.97, 0.91, 0.76, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("6_cinzel_bold")
+theme_override_font_sizes/font_size = 20
+text = "THE SOUL CRYPT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="Panel/HeaderBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CountSection" type="PanelContainer" parent="Panel/HeaderBar"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_count_plate")
+
+[node name="CountLabel" type="Label" parent="Panel/HeaderBar/CountSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.84, 0.76, 1)
+theme_override_fonts/font = ExtResource("7_crimson_italic")
+theme_override_font_sizes/font_size = 17
+text = "0 Souls in Grimoire"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Panel/HeaderBar"]
+custom_minimum_size = Vector2(48, 44)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.9, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("6_cinzel_bold")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_close_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_close_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_close_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "✕"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 75.0
+offset_right = -40.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 1
+
+[node name="MarginBox" type="MarginContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+
+[node name="CardsContainer" type="GridContainer" parent="Panel/ScrollContainer/MarginBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/h_separation = 18
+theme_override_constants/v_separation = 18
+columns = 5
+
+[node name="CardPreviewPopup" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PopupBackdrop" type="ColorRect" parent="CardPreviewPopup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.015, 0.03, 0.88)
+
+[node name="BigCardSlot" type="Control" parent="CardPreviewPopup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -200.0
+offset_right = 140.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TapToCloseHint" type="Label" parent="CardPreviewPopup"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -56.0
+offset_right = 200.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.85, 0.8, 0.7, 0.85)
+theme_override_fonts/font = ExtResource("7_crimson_italic")
+theme_override_font_sizes/font_size = 15
+text = "[ Click anywhere to dismiss ]"
+horizontal_alignment = 1

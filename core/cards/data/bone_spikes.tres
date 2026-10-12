@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://core/cards/card_data.gd" id="1_card"]
+
+[ext_resource type="Texture2D" path="res://battlefield/assets/cards/bone_spikes.webp" id="2_art"]
+
+[resource]
+script = ExtResource("1_card")
+art = ExtResource("2_art")
+id = "bone_spikes"
+title = "Bone Spikes"
+description = "Gain 6 Block. Gain 3 Thorns."
+cost = 1
+card_type = 1
+target_type = 2
+rarity = 1
+damage = 0
+block = 6
+summon_id = ""
+heal = 0
+strength_buff = 0
+apply_vulnerable = 0
+apply_weak = 0
+apply_bleed = 0
+cleanse_debuffs = false
+thorns_buff = 3

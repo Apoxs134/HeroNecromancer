@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="twilight_sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="85%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#141a24" />
+    </linearGradient>
+    <radialGradient id="pale_moonlight" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#0369a1" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="granary_wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#261b14" />
+      <stop offset="100%" stop-color="#0f0b08" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1280" height="720" fill="url(#twilight_sky)" />
+  <circle cx="896" cy="216" r="300" fill="url(#pale_moonlight)" />
+
+  <!-- Crescent Pale Moon -->
+  <path d="M 940 120 A 40 40 0 1 0 980 180 A 34 34 0 1 1 940 120 Z" fill="#e0f2fe" opacity="0.9" />
+
+  <!-- Massive Heavy Timber Granary Roof & Beams (Left) -->
+  <polygon points="0,180 480,260 480,720 0,720" fill="url(#granary_wood)" />
+  <polygon points="0,180 500,260 490,280 0,210" fill="#38251a" />
+
+  <!-- Granary Timber Siding Lines -->
+  <line x1="0" y1="320" x2="480" y2="360" stroke="#160e0a" stroke-width="4" />
+  <line x1="0" y1="420" x2="480" y2="450" stroke="#160e0a" stroke-width="4" />
+  <line x1="0" y1="520" x2="480" y2="540" stroke="#160e0a" stroke-width="4" />
+  <line x1="0" y1="620" x2="480" y2="630" stroke="#160e0a" stroke-width="4" />
+
+  <!-- Iron Bound Barn Door (Open to the Night) -->
+  <polygon points="120,400 360,430 360,720 120,720" fill="#030408" />
+  <!-- Grain Sacks Stacked Inside Doorway -->
+  <ellipse cx="200" cy="670" rx="40" ry="25" fill="#3b2b1d" />
+  <ellipse cx="260" cy="680" rx="45" ry="28" fill="#4a3726" />
+  <ellipse cx="225" cy="640" rx="35" ry="22" fill="#2d2116" />
+
+  <!-- Vargas Spirit Guarding Outside Granary (Pale Blue Ethereal Knight Silhouette) -->
+  <g transform="translate(680, 360)">
+    <ellipse cx="0" cy="180" rx="80" ry="25" fill="#38bdf8" opacity="0.25" />
+    <!-- Cloak / Armor Body -->
+    <path d="M -35,50 L 0,-20 L 35,50 L 25,180 L -25,180 Z" fill="#0c4a6e" opacity="0.85" />
+    <!-- Helm & Visor Light -->
+    <circle cx="0" cy="-35" r="22" fill="#0369a1" />
+    <line x1="-12" y1="-35" x2="12" y2="-35" stroke="#7dd3fc" stroke-width="3" />
+    <!-- Spectral Greatshield -->
+    <polygon points="35,30 85,40 75,150 35,170" fill="#0284c7" opacity="0.7" stroke="#38bdf8" stroke-width="2" />
+    <!-- Ethereal wisps -->
+    <path d="M 0,-45 Q -20,-75 0,-95 Q 20,-75 0,-45" fill="#38bdf8" opacity="0.4" />
+  </g>
+
+  <!-- The Hero Silhouette (Foreground Right Looking to Mountains) -->
+  <g transform="translate(1020, 390)">
+    <!-- Tattered Cloak -->
+    <path d="M -20,20 L 0,-40 L 25,20 L 60,280 L -40,280 Z" fill="#030712" />
+    <!-- Hooded Head -->
+    <circle cx="2" cy="-50" r="20" fill="#030712" />
+    <!-- Pale glowing eye glint -->
+    <circle cx="10" cy="-48" r="2" fill="#67e8f9" />
+    <!-- Necromancer Staff in Right Hand -->
+    <line x1="45" y1="-80" x2="45" y2="280" stroke="#1e293b" stroke-width="5" />
+    <!-- Bone Relic at staff head -->
+    <circle cx="45" cy="-80" r="14" fill="#67e8f9" opacity="0.85" />
+    <circle cx="45" cy="-80" r="5" fill="#f8fafc" />
+  </g>
+
+  <!-- Distant Jagged Mountains of Chapter 2 (Mourning Crags) -->
+  <polygon points="500,480 620,380 720,440 840,320 980,450 1280,360 1280,560 500,560" fill="#0b101b" />
+
+  <!-- Foreground Ground -->
+  <rect y="640" width="1280" height="80" fill="#06090e" />
+</svg>

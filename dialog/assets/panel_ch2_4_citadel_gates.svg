@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="sky_citadel_horizon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020307" />
+      <stop offset="35%" stop-color="#0f172a" />
+      <stop offset="65%" stop-color="#450a0a" />
+      <stop offset="100%" stop-color="#7f1d1d" />
+    </linearGradient>
+    <radialGradient id="blood_moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fecaca" />
+      <stop offset="40%" stop-color="#ef4444" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#991b1b" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky & Looming Crimson Dusk -->
+  <rect width="1280" height="720" fill="url(#sky_citadel_horizon)" />
+
+  <!-- Blood Moon on the Horizon -->
+  <circle cx="640" cy="240" r="160" fill="url(#blood_moon)" />
+  <circle cx="640" cy="240" r="70" fill="#fecdd3" opacity="0.9" />
+
+  <!-- The High Citadel Spires on the Horizon (King Alden's Capital) -->
+  <g fill="#050811" stroke="#000000" stroke-width="1.5">
+    <!-- Central Grand Keep -->
+    <rect x="610" y="240" width="60" height="180" />
+    <polygon points="600,240 640,110 680,240" />
+    
+    <!-- Cathedral Tower Spire (Left) -->
+    <rect x="540" y="280" width="45" height="140" />
+    <polygon points="535,280 562,160 590,280" />
+    <!-- Cross Finial -->
+    <line x1="562" y1="140" x2="562" y2="160" stroke="#fbbf24" stroke-width="2" />
+    <line x1="554" y1="147" x2="570" y2="147" stroke="#fbbf24" stroke-width="2" />
+
+    <!-- Royal Bastion Spire (Right) -->
+    <rect x="695" y="270" width="50" height="150" />
+    <polygon points="690,270 720,150 750,270" />
+
+    <!-- Outer Curtain Walls -->
+    <polygon points="460,420 540,360 740,360 820,420" />
+  </g>
+
+  <!-- Midground Crag Ramparts (Breached Fortress) -->
+  <polygon points="0,520 280,440 640,480 1000,430 1280,510 1280,720 0,720" fill="#090d16" />
+
+  <!-- Shattered Templar Greatswords & Shields Littered on the Rampart -->
+  <g transform="translate(340, 520)">
+    <!-- Broken Gilded Shield in Dirt -->
+    <ellipse cx="0" cy="30" rx="35" ry="20" fill="#991b1b" stroke="#fbbf24" stroke-width="2" transform="rotate(-25)" />
+    <!-- Impaled Sword -->
+    <line x1="60" y1="-40" x2="40" y2="50" stroke="#cbd5e1" stroke-width="3" />
+    <line x1="45" y1="-25" x2="70" y2="-20" stroke="#fbbf24" stroke-width="3" />
+  </g>
+
+  <g transform="translate(920, 540)">
+    <!-- Slain Inquisitor Halberd Snapped -->
+    <line x1="-50" y1="20" x2="40" y2="45" stroke="#475569" stroke-width="3" />
+    <polygon points="35,35 60,45 35,55" fill="#94a3b8" />
+  </g>
+
+  <!-- The Hero & His Fallen Vanguard Gathering at the Cliff Edge (Looking Towards Citadel) -->
+  <g transform="translate(640, 480)">
+    <!-- Hero (Center) -->
+    <path d="M -18 120 L -12 20 Q 0 5, 12 20 L 18 120 Z" fill="#020408" />
+    <circle cx="0" cy="10" r="10" fill="#020408" />
+    <circle cx="2" cy="9" r="2" fill="#38bdf8" />
+    <!-- Tattered Cape Catching Mountain Wind -->
+    <path d="M -14 28 Q -50 40, -75 80 Q -40 70, -12 60" fill="#090d16" />
+    <!-- Drawn Pale Blade Pointed Toward Citadel -->
+    <line x1="14" y1="40" x2="60" y2="25" stroke="#38bdf8" stroke-width="2.5" />
+    <circle cx="60" cy="25" r="5" fill="#7dd3fc" opacity="0.8" />
+
+    <!-- Vargas (Left) -->
+    <path d="M -75 130 L -70 45 Q -55 35, -40 45 L -35 130 Z" fill="#020408" />
+    <circle cx="-55" cy="35" r="9" fill="#020408" />
+    <path d="M -80 40 L -60 38 L -60 120 L -80 115 Z" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+
+    <!-- Lyra (Right) -->
+    <path d="M 40 130 Q 55 45, 70 130 Z" fill="#020408" />
+    <circle cx="55" cy="40" r="7" fill="#020408" />
+    <circle cx="53" cy="40" r="1.5" fill="#38bdf8" />
+  </g>
+
+  <!-- Foreground Dark Overhang -->
+  <polygon points="0,640 1280,630 1280,720 0,720" fill="#020408" />
+</svg>

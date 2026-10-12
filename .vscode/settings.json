@@ -3,5 +3,22 @@
         "*.md": "vscode.markdown.preview.editor"
     },
     "markdown.preview.scrollEditorWithPreview": true,
-    "markdown.extension.toc.levels": "2..3"
+    "markdown.extension.toc.levels": "2..3",
+    "terminal.integrated.profiles.osx": {
+        "Sim: Crusade Campaign": {
+            "path": "bash",
+            "args": ["-c", "\"${workspaceFolder}/sim.sh\" crusade; exec zsh"],
+            "icon": "flame"
+        },
+        "Sim: Analytics": {
+            "path": "bash",
+            "args": ["-c", "\"${workspaceFolder}/sim.sh\" sim; exec zsh"],
+            "icon": "graph"
+        },
+        "Sim: Gameplay": {
+            "path": "bash",
+            "args": ["-c", "\"${workspaceFolder}/sim.sh\" auto; exec zsh"],
+            "icon": "play"
+        }
+    }
 }

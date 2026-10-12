@@ -1,0 +1,95 @@
+{
+  "intro_scene": {
+    "background_color": [0.04, 0.02, 0.04, 1.0],
+    "next_state": "WORLD_MAP",
+    "splash": {
+      "title": "CHAPTER 3",
+      "subtitle": "THE HIGH CITADEL"
+    },
+    "lines": [
+      {
+        "panel": "res://dialog/assets/panel_ch3_1_citadel_breach.png",
+        "speaker": "Narrator",
+        "text": "The gilded gates of the High Citadel groan and collapse inward. Royal standards fall into burning rubble as the pale host pours into the capital."
+      },
+      {
+        "speaker": "Kaelen (Spirit)",
+        "text": "The palace guard broke ranks at the fountain square. They drop their crossbows and flee into the alleys, Commander. They cannot face their own dead."
+      },
+      {
+        "speaker": "Vargas (Spirit)",
+        "text": "...The royal palace is dead ahead. The banquet hall where King Alden smiled and offered us cups of poisoned dregs."
+      },
+      {
+        "speaker": "Lyra (Spirit)",
+        "text": "Lord of Bones... does your heart still beat? I can feel no pulse within your breast."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "A beating heart is a distraction. Alden sits in his feast hall, counting the minutes of his reign. We end this."
+      }
+    ]
+  },
+  "ending_scene": {
+    "background_color": [0.03, 0.02, 0.04, 1.0],
+    "next_state": "CREDITS",
+    "lines": [
+      {
+        "panel": "res://dialog/assets/panel_ch3_2_banquet_revisit.png",
+        "speaker": "Narrator",
+        "text": "The heavy oak doors give way with a deafening crash. The banquet hall is frozen in eerie silence, laden with spoiled meat and spilled, blood-red wine."
+      },
+      {
+        "speaker": "King Alden",
+        "text": "Stay back! S-stay away from me! I am the crowned King of this realm! I have gold—the royal vaults! Entire duchies! Take them! Take them all!"
+      },
+      {
+        "speaker": "King Alden",
+        "text": "Why do you stare at me like that?! Say something! Damn you, speak!"
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The Hero does not speak. He takes two measured steps across the marble tiles, past the broken chairs where his companions died choking on venom."
+      },
+      {
+        "panel": "res://dialog/assets/panel_ch3_3_execution.png",
+        "shake": true,
+        "speaker": "Narrator",
+        "text": "Without hesitation, without anger, the curved blade of the pale scythe reaps through King Alden's chest. Cold blue fire erupts through his ribs. The golden crown slips from his brow, bouncing hollowly across the marble."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "...Rise, Alden. Take your spear. Stand guard at the door."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The dead King's eyes ignite with pale corpse-light. Silently, the corpse picks up a discarded halberd and turns toward the entrance, taking his eternal post."
+      },
+      {
+        "panel": "res://dialog/assets/panel_ch3_4_pale_throne.png",
+        "speaker": "Narrator",
+        "text": "The Hero ascends the dais of bone and gilded stone, sitting upon the royal throne. Ranks of dead knights stand motionless in the gloom, waiting for commands that never come."
+      },
+      {
+        "speaker": "Vargas (Spirit)",
+        "text": "...Commander... Alden is slain. The betrayal is answered. ...Are you at peace?"
+      },
+      {
+        "speaker": "The Hero",
+        "text": "...Peace? I feel nothing. No warmth. No triumph. No sorrow."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "In the ornate gilded mirror beside the throne, the Hero gazes into his reflection. Hollow eye sockets burn with icy death. The horns of the pale flame crown his skull."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "The Demon Lord did not die in the abyss. He only waited for me to wear his crown."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The silence of the grave descends upon the High Citadel. The Crusade is complete."
+      }
+    ]
+  }
+}

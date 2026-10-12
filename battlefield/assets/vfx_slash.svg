@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="slashGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="75%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Primary High-Velocity Arc Slash -->
+  <path d="M15 15 Q60 55 105 105" fill="none" stroke="url(#slashGlow)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M25 15 Q60 50 95 95" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <!-- Secondary Cross Slash Slice -->
+  <path d="M100 20 Q60 60 20 100" fill="none" stroke="url(#slashGlow)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Sparks -->
+  <circle cx="60" cy="60" r="4" fill="#ffffff"/>
+  <circle cx="50" cy="50" r="2.5" fill="#bae6fd"/>
+  <circle cx="70" cy="70" r="2.5" fill="#bae6fd"/>
+</svg>

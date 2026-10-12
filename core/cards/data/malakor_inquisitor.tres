@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://core/cards/card_data.gd" id="1_card"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/cards/malakor_inquisitor.webp" id="2_art"]
+
+[resource]
+script = ExtResource("1_card")
+art = ExtResource("2_art")
+id = "malakor_inquisitor"
+title = "Inquisitor Malakor"
+description = "Summon Malakor (14 HP. End of turn: Brands all enemies with 3 Sun-Flame / Bleed. Burst: 20 Holy Damage)."
+cost = 2
+card_type = 3
+target_type = 2
+rarity = 2
+damage = 3
+block = 0
+summon_id = "malakor_inquisitor"
+summon_hp = 14
+burst_damage = 20
+burst_heal = 0
+burst_block = 0
+heal = 0
+apply_vulnerable = 0
+apply_weak = 0
+apply_bleed = 3
+cleanse_debuffs = false
+thorns_buff = 0
+is_upgraded = false

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Outer Iron Bezel -->
+    <linearGradient id="ironRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="30%" stop-color="#1e293b"/>
+      <stop offset="70%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+
+    <!-- Runic Gold Edge -->
+    <linearGradient id="runeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+
+    <!-- Deep Soul Core Flame -->
+    <radialGradient id="soulCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f0fdfa"/>
+      <stop offset="35%" stop-color="#38bdf8"/>
+      <stop offset="70%" stop-color="#0369a1"/>
+      <stop offset="90%" stop-color="#082f49"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+
+    <!-- Soul Flame Glow -->
+    <filter id="coreGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feComposite in="SourceGraphic" in2="glow" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Drop Shadow -->
+  <circle cx="60" cy="62" r="54" fill="#020617" opacity="0.7"/>
+
+  <!-- Outer Heavy Iron Rim -->
+  <circle cx="60" cy="60" r="54" fill="url(#ironRing)" stroke="#090d16" stroke-width="2"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="url(#runeGold)" stroke-width="2.5" opacity="0.9"/>
+
+  <!-- Four Runic Claws / Brackets -->
+  <polygon points="60,3 64,12 56,12" fill="url(#runeGold)"/>
+  <polygon points="60,117 64,108 56,108" fill="url(#runeGold)"/>
+  <polygon points="3,60 12,64 12,56" fill="url(#runeGold)"/>
+  <polygon points="117,60 108,64 108,56" fill="url(#runeGold)"/>
+
+  <!-- Inner Abyss Backing -->
+  <circle cx="60" cy="60" r="46" fill="#040812"/>
+
+  <!-- Swirling Soul Light -->
+  <circle cx="60" cy="60" r="42" fill="url(#soulCore)" opacity="0.85" filter="url(#coreGlow)"/>
+
+  <!-- Concentric Occult Inscription Ring -->
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#7dd3fc" stroke-width="1.2" stroke-dasharray="6 3 2 3" opacity="0.6"/>
+
+  <!-- Top Glass Highlight -->
+  <path d="M30 35 C42 22 78 22 90 35 C75 29 45 29 30 35 Z" fill="#ffffff" opacity="0.35"/>
+</svg>

@@ -18,15 +18,19 @@ enum Chapter {
 enum DialogId {
 	NONE,
 	INTRO_SCENE,
-	VICTORY_SCENE
+	VICTORY_SCENE,
+	ENDING_SCENE
 }
 
 @export var zone: AreaZone = AreaZone.CHARNEL_TRENCH
 @export var chapter: Chapter = Chapter.CHAPTER_0_PROLOGUE
 @export var target_state: GameManager.GameState = GameManager.GameState.DIALOG
 @export var dialog_id: DialogId = DialogId.INTRO_SCENE
+@export var custom_dialog_id: String = ""
 @export var encounter_index: int = 0
 @export var deck: DeckData
+@export var map_data_tres: String = ""
+@export var encounter_tres: String = ""
 
 func get_chapter_key() -> String:
 	match chapter:
@@ -42,10 +46,14 @@ func get_chapter_key() -> String:
 			return "chapter_0"
 
 func get_dialog_key() -> String:
+	if not custom_dialog_id.is_empty():
+		return custom_dialog_id
 	match dialog_id:
 		DialogId.INTRO_SCENE:
 			return "intro_scene"
 		DialogId.VICTORY_SCENE:
 			return "victory_scene"
+		DialogId.ENDING_SCENE:
+			return "ending_scene"
 		_:
 			return ""

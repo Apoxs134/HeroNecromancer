@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="sky_storm_flash" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="45%" stop-color="#172554" />
+      <stop offset="70%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1c1917" />
+    </linearGradient>
+    <radialGradient id="torch_fire" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="20%" stop-color="#fed7aa" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#f97316" stop-opacity="0.75" />
+      <stop offset="85%" stop-color="#c2410c" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="pale_corpse_light" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Sky with Distant Lightning Glow -->
+  <rect width="1280" height="720" fill="url(#sky_storm_flash)" />
+
+  <!-- Lightning Bolt Silhouette in Storm Cloud -->
+  <polyline points="280,0 260,110 300,160 270,260" stroke="#93c5fd" stroke-width="4" fill="none" opacity="0.8" />
+  <polyline points="280,0 260,110 300,160 270,260" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.95" />
+
+  <!-- Distant Oakhaven Church & Bell Tower Silhouette (Left) -->
+  <rect x="160" y="240" width="80" height="240" fill="#090d16" />
+  <polygon points="140,240 200,90 260,240" fill="#090d16" /> <!-- Steeple -->
+  <line x1="200" y1="90" x2="200" y2="50" stroke="#090d16" stroke-width="4" /> <!-- Iron Cross -->
+  <line x1="190" y1="65" x2="210" y2="65" stroke="#090d16" stroke-width="4" />
+  <!-- Belfry Arches -->
+  <rect x="185" y="190" width="30" height="40" rx="10" fill="#1e293b" />
+
+  <!-- Ground Ridge & Dirt Road -->
+  <path d="M 0 460 C 400 480, 800 450, 1280 470 L 1280 720 L 0 720 Z" fill="#0c0a09" />
+  <path d="M 0 520 C 500 500, 900 530, 1280 500 L 1280 720 L 0 720 Z" fill="#1c1917" />
+
+  <!-- ================= MOB OF ANGRY PEASANTS (LEFT & CENTER) ================= -->
+  <!-- Torch 1 (Far Left Peasant) -->
+  <circle cx="340" cy="380" r="90" fill="url(#torch_fire)" />
+  <line x1="340" y1="380" x2="330" y2="560" stroke="#78350f" stroke-width="6" />
+  <polygon points="300,450 360,450 375,650 285,650" fill="#1c1917" />
+  <circle cx="330" cy="425" r="20" fill="#292524" />
+
+  <!-- Torch 2 (Center-Left Mob Leader) -->
+  <circle cx="480" cy="340" r="110" fill="url(#torch_fire)" />
+  <line x1="480" y1="340" x2="470" y2="540" stroke="#78350f" stroke-width="6" />
+  <!-- Mob Leader with Scythe -->
+  <polygon points="440,430 520,430 535,660 425,660" fill="#292524" />
+  <circle cx="480" cy="395" r="22" fill="#44403c" />
+  <!-- Large Curved Scythe Blade Raised High -->
+  <line x1="460" y1="390" x2="550" y2="220" stroke="#78350f" stroke-width="6" />
+  <path d="M 550 220 C 530 140, 430 180, 390 240 C 450 210, 520 200, 550 220 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" />
+
+  <!-- Torch 3 & Pitchfork (Center Peasant) -->
+  <circle cx="610" cy="360" r="95" fill="url(#torch_fire)" />
+  <line x1="610" y1="360" x2="600" y2="540" stroke="#78350f" stroke-width="6" />
+  <polygon points="570,440 640,440 655,660 555,660" fill="#1c1917" />
+  <circle cx="605" cy="405" r="20" fill="#292524" />
+  <!-- Pitchfork Raised -->
+  <line x1="630" y1="450" x2="670" y2="240" stroke="#78350f" stroke-width="5" />
+  <line x1="655" y1="240" x2="685" y2="240" stroke="#cbd5e1" stroke-width="4" />
+  <line x1="655" y1="240" x2="655" y2="200" stroke="#cbd5e1" stroke-width="4" />
+  <line x1="670" y1="240" x2="670" y2="190" stroke="#cbd5e1" stroke-width="4" />
+  <line x1="685" y1="240" x2="685" y2="200" stroke="#cbd5e1" stroke-width="4" />
+
+  <!-- Additional Militia Figures in Silhouette -->
+  <polygon points="210,480 270,480 280,660 200,660" fill="#090d16" />
+  <circle cx="240" cy="455" r="18" fill="#1c1917" />
+  <line x1="220" y1="460" x2="210" y2="300" stroke="#44403c" stroke-width="4" /> <!-- Spear -->
+
+  <!-- ================= THE HERO STANDING FIRM (RIGHT) ================= -->
+  <!-- Pale Necromantic Eruption Glow on Hero's Raised Hand -->
+  <circle cx="950" cy="440" r="160" fill="url(#pale_corpse_light)" />
+
+  <!-- The Hero Silhouette -->
+  <polygon points="980,450 1060,450 1080,680 960,680" fill="#020617" />
+  <circle cx="1020" cy="410" r="24" fill="#f8fafc" />
+  <!-- Hero's Left Hand Outstretched (Pleading / Corpse Light Erupting) -->
+  <line x1="1000" y1="470" x2="940" y2="440" stroke="#f8fafc" stroke-width="8" />
+  <circle cx="930" cy="435" r="18" fill="#38bdf8" />
+  <circle cx="930" cy="435" r="8" fill="#ffffff" />
+  <!-- Tendrils of Pale Frost Smoke -->
+  <path d="M 930 435 Q 890 410, 870 430 Q 910 445, 930 435" stroke="#bae6fd" stroke-width="3" fill="none" />
+  <path d="M 930 435 Q 920 370, 950 350 Q 940 395, 930 435" stroke="#bae6fd" stroke-width="3" fill="none" />
+
+  <!-- Hero's Right Hand on Sword Pommel -->
+  <line x1="1040" y1="470" x2="1070" y2="520" stroke="#94a3b8" stroke-width="6" />
+  <line x1="1070" y1="510" x2="1050" y2="650" stroke="#cbd5e1" stroke-width="4" />
+
+  <!-- Behind Hero: Looming Vargas Undead Bastion Eye Glint -->
+  <polygon points="1100,430 1190,430 1210,680 1080,680" fill="#0b0f19" opacity="0.85" />
+  <circle cx="1145" cy="400" r="22" fill="#334155" />
+  <circle cx="1138" cy="398" r="4" fill="#38bdf8" /> <!-- Cold Cyan Eye -->
+  <circle cx="1152" cy="398" r="4" fill="#38bdf8" />
+  <rect x="1080" y="440" width="35" height="150" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+
+</svg>

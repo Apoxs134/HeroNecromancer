@@ -1,6 +1,67 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=21 format=3 uid="uid://c7mapworld001"]
 
 [ext_resource type="Script" path="res://world_map/world_map.gd" id="1_world_map_gd"]
+[ext_resource type="PackedScene" path="res://core/ui/claim_card_modal/claim_card_modal.tscn" id="2_claim_modal"]
+[ext_resource type="PackedScene" path="res://core/ui/bone_altar_modal/bone_altar_modal.tscn" id="3_altar_modal"]
+[ext_resource type="Texture2D" uid="uid://cbhqqhvetx18l" path="res://battlefield/assets/frame_black_map.webp" id="4_frame_overlay"]
+[ext_resource type="Texture2D" uid="uid://cimgbhen5kymc" path="res://ui/header_v2_ui.webp" id="5_header_v2"]
+[ext_resource type="Texture2D" uid="uid://dbgoj6gt3c2co" path="res://ui/footer_v1_ui.webp" id="6_footer_v1"]
+[ext_resource type="Texture2D" uid="uid://8qecqrlxsthj" path="res://ui/button_state_normal_ui.webp" id="7_btn_normal"]
+[ext_resource type="Texture2D" uid="uid://ciloubrkxahvw" path="res://ui/button_state_hover_ui.webp" id="8_btn_hover"]
+[ext_resource type="Texture2D" uid="uid://u0fhxr0fwan0" path="res://ui/button_state_press_ui.webp" id="9_btn_press"]
+[ext_resource type="Texture2D" uid="uid://7y6rcc2hhpew" path="res://ui/dialog_v2_ui.webp" id="10_dialog_v2"]
+[ext_resource type="FontFile" uid="uid://c8m3isspuo012" path="res://ui/fonts/Cinzel/static/Cinzel-Bold.ttf" id="11_cinzel_bold"]
+[ext_resource type="FontFile" uid="uid://dsktu75j0p314" path="res://ui/fonts/Cinzel/static/Cinzel-SemiBold.ttf" id="12_cinzel_semibold"]
+[ext_resource type="FontFile" uid="uid://k3ndgelr61lv" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-Regular.ttf" id="13_crimson_regular"]
+[ext_resource type="FontFile" uid="uid://cor178qbqtib2" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-MediumItalic.ttf" id="14_crimson_italic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_normal"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("7_btn_normal")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_hover"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("8_btn_hover")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pressed"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("9_btn_press")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_modal_panel"]
+content_margin_left = 34.0
+content_margin_top = 28.0
+content_margin_right = 34.0
+content_margin_bottom = 28.0
+texture = ExtResource("10_dialog_v2")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
 
 [node name="WorldMap" type="Control"]
 layout_mode = 3
@@ -18,62 +79,250 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.1, 0.15, 0.12, 1)
+color = Color(0.04, 0.035, 0.05, 1)
 
-[node name="Title" type="Label" parent="."]
+[node name="MapScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 1
+
+[node name="MapContent" type="Control" parent="MapScrollContainer"]
+custom_minimum_size = Vector2(1280, 1920)
+layout_mode = 2
+
+[node name="MapTexture" type="TextureRect" parent="MapScrollContainer/MapContent"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PathLayer" type="Control" parent="MapScrollContainer/MapContent"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="NodesContainer" type="Control" parent="MapScrollContainer/MapContent"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapFrameOverlay" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_frame_overlay")
+expand_mode = 1
+
+[node name="HeaderPanel" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
-offset_top = 60.0
-offset_right = 200.0
-offset_bottom = 120.0
+offset_left = -460.0
+offset_top = 10.0
+offset_right = 460.0
+offset_bottom = 86.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 36
-text = "WORLD MAP"
-horizontal_alignment = 1
+texture = ExtResource("5_header_v2")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Title" type="Label" parent="HeaderPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.97, 0.91, 0.76, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("11_cinzel_bold")
+theme_override_font_sizes/font_size = 18
+text = "CRUSADE: OAKHAVEN LOWLANDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FooterBar" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -460.0
+offset_top = -68.0
+offset_right = 460.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_footer_v1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatusLabel" type="Label" parent="FooterBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 0.86, 0.76, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("14_crimson_italic")
+theme_override_font_sizes/font_size = 16
+text = "Choose your path upwards to advance your Crusade."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 168.0
+offset_bottom = 66.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.92, 0.88, 0.78, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_fonts/font = ExtResource("11_cinzel_bold")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "◀ COVER"
+
+[node name="ClaimCardModal" parent="." instance=ExtResource("2_claim_modal")]
+visible = false
+layout_mode = 1
+
+[node name="BoneAltarModal" parent="." instance=ExtResource("3_altar_modal")]
+visible = false
+layout_mode = 1
+
+[node name="TutorialModal" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="ModalPanel" type="Panel" parent="TutorialModal"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -100.0
-offset_right = 150.0
-offset_bottom = 150.0
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 15
-alignment = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_modal_panel")
 
-[node name="Dialog1Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Intro Dialog (Event)"
+[node name="TutorialTitle" type="Label" parent="TutorialModal/ModalPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 22.0
+offset_right = 280.0
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.96, 0.88, 0.65, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("11_cinzel_bold")
+theme_override_font_sizes/font_size = 19
+text = "CRUSADE MAP NAVIGATION"
+horizontal_alignment = 1
 
-[node name="Dialog2Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Victory Dialog (Event)"
+[node name="TutorialBody" type="Label" parent="TutorialModal/ModalPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -80.0
+offset_right = 270.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.92, 0.90, 0.84, 1)
+theme_override_fonts/font = ExtResource("13_crimson_regular")
+theme_override_font_sizes/font_size = 16
+text = "Ascend through the lowlands toward the Granary:
+- Choose your path upwards along connected routes.
+- ⚔️ Skirmish: Battle militia scouts for souls.
+- 💀 Elite: Face dangerous Templar inquisitors.
+- 📜 Grimoire Shrine: Claim forbidden spells.
+- 🕯️ Bone Altar: Restore Vanguard vitality.
+- 👑 Fortress: Breaching the summit advances the Crusade."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
-[node name="Battle1Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Battlefield 1 (Combat)"
-
-[node name="Battle2Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Battlefield 2 (Combat)"
-
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 40.0
-offset_right = 180.0
-offset_bottom = 80.0
-text = "Back to Menu"
+[node name="TutorialDismissButton" type="Button" parent="TutorialModal/ModalPanel"]
+custom_minimum_size = Vector2(180, 48)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -62.0
+offset_right = 90.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.96, 0.92, 0.82, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_fonts/font = ExtResource("11_cinzel_bold")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "ENTER CRUSADE"

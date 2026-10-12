@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="reticleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background Target Glow -->
+  <circle cx="32" cy="32" r="28" fill="url(#reticleGlow)"/>
+  <!-- Target Center Dot -->
+  <circle cx="32" cy="32" r="3.5" fill="#f87171"/>
+  <!-- Corner Brackets -->
+  <path d="M12 24 L12 12 L24 12" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M40 12 L52 12 L52 24" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M52 40 L52 52 L40 52" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 52 L12 52 L12 40" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <!-- Cardinal Crosshair Ticks -->
+  <line x1="32" y1="8" x2="32" y2="18" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+  <line x1="32" y1="46" x2="32" y2="56" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8" y1="32" x2="18" y2="32" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+  <line x1="46" y1="32" x2="56" y2="32" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+</svg>

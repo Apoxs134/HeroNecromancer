@@ -1,20 +1,67 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=12 format=3]
 
 [ext_resource type="Script" path="res://core/ui/claim_card_modal/claim_card_modal.gd" id="1_claim_modal"]
+[ext_resource type="Texture2D" uid="uid://7y6rcc2hhpew" path="res://ui/dialog_v2_ui.webp" id="2_dialog_v2"]
+[ext_resource type="FontFile" uid="uid://c8m3isspuo012" path="res://ui/fonts/Cinzel/static/Cinzel-Bold.ttf" id="3_cinzel_bold"]
+[ext_resource type="FontFile" uid="uid://dsktu75j0p314" path="res://ui/fonts/Cinzel/static/Cinzel-SemiBold.ttf" id="4_cinzel_semibold"]
+[ext_resource type="FontFile" uid="uid://k3ndgelr61lv" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-Regular.ttf" id="5_crimson_regular"]
+[ext_resource type="Texture2D" uid="uid://8qecqrlxsthj" path="res://ui/button_state_normal_ui.webp" id="6_btn_normal"]
+[ext_resource type="Texture2D" uid="uid://ciloubrkxahvw" path="res://ui/button_state_hover_ui.webp" id="7_btn_hover"]
+[ext_resource type="Texture2D" uid="uid://u0fhxr0fwan0" path="res://ui/button_state_press_ui.webp" id="8_btn_press"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
-bg_color = Color(0.06, 0.08, 0.11, 0.98)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.35, 0.45, 0.6, 0.7)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-shadow_color = Color(0, 0, 0, 0.6)
-shadow_size = 16
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_modal"]
+content_margin_left = 34.0
+content_margin_top = 26.0
+content_margin_right = 34.0
+content_margin_bottom = 26.0
+texture = ExtResource("2_dialog_v2")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pri_normal"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("6_btn_normal")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pri_hover"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("7_btn_hover")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pri_pressed"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("8_btn_press")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
 
 [node name="ClaimCardModal" type="Control"]
 layout_mode = 3
@@ -41,22 +88,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -560.0
-offset_top = -290.0
-offset_right = 560.0
-offset_bottom = 290.0
+offset_left = -580.0
+offset_top = -305.0
+offset_right = 580.0
+offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+theme_override_styles/panel = SubResource("StyleBoxTexture_modal")
 
 [node name="TitleLabel" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 22.0
-offset_bottom = 58.0
+offset_top = 20.0
+offset_bottom = 54.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.98, 0.8, 0.22, 1)
+theme_override_colors/font_color = Color(0.98, 0.88, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.95)
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("3_cinzel_bold")
 theme_override_font_sizes/font_size = 24
 text = "THE FALLEN VANGUARD"
 horizontal_alignment = 1
@@ -66,12 +116,13 @@ vertical_alignment = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 60.0
-offset_bottom = 86.0
+offset_top = 56.0
+offset_bottom = 82.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.65, 0.78, 0.92, 1)
-theme_override_font_sizes/font_size = 14
-text = "Starter Deck Acquired — Hover over cards to inspect:"
+theme_override_colors/font_color = Color(0.88, 0.86, 0.92, 1)
+theme_override_fonts/font = ExtResource("5_crimson_regular")
+theme_override_font_sizes/font_size = 16
+text = "Starter Deck Acquired — Click a card to claim:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -84,26 +135,36 @@ anchor_bottom = 0.5
 offset_left = 30.0
 offset_top = -170.0
 offset_right = -30.0
-offset_bottom = 155.0
+offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
-theme_override_constants/separation = 28
+theme_override_constants/separation = 32
 
 [node name="ClaimButton" type="Button" parent="Panel"]
-custom_minimum_size = Vector2(260, 48)
+custom_minimum_size = Vector2(280, 46)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -130.0
-offset_top = -68.0
-offset_right = 130.0
-offset_bottom = -20.0
+offset_left = -140.0
+offset_top = -64.0
+offset_right = 140.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 16
-text = "Claim & Continue  [ Enter ]"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.97, 0.92, 0.82, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_fonts/font = ExtResource("4_cinzel_semibold")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_pri_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_pri_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pri_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "Skip / Take No Cards"

@@ -45,7 +45,7 @@
   <rect x="18" y="50" width="204" height="130" rx="8" fill="#020617" stroke="#334155" stroke-width="2" />
 
   <!-- Type & Rarity Ribbon Banner -->
-  <polygon points="40,186 200,186 190,206 50,206" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+  <polygon points="40,185 200,185 188,209 52,209" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
 
   <!-- Description Box -->
   <rect x="18" y="214" width="204" height="106" rx="8" fill="url(#desc_plate)" stroke="#334155" stroke-width="1.5" />

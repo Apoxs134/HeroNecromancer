@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 230" width="170" height="230">
+  <defs>
+    <radialGradient id="paleSoulGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cloakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="60%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="scytheBlade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="35%" stop-color="#38bdf8"/>
+      <stop offset="80%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="85" cy="215" rx="65" ry="13" fill="#020617" opacity="0.7"/>
+  <!-- Necromantic Pale Aura -->
+  <circle cx="85" cy="110" r="85" fill="url(#paleSoulGlow)"/>
+
+  <!-- Hero Necromancer (Facing Right) -->
+  <!-- Dark Flowing Robes & Tattered Hem -->
+  <path d="M45 80 L115 85 L125 210 L30 210 Z" fill="url(#cloakGrad)" stroke="#090d16" stroke-width="2"/>
+  <path d="M30 205 L45 215 L60 205 L75 215 L95 205 L110 215 L125 205" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- Chest Plate / Bone Armor -->
+  <path d="M60 85 L105 85 L100 135 L65 135 Z" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M82 90 L82 130" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="68" y1="105" x2="96" y2="105" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- Hood (Facing Right) -->
+  <path d="M50 45 C50 25 70 18 95 20 C115 22 122 36 120 58 C118 74 105 82 85 82 C65 82 50 68 50 45 Z" fill="#0f172a" stroke="#020617" stroke-width="2"/>
+  <!-- Face Shadow Interior -->
+  <path d="M85 36 C95 38 108 42 106 58 C104 68 94 72 86 68 Z" fill="#020617"/>
+  <!-- Ethereal Pale Cyan Eyes (Glowing Right) -->
+  <ellipse cx="98" cy="48" rx="3.5" ry="2" fill="#38bdf8"/>
+  <circle cx="98" cy="48" r="1.2" fill="#ffffff"/>
+
+  <!-- Rear Arm -->
+  <path d="M55 90 L40 120 L58 135" fill="none" stroke="#1e1b4b" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Great Pale Bone Scythe (Facing Right toward enemies) -->
+  <!-- Shaft -->
+  <line x1="140" y1="15" x2="60" y2="215" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+  <!-- Pale Scythe Blade -->
+  <path d="M136 18 Q168 35 158 75 Q152 45 132 30 Z" fill="url(#scytheBlade)" stroke="#38bdf8" stroke-width="1.5"/>
+  <!-- Ethereal Blade Glint -->
+  <path d="M138 20 Q162 38 155 70" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Forward Hand Casting Soul Spark -->
+  <path d="M95 95 L118 115 L135 110" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="138" cy="110" r="5" fill="#38bdf8"/>
+  <circle cx="138" cy="110" r="2.5" fill="#ffffff"/>
+</svg>

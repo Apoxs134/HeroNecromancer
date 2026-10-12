@@ -1,6 +1,130 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=23 format=3 uid="uid://btlprep001nec"]
 
 [ext_resource type="Script" path="res://battlefield/battlefield.gd" id="1_battlefield_gd"]
+[ext_resource type="PackedScene" path="res://battlefield/deck_tray/deck_tray.tscn" id="2_deck_tray"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/icon_soul_crypt.svg" id="3_crypt_icon"]
+[ext_resource type="Texture2D" uid="uid://c5ut1rdc0uguh" path="res://ui/header_v1_ui.webp" id="4_header_v1"]
+[ext_resource type="Texture2D" uid="uid://7y6rcc2hhpew" path="res://ui/dialog_v2_ui.webp" id="5_dialog_v2"]
+[ext_resource type="Texture2D" uid="uid://8qecqrlxsthj" path="res://ui/button_state_normal_ui.webp" id="6_btn_normal"]
+[ext_resource type="Texture2D" uid="uid://ciloubrkxahvw" path="res://ui/button_state_hover_ui.webp" id="7_btn_hover"]
+[ext_resource type="Texture2D" uid="uid://u0fhxr0fwan0" path="res://ui/button_state_press_ui.webp" id="8_btn_press"]
+[ext_resource type="FontFile" uid="uid://c8m3isspuo012" path="res://ui/fonts/Cinzel/static/Cinzel-Bold.ttf" id="9_cinzel_bold"]
+[ext_resource type="FontFile" uid="uid://dsktu75j0p314" path="res://ui/fonts/Cinzel/static/Cinzel-SemiBold.ttf" id="10_cinzel_semibold"]
+[ext_resource type="FontFile" uid="uid://k3ndgelr61lv" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-Regular.ttf" id="11_crimson_regular"]
+[ext_resource type="FontFile" uid="uid://cor178qbqtib2" path="res://ui/fonts/Crimson_Pro/static/CrimsonPro-MediumItalic.ttf" id="12_crimson_italic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_card"]
+content_margin_left = 28.0
+content_margin_top = 22.0
+content_margin_right = 28.0
+content_margin_bottom = 22.0
+texture = ExtResource("5_dialog_v2")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_diff_badge"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.08, 0.06, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.68, 0.55, 0.3, 0.85)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_separator"]
+color = Color(0.48, 0.4, 0.28, 0.55)
+thickness = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_normal"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+texture = ExtResource("6_btn_normal")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_hover"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+texture = ExtResource("7_btn_hover")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pressed"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+texture = ExtResource("8_btn_press")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dialog"]
+content_margin_left = 32.0
+content_margin_top = 22.0
+content_margin_right = 32.0
+content_margin_bottom = 22.0
+texture = ExtResource("5_dialog_v2")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nameplate"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+bg_color = Color(0.08, 0.07, 0.1, 0.96)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.72, 0.58, 0.32, 0.9)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_dbg_normal"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(0.25, 0.08, 0.08, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.85, 0.35, 0.35, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="Battlefield" type="Control"]
 layout_mode = 3
@@ -18,70 +142,203 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2, 0.08, 0.08, 1)
+color = Color(0.04, 0.035, 0.05, 1)
 
-[node name="Title" type="Label" parent="."]
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BackgroundDimmer" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.03, 0.65)
+
+[node name="HeaderPanel" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
-offset_top = 60.0
-offset_right = 200.0
-offset_bottom = 120.0
+offset_left = -380.0
+offset_top = 10.0
+offset_right = 380.0
+offset_bottom = 146.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 36
-text = "BATTLEFIELD"
-horizontal_alignment = 1
+texture = ExtResource("4_header_v1")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="DetailsLabel" type="Label" parent="."]
+[node name="Title" type="Label" parent="HeaderPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.97, 0.91, 0.76, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("9_cinzel_bold")
+theme_override_font_sizes/font_size = 25
+text = "THE DARK FOREST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardPanel" type="PanelContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -100.0
-offset_right = 250.0
-offset_bottom = 80.0
+offset_left = -480.0
+offset_top = -215.0
+offset_right = 480.0
+offset_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 20
-text = "Level Details Loading..."
+theme_override_styles/panel = SubResource("StyleBoxTexture_card")
+
+[node name="CardContent" type="VBoxContainer" parent="CardPanel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TopBar" type="HBoxContainer" parent="CardPanel/CardContent"]
+layout_mode = 2
+
+[node name="LineupTitle" type="Label" parent="CardPanel/CardContent/TopBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.82, 0.68, 1)
+theme_override_fonts/font = ExtResource("9_cinzel_bold")
+theme_override_font_sizes/font_size = 16
+text = "⚔  HOSTILE SQUADRON"
+
+[node name="Spacer" type="Control" parent="CardPanel/CardContent/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DifficultyBadge" type="PanelContainer" parent="CardPanel/CardContent/TopBar"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_diff_badge")
+
+[node name="DifficultyLabel" type="Label" parent="CardPanel/CardContent/TopBar/DifficultyBadge"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.84, 0.45, 1)
+theme_override_fonts/font = ExtResource("9_cinzel_bold")
+theme_override_font_sizes/font_size = 13
+text = "DIFFICULTY: NORMAL"
+
+[node name="HSeparator" type="HSeparator" parent="CardPanel/CardContent"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_separator")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CardPanel/CardContent"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 1
+vertical_scroll_mode = 0
+
+[node name="EnemyListContainer" type="HBoxContainer" parent="CardPanel/CardContent/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="DetailsLabel" type="Label" parent="CardPanel"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.88, 0.84, 1)
+theme_override_fonts/font = ExtResource("11_crimson_regular")
+theme_override_font_sizes/font_size = 16
+text = "Loading encounter data..."
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
-[node name="FinishButton" type="Button" parent="."]
+[node name="BattleActionsContainer" type="HBoxContainer" parent="."]
+visible = false
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -110.0
-offset_top = -160.0
-offset_right = 110.0
-offset_bottom = -110.0
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 195.0
+offset_right = 400.0
+offset_bottom = 255.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 20
-text = "Victory (Complete)"
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
 
-[node name="RetreatButton" type="Button" parent="."]
+[node name="RetreatButton" type="Button" parent="BattleActionsContainer"]
+custom_minimum_size = Vector2(180, 52)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.85, 0.82, 0.88, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.8, 1, 1)
+theme_override_fonts/font = ExtResource("9_cinzel_bold")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "RETREAT"
+
+[node name="SoulCryptButton" type="Button" parent="BattleActionsContainer"]
+custom_minimum_size = Vector2(200, 52)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.92, 0.87, 0.98, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.8, 1, 1)
+theme_override_constants/icon_max_width = 22
+theme_override_fonts/font = ExtResource("9_cinzel_bold")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = " SOUL CRYPT"
+icon = ExtResource("3_crypt_icon")
+expand_icon = true
+
+[node name="FinishButton" type="Button" parent="BattleActionsContainer"]
+custom_minimum_size = Vector2(230, 52)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.98, 0.92, 0.8, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_fonts/font = ExtResource("9_cinzel_bold")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "BEGIN BATTLE"
+
+[node name="DeckTray" parent="." instance=ExtResource("2_deck_tray")]
+visible = false
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -110.0
-offset_top = -90.0
-offset_right = 110.0
-offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 20
-text = "Retreat (Map)"
+z_index = 20
 
 [node name="EventOverlay" type="ColorRect" parent="."]
 visible = false
@@ -91,7 +348,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.45)
+color = Color(0, 0, 0, 0.65)
 
 [node name="Panel" type="Panel" parent="EventOverlay"]
 layout_mode = 1
@@ -99,29 +356,79 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 100.0
-offset_top = -180.0
-offset_right = -100.0
+offset_left = 80.0
+offset_top = -200.0
+offset_right = -80.0
 offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dialog")
 
-[node name="SpeakerLabel" type="Label" parent="EventOverlay/Panel"]
+[node name="Nameplate" type="PanelContainer" parent="EventOverlay/Panel"]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 15.0
-offset_right = 300.0
-offset_bottom = 45.0
-theme_override_font_sizes/font_size = 18
-text = "Event Speaker"
+offset_left = 32.0
+offset_top = -18.0
+offset_right = 260.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nameplate")
+
+[node name="SpeakerLabel" type="Label" parent="EventOverlay/Panel/Nameplate"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.88, 0.65, 1)
+theme_override_fonts/font = ExtResource("9_cinzel_bold")
+theme_override_font_sizes/font_size = 15
+text = "SPEAKER"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MessageLabel" type="Label" parent="EventOverlay/Panel"]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 50.0
-offset_right = 900.0
-offset_bottom = 130.0
-theme_override_font_sizes/font_size = 16
-text = "Event text message goes here..."
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 1070.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.93, 0.91, 0.86, 1)
+theme_override_fonts/font = ExtResource("11_crimson_regular")
+theme_override_font_sizes/font_size = 19
+text = "Tutorial / Battle Dialogue message..."
 autowrap_mode = 3
 
+[node name="HintLabel" type="Label" parent="EventOverlay/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -32.0
+offset_right = -30.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.65, 0.62, 0.55, 0.8)
+theme_override_fonts/font = ExtResource("12_crimson_italic")
+theme_override_font_sizes/font_size = 14
+text = "[ Click anywhere to continue ]"
+horizontal_alignment = 2
+
+[node name="DebugSkipButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -165.0
+offset_top = 28.0
+offset_right = -35.0
+offset_bottom = 68.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 0.8, 0.8, 0.95)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.5, 0.5, 1)
+theme_override_fonts/font = ExtResource("10_cinzel_semibold")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_dbg_normal")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+action_mode = 0
+text = "⚡ Skip (Debug)"

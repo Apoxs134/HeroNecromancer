@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <radialGradient id="shieldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#60a5fa" stop-opacity="0.4"/>
+      <stop offset="85%" stop-color="#93c5fd" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Outer Hexagon -->
+  <polygon points="64,8 116,36 116,92 64,120 12,92 12,36" fill="url(#shieldGlow)" stroke="#93c5fd" stroke-width="3"/>
+  <!-- Inner Hexagon Frame -->
+  <polygon points="64,20 104,42 104,86 64,108 24,86 24,42" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 4"/>
+  <!-- Core Sigil -->
+  <polygon points="64,38 86,52 86,76 64,90 42,76 42,52" fill="none" stroke="#bfdbfe" stroke-width="2"/>
+  <circle cx="64" cy="64" r="6" fill="#ffffff"/>
+</svg>

@@ -50,3 +50,16 @@ All dialogue must be authored in modular JSON files per chapter in `res://dialog
 
 Never hardcode dialogue dictionaries directly into `dialog.gd`.
 
+---
+
+## 5. Cutscene SVG Illustration Standards
+Every chapter dialogue sequence must pair with bespoke SVG cutscene illustrations created in `res://dialog/assets/` (e.g. `panel_ch<N>_<beat>.svg`). Never leave beats using placeholder panels (`default_panel.svg`).
+
+* **Dimensions**: Strict `viewBox="0 0 1280 720" width="1280" height="720"`.
+* **Visual Style**: Dark fantasy vector silhouettes with dramatic sky/lighting gradients, distinct character profiles (Hero with pale blue corpse-flame, Vargas's towering iron tower shield), and atmospheric environmental details.
+* **Palette Guidance**:
+  * Shadows & Night: `#020617`, `#0f172a`, `#1e293b`
+  * Pale Necromantic Magic: `#38bdf8`, `#7dd3fc`, `#ffffff`
+  * Earthly & Hostile Flames: `#b45309`, `#ea580c`, `#fed7aa`
+* **JSON Association**: Link panels via `"panel": "res://dialog/assets/panel_ch<N>_<beat>.svg"` at the specific dialogue beat where the camera or visual focus transitions.
+

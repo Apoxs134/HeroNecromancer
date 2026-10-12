@@ -1,0 +1,111 @@
+{
+  "intro_scene": {
+    "background_color": [0.03, 0.04, 0.07, 1.0],
+    "next_state": "WORLD_MAP",
+    "splash": {
+      "title": "CHAPTER 2",
+      "subtitle": "THE MOURNING CRAGS"
+    },
+    "lines": [
+      {
+        "panel": "res://dialog/assets/panel_ch2_1_crags.png",
+        "speaker": "Narrator",
+        "text": "The fertile lowlands fade behind you into sharp obsidian cliffs. Howling gales shriek through the Gallows Pass, where iron gibbets swing in the frozen mist."
+      },
+      {
+        "speaker": "Lyra (Spirit)",
+        "text": "...The Gallows Pass. When we rode south against the Demon Lord, King Alden swore these cages would be torn down. Instead, he filled them with anyone who questioned his reign."
+      },
+      {
+        "speaker": "Kaelen (Spirit)",
+        "text": "Scouts on the upper ridge, Commander. These are not frightened farmers with scythes. Burnished plate. Golden sun-crests. Grand Judiciar Vane's holy crusaders."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Vane was at the banquet. He sat three chairs from King Alden when the wine was poured. He watched my Vanguard choke on venom and said nothing."
+      },
+      {
+        "panel": "res://dialog/assets/panel_ch2_2_inquisition.png",
+        "speaker": "Narrator",
+        "text": "At the throat of the mountain pass, a massive iron gate bristles with pikes and braziers. Torches hiss against the driving sleet."
+      },
+      {
+        "speaker": "Grand Judiciar Vane",
+        "text": "Halt, abominable traitor! Did you imagine carving through peasants would grant you passage to the High Citadel? You are an apostate stripped of your holy oaths!"
+      },
+      {
+        "speaker": "The Hero",
+        "text": "I did not abandon my oaths, Vane. Your king drowned them in poison. Yield the gate. I have no quarrel with soldiers who only follow orders."
+      },
+      {
+        "speaker": "Grand Judiciar Vane",
+        "text": "Orders? It is sacred law! King Alden cleanses this realm of demons. You slew the Demon Lord only to bring his corpse-stench back to our borders! Archers, loose holy oil! Burn the fiend!"
+      },
+      {
+        "speaker": "Vargas (Spirit)",
+        "text": "...Commander... listen to him. They do not care that we bled to save the realm. To the court, we were only disposable hounds."
+      },
+      {
+        "panel": "res://dialog/assets/panel_ch2_3_wrath.png",
+        "shake": true,
+        "speaker": "Narrator",
+        "text": "The Hero looks down at his hands. Beneath his gauntlets, dark obsidian veins pulse with biting cold. The regret that haunted him in Oakhaven burns away, replaced by chilling, pitiless fury."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "In Oakhaven, I pleaded with commoners to lay down their scythes. I spared them because their only fault was fear."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "You, Vane... you knew the truth. You counted the silver Alden melted from the spoils of our victory."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "No more pleading. No more mercy. Form the Vanguard. We take the pass in blood."
+      },
+      {
+        "speaker": "Lyra (Spirit)",
+        "text": "...As you command, my Lord of Bones."
+      }
+    ]
+  },
+  "ending_scene": {
+    "background_color": [0.05, 0.03, 0.04, 1.0],
+    "next_chapter": "chapter_3",
+    "lines": [
+      {
+        "panel": "res://dialog/assets/panel_ch2_4_citadel_gates.png",
+        "speaker": "Narrator",
+        "text": "The fortress of the Gallows Pass has fallen. Beneath shattered banners of the Sun-Cross, High Inquisitor Malakor lies broken against the stone ramparts."
+      },
+      {
+        "speaker": "High Inquisitor Malakor",
+        "text": "You... butcher... Look at your hands... Look at what you've become... King Alden saw the rotting monster in you before you even departed for the demon lands..."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Alden saw a hero whose devotion threatened his throne."
+      },
+      {
+        "speaker": "High Inquisitor Malakor",
+        "text": "Strike then, monster... Kill me and prove the cathedral bells right..."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The Hero does not raise his voice. He does not sneer. With eerie stillness, he extends his gauntlet. Pale blue flames seep into Malakor's chest, wrenching his soul from his dying flesh and binding it into the grimoire."
+      },
+      {
+        "speaker": "Lyra (Spirit)",
+        "text": "...Commander... his soul is bound to our line. But you didn't even flinch."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Flinching is a luxury for the living. Look north."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Beyond the shattered pass, the stormclouds break. Across the burning lowlands, the spires of the High Citadel pierce a crimson blood moon. The final march has begun."
+      }
+    ]
+  }
+}

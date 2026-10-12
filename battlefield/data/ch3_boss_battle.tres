@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_throne_boss.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch3_boss_battle"
+title = "FINAL CLIMAX: KING ALDEN THE TRAITOR"
+difficulty = "Boss"
+bg_texture = ExtResource("2_bg")
+enemies = ["King Alden the Betrayer", "Royal Sun-Golem", "High Chancellor Malakor's Shade", "Palace Gilded Knight"]
+tutorial_dialog = [{
+"speaker": "King Alden",
+"text": "Keep back! You were supposed to rot beneath the capital! Guards! Butcher this ghoul!"
+}, {
+"speaker": "The Hero",
+"text": "There are no guards left, Alden. Only the dead you sent to die."
+}]
+next_state = 3
+next_dialog_id = "ending_scene"
+next_encounter_tres = ""
+return_to_map = false

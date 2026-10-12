@@ -2,14 +2,15 @@
   "intro_scene": {
     "background_color": [0.08, 0.09, 0.08, 1.0],
     "next_state": "BATTLEFIELD",
-    "encounter_id": "peasant_militia",
+    "encounter_id": "ch1_battle_tutorial",
+    "encounter_tres": "res://battlefield/data/ch1_battle_tutorial.tres",
     "splash": {
       "title": "CHAPTER 1",
       "subtitle": "THE BREAD & THE SCYTHE"
     },
     "lines": [
       {
-        "panel": "res://dialog/assets/default_panel.svg",
+        "panel": "res://dialog/assets/panel_ch1_1_lowlands.png",
         "speaker": "Narrator",
         "text": "The wind howls across the agrarian lowlands of Oakhaven. Golden wheat bends beneath dark gathering stormclouds."
       },
@@ -22,6 +23,7 @@
         "text": "...Commander... I smell grease-torches and steel ahead. Voices in the granary..."
       },
       {
+        "panel": "res://dialog/assets/panel_ch1_2_mob.png",
         "speaker": "Angry Peasant",
         "text": "There! The church bells were right! Look at the fiend's hands—corpse light! He's defiling the dead!"
       },
@@ -34,12 +36,53 @@
         "text": "Wait! Listen to me! I am the one who felled the demon lord! We bled for you...!"
       },
       {
+        "panel": "res://dialog/assets/panel_ch1_3_standoff.png",
+        "shake": true,
         "speaker": "Peasant Militia",
         "text": "Lies from a demon's mouth! Draw the scythes! Kill the witch before he takes our sons!"
       },
       {
         "speaker": "Vargas (Spirit)",
         "text": "...Commander... their terror has made them deaf. Form the line. We must defend ourselves..."
+      }
+    ]
+  },
+  "ending_scene": {
+    "background_color": [0.05, 0.07, 0.1, 1.0],
+    "next_chapter": "chapter_2",
+    "lines": [
+      {
+        "panel": "res://dialog/assets/panel_ch1_4_granary_end.png",
+        "speaker": "Narrator",
+        "text": "Twilight settles cold over the wooden beams of Oakhaven Granary. Outside, the routed militia disperses into the mist."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "They fled without casualties. We held the line without becoming the butcher Alden claimed I am."
+      },
+      {
+        "speaker": "Vargas (Spirit)",
+        "text": "...Mercy is an expensive luxury for the dead, Commander. Every blow you pulled cost us essence."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The Hero reaches into an open grain sack, breaking a crust of fresh rye. He chews slowly, but tastes only chalk and cold iron. His fingertips radiate frost beneath the torches."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "...The bread. It tastes of nothing. Just... ash."
+      },
+      {
+        "speaker": "Vargas (Spirit)",
+        "text": "...The pale flame claims what the living take for granted. And the Church inquisitors will not be as forgiving as terrified farmers."
+      },
+      {
+        "speaker": "The Hero",
+        "text": "Then we do not linger. We march north into the Mourning Crags before dawn breaks."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "He clutches the grimoire tight with deadened hands. The path ahead is steep and unforgiving, but the Vanguard marches onward."
       }
     ]
   }

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dvyyrq62bei00"]
+
+[ext_resource type="Script" uid="uid://e7c4twm2nvj1" path="res://core/cards/card_data.gd" id="1_card"]
+[ext_resource type="Texture2D" uid="uid://xlf3m70eiemr" path="res://battlefield/assets/cards/lyra_benediction.webp" id="2_art"]
+
+[resource]
+script = ExtResource("1_card")
+id = "lyra_benediction"
+title = "Lyra's Benediction"
+description = "Summon Lyra (+2 Block & +1 HP each turn). (Burst: 10 HP Heal + 12 Block)."
+cost = 2
+card_type = 3
+target_type = 2
+block = 2
+summon_id = "lyra_spirit"
+heal = 1
+burst_heal = 10
+burst_block = 12
+art = ExtResource("2_art")

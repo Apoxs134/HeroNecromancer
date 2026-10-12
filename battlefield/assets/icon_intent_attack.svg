@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="atkBlade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="40%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <!-- Crossed Swords -->
+  <line x1="6" y1="26" x2="26" y2="6" stroke="url(#atkBlade)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="26" y1="26" x2="6" y2="6" stroke="url(#atkBlade)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Guards -->
+  <line x1="7" y1="21" x2="11" y2="25" stroke="#fef08a" stroke-width="2"/>
+  <line x1="25" y1="21" x2="21" y2="25" stroke="#fef08a" stroke-width="2"/>
+  <!-- Central Spark -->
+  <circle cx="16" cy="16" r="2.5" fill="#ffffff"/>
+</svg>

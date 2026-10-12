@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="sky_dusk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="45%" stop-color="#1e1b4b" />
+      <stop offset="80%" stop-color="#3b1d11" />
+      <stop offset="100%" stop-color="#1c1917" />
+    </linearGradient>
+    <linearGradient id="ground_field" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917" />
+      <stop offset="40%" stop-color="#29180d" />
+      <stop offset="100%" stop-color="#0c0a09" />
+    </linearGradient>
+    <radialGradient id="torch_glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fed7aa" stop-opacity="0.95" />
+      <stop offset="35%" stop-color="#ea580c" stop-opacity="0.6" />
+      <stop offset="80%" stop-color="#9a3412" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="pale_magic" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#0e7490" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1280" height="720" fill="url(#sky_dusk)" />
+
+  <!-- Mountain Silhouette -->
+  <polygon points="0,380 180,310 380,350 620,280 840,340 1080,290 1280,350 1280,480 0,480" fill="#090d16" opacity="0.9" />
+
+  <!-- Farmland Ridge & Distant Silo -->
+  <path d="M 0 420 Q 340 370, 700 400 T 1280 390 L 1280 500 L 0 500 Z" fill="#141118" />
+  <rect x="740" y="340" width="45" height="60" fill="#09070c" />
+  <polygon points="730,340 762,305 795,340" fill="#09070c" />
+
+  <!-- Combat Ground -->
+  <rect y="460" width="1280" height="260" fill="url(#ground_field)" />
+
+  <!-- Muddy Road / Combat Lane -->
+  <path d="M 280 720 L 520 460 L 760 460 L 1020 720 Z" fill="#17120e" opacity="0.8" />
+
+  <!-- Defensive Wooden Stakes / Peasant Barricade -->
+  <line x1="160" y1="520" x2="220" y2="440" stroke="#442a17" stroke-width="12" stroke-linecap="round" />
+  <line x1="200" y1="530" x2="270" y2="450" stroke="#321f11" stroke-width="10" stroke-linecap="round" />
+  <line x1="240" y1="535" x2="310" y2="465" stroke="#442a17" stroke-width="11" stroke-linecap="round" />
+
+  <line x1="1040" y1="520" x2="980" y2="440" stroke="#442a17" stroke-width="12" stroke-linecap="round" />
+  <line x1="1000" y1="530" x2="930" y2="450" stroke="#321f11" stroke-width="10" stroke-linecap="round" />
+  <line x1="960" y1="535" x2="890" y2="465" stroke="#442a17" stroke-width="11" stroke-linecap="round" />
+
+  <!-- Barricade Cross Beams -->
+  <line x1="150" y1="500" x2="330" y2="480" stroke="#5c3a1e" stroke-width="8" />
+  <line x1="1050" y1="500" x2="870" y2="480" stroke="#5c3a1e" stroke-width="8" />
+
+  <!-- Peasant Torches Stuck in Ground -->
+  <!-- Left Torch -->
+  <line x1="190" y1="460" x2="190" y2="390" stroke="#26170d" stroke-width="6" />
+  <circle cx="190" cy="385" r="50" fill="url(#torch_glow)" />
+  <circle cx="190" cy="385" r="8" fill="#fef08a" />
+
+  <!-- Right Torch -->
+  <line x1="1010" y1="460" x2="1010" y2="390" stroke="#26170d" stroke-width="6" />
+  <circle cx="1010" cy="385" r="50" fill="url(#torch_glow)" />
+  <circle cx="1010" cy="385" r="8" fill="#fef08a" />
+
+  <!-- Necromancy Runes / Pale Magic Aura on Hero's Side (Bottom Left) -->
+  <ellipse cx="400" cy="620" rx="140" ry="40" fill="url(#pale_magic)" />
+  <path d="M 340 620 L 460 620 M 400 580 L 400 660" stroke="#a5f3fc" stroke-width="2" opacity="0.6" />
+  <circle cx="400" cy="620" r="30" stroke="#a5f3fc" stroke-width="1.5" fill="none" opacity="0.5" />
+
+  <!-- Wheat Sprigs on Edges -->
+  <path d="M 40 720 Q 60 640 100 580 M 80 720 Q 110 650 140 600 M 1160 720 Q 1140 640 1100 580" stroke="#b45309" stroke-width="3" fill="none" opacity="0.7" />
+
+  <!-- Foreground Vignette Scrim -->
+  <rect width="1280" height="720" fill="black" opacity="0.25" />
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="exec_bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020306" />
+      <stop offset="50%" stop-color="#090b14" />
+      <stop offset="85%" stop-color="#1c070d" />
+      <stop offset="100%" stop-color="#2b050c" />
+    </linearGradient>
+    <radialGradient id="pale_burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#7dd3fc" stop-opacity="0.9" />
+      <stop offset="55%" stop-color="#0284c7" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="crown_gleam" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="60%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#713f12" />
+    </radialGradient>
+  </defs>
+
+  <!-- Dark Atmospheric Background -->
+  <rect width="1280" height="720" fill="url(#exec_bg)" />
+
+  <!-- The Execution Impact Aura (Burst of Pale Blue Flame) -->
+  <circle cx="680" cy="360" r="320" fill="url(#pale_burst)" />
+
+  <!-- Floor Horizon Line -->
+  <line x1="0" y1="580" x2="1280" y2="580" stroke="#0f172a" stroke-width="3" />
+  <polygon points="0,580 1280,580 1280,720 0,720" fill="#04060b" />
+
+  <!-- The Hero Silhouette (Left - Delivering the Silent Thrust) -->
+  <g transform="translate(460, 240)">
+    <!-- Body in Ruthless, Forward-Leaning Execution Thrust -->
+    <path d="M -80 340 L -40 80 Q 0 40, 40 80 L 120 340 Z" fill="#010204" />
+    <circle cx="0" cy="50" r="22" fill="#010204" />
+    <!-- Cold Soul Eye Glow -->
+    <circle cx="10" cy="48" r="4" fill="#38bdf8" />
+    
+    <!-- Flowing Tattered Cape Behind Him -->
+    <path d="M -60 120 Q -140 180, -200 300 Q -120 280, -40 260 Z" fill="#060912" />
+
+    <!-- Both Gauntlets Gripping the Greatsword Hilt -->
+    <circle cx="80" cy="120" r="14" fill="#020408" stroke="#38bdf8" stroke-width="1.5" />
+
+    <!-- Greatsword Blade Piercing Through Into Alden -->
+    <line x1="90" y1="120" x2="340" y2="120" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+    <line x1="90" y1="120" x2="340" y2="120" stroke="#38bdf8" stroke-width="10" stroke-linecap="round" opacity="0.6" />
+  </g>
+
+  <!-- King Alden (Right - Impaled in Agony, Robes Ripping) -->
+  <g transform="translate(760, 250)">
+    <!-- Impaled Torso Arched Backwards -->
+    <path d="M -30 330 L 20 110 Q 50 80, 80 120 L 140 330 Z" fill="#4c0519" stroke="#fbbf24" stroke-width="1.5" />
+    <!-- Blood/Soul Wisps Erupting from Back -->
+    <path d="M 60 115 Q 120 70, 160 50 M 65 125 Q 140 130, 200 110" stroke="#38bdf8" stroke-width="3" fill="none" />
+    <path d="M 70 120 Q 130 160, 180 190" stroke="#991b1b" stroke-width="3.5" fill="none" />
+
+    <!-- Head Thrown Backwards Screaming (Silent Agony) -->
+    <circle cx="65" cy="70" r="20" fill="#070305" />
+    <!-- Ermine Collar Fluttering -->
+    <ellipse cx="40" cy="100" rx="30" ry="14" fill="#f1f5f9" />
+
+    <!-- Empty Hands Clawing at Blade -->
+    <line x1="0" y1="110" x2="-20" y2="115" stroke="#fecdd3" stroke-width="3" />
+    <line x1="10" y1="130" x2="-15" y2="125" stroke="#fecdd3" stroke-width="3" />
+  </g>
+
+  <!-- The Crown Tumbing Off His Head (Frozen in Air, Twisting Down) -->
+  <g transform="translate(860, 200) rotate(45)">
+    <polygon points="-25,18 -15,-10 0,10 15,-10 25,18" fill="url(#crown_gleam)" stroke="#000000" stroke-width="1.5" />
+    <circle cx="0" cy="22" r="24" fill="none" stroke="#fbbf24" stroke-width="3" />
+    <!-- Crown Gem Flare -->
+    <circle cx="0" cy="18" r="4" fill="#ef4444" />
+  </g>
+
+  <!-- Pale Sparks & Soul Essence Shattering Everywhere -->
+  <g fill="#7dd3fc" opacity="0.85">
+    <circle cx="640" cy="320" r="4" />
+    <circle cx="710" cy="280" r="3.5" />
+    <circle cx="730" cy="400" r="3" />
+    <circle cx="600" cy="380" r="2.5" />
+    <circle cx="780" cy="330" r="4" />
+    <circle cx="820" cy="260" r="3" />
+  </g>
+</svg>

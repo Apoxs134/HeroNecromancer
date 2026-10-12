@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://battlefield/vfx/shield_ward/shield_ward.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://battlefield/vfx/shield_ward/shield_hex.svg" id="2_shield"]
+[ext_resource type="Texture2D" path="res://battlefield/vfx/damage_impact/shockwave_ring.svg" id="3_ring"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_add"]
+blend_mode = 1
+
+[node name="ShieldWard" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="RingSprite" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_add")
+custom_minimum_size = Vector2(128, 128)
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("3_ring")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ShieldSprite" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_add")
+custom_minimum_size = Vector2(128, 128)
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("2_shield")
+expand_mode = 1
+stretch_mode = 5

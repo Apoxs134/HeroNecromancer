@@ -5,7 +5,8 @@ enum CardType {
 	ATTACK,
 	SKILL,
 	POWER,
-	SUMMON
+	SUMMON,
+	SPELL
 }
 
 enum TargetType {
@@ -33,3 +34,18 @@ enum CardRarity {
 @export var damage: int = 0
 @export var block: int = 0
 @export var summon_id: String = ""
+@export var heal: int = 0
+@export var strength_buff: int = 0
+@export var apply_vulnerable: int = 0
+@export var apply_weak: int = 0
+@export var apply_bleed: int = 0
+@export var cleanse_debuffs: bool = false
+@export var thorns_buff: int = 0
+@export var summon_hp: int = 0
+@export var burst_damage: int = 0
+@export var burst_heal: int = 0
+@export var burst_block: int = 0
+@export var fatal_energy_refund: int = 0
+@export var fatal_draw: int = 0
+@export var is_upgraded: bool = false
+@export var art: Texture2D

@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="DeckData" load_steps=6 format=3]
+[gd_resource type="Resource" script_class="DeckData" format=3 uid="uid://dry31hymrksb5"]
 
-[ext_resource type="Script" path="res://core/cards/deck_data.gd" id="1_deck"]
-[ext_resource type="Resource" path="res://core/cards/data/pale_smite.tres" id="2_pale"]
-[ext_resource type="Resource" path="res://core/cards/data/grave_ward.tres" id="3_ward"]
-[ext_resource type="Resource" path="res://core/cards/data/vargas_bulwark.tres" id="4_vargas"]
-[ext_resource type="Resource" path="res://core/cards/data/kaelen_volley.tres" id="5_kaelen"]
+[ext_resource type="Script" uid="uid://e7c4twm2nvj1" path="res://core/cards/card_data.gd" id="1_cv6rh"]
+[ext_resource type="Script" uid="uid://dqvkmsikfi4y" path="res://core/cards/deck_data.gd" id="1_deck"]
+[ext_resource type="Resource" uid="uid://ccugmmhd57sig" path="res://core/cards/data/pale_smite.tres" id="2_pale"]
+[ext_resource type="Resource" uid="uid://ci4do5l8o0hkk" path="res://core/cards/data/grave_ward.tres" id="3_ward"]
+[ext_resource type="Resource" uid="uid://3mvdw8w6ewcg" path="res://core/cards/data/vargas_bulwark.tres" id="4_vargas"]
+[ext_resource type="Resource" path="res://core/cards/data/kaelen_sentry.tres" id="5_kaelen"]
+[ext_resource type="Resource" path="res://core/cards/data/lyra_benediction.tres" id="6_lyra"]
 
 [resource]
 script = ExtResource("1_deck")
 deck_name = "The Fallen Vanguard"
-cards = [ExtResource("2_pale"), ExtResource("2_pale"), ExtResource("2_pale"), ExtResource("2_pale"), ExtResource("3_ward"), ExtResource("3_ward"), ExtResource("3_ward"), ExtResource("3_ward"), ExtResource("4_vargas"), ExtResource("5_kaelen")]
+cards = Array[ExtResource("1_cv6rh")]([ExtResource("2_pale"), ExtResource("2_pale"), ExtResource("2_pale"), ExtResource("2_pale"), ExtResource("3_ward"), ExtResource("3_ward"), ExtResource("3_ward"), ExtResource("4_vargas"), ExtResource("5_kaelen"), ExtResource("6_lyra")])

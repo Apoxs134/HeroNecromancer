@@ -1,0 +1,625 @@
+{
+	"global_avg_hp": 23.1414667502294,
+	"global_avg_turns": 51.886026400878,
+	"global_clear_rate": 68.375,
+	"profiles": [
+		{
+			"avg_final_hp": 15.6785714285714,
+			"avg_turns": 63.3571428571429,
+			"clear_rate": 56.0,
+			"completed_runs": 56,
+			"deaths_by_stage": {
+				"ch1_boss": 0,
+				"ch1_elite": 0,
+				"ch1_skirmish": 0,
+				"ch1_tutorial": 0,
+				"ch2_boss": 9,
+				"ch2_elite": 0,
+				"ch2_skirmish": 0,
+				"ch3_boss": 35,
+				"ch3_elite": 0,
+				"ch3_skirmish": 0
+			},
+			"draft_card_stats": {
+				"bone_spikes": {
+					"picks": 96,
+					"win_correlation": 61.4583333333333,
+					"wins": 59
+				},
+				"charnel_sacrifice": {
+					"picks": 4,
+					"win_correlation": 75.0,
+					"wins": 3
+				},
+				"dark_harvest": {
+					"picks": 113,
+					"win_correlation": 66.3716814159292,
+					"wins": 75
+				},
+				"forbidden_rite": {
+					"picks": 4,
+					"win_correlation": 75.0,
+					"wins": 3
+				},
+				"grim_harvest": {
+					"picks": 251,
+					"win_correlation": 59.3625498007968,
+					"wins": 149
+				},
+				"pale_guillotine": {
+					"picks": 155,
+					"win_correlation": 52.258064516129,
+					"wins": 81
+				},
+				"sanguine_curse": {
+					"picks": 2,
+					"win_correlation": 50.0,
+					"wins": 1
+				},
+				"soul_cleanse": {
+					"picks": 160,
+					"win_correlation": 54.375,
+					"wins": 87
+				},
+				"soul_roulette": {
+					"picks": 4,
+					"win_correlation": 75.0,
+					"wins": 3
+				},
+				"soul_surge": {
+					"picks": 34,
+					"win_correlation": 47.0588235294118,
+					"wins": 16
+				},
+				"wither_touch": {
+					"picks": 50,
+					"win_correlation": 54.0,
+					"wins": 27
+				}
+			},
+			"persona": "BALANCED (Casual)",
+			"total_runs": 100
+		},
+		{
+			"avg_final_hp": 31.4193548387097,
+			"avg_turns": 58.3870967741936,
+			"clear_rate": 93.0,
+			"completed_runs": 93,
+			"deaths_by_stage": {
+				"ch1_boss": 0,
+				"ch1_elite": 0,
+				"ch1_skirmish": 0,
+				"ch1_tutorial": 0,
+				"ch2_boss": 1,
+				"ch2_elite": 0,
+				"ch2_skirmish": 0,
+				"ch3_boss": 6,
+				"ch3_elite": 0,
+				"ch3_skirmish": 0
+			},
+			"draft_card_stats": {
+				"bone_spikes": {
+					"picks": 101,
+					"win_correlation": 95.049504950495,
+					"wins": 96
+				},
+				"charnel_sacrifice": {
+					"picks": 4,
+					"win_correlation": 100.0,
+					"wins": 4
+				},
+				"dark_harvest": {
+					"picks": 114,
+					"win_correlation": 92.1052631578947,
+					"wins": 105
+				},
+				"forbidden_rite": {
+					"picks": 5,
+					"win_correlation": 100.0,
+					"wins": 5
+				},
+				"grim_harvest": {
+					"picks": 256,
+					"win_correlation": 97.65625,
+					"wins": 250
+				},
+				"pale_guillotine": {
+					"picks": 159,
+					"win_correlation": 89.937106918239,
+					"wins": 143
+				},
+				"sanguine_curse": {
+					"picks": 2,
+					"win_correlation": 100.0,
+					"wins": 2
+				},
+				"soul_cleanse": {
+					"picks": 167,
+					"win_correlation": 90.4191616766467,
+					"wins": 151
+				},
+				"soul_roulette": {
+					"picks": 4,
+					"win_correlation": 75.0,
+					"wins": 3
+				},
+				"soul_surge": {
+					"picks": 34,
+					"win_correlation": 97.0588235294118,
+					"wins": 33
+				},
+				"wither_touch": {
+					"picks": 51,
+					"win_correlation": 88.2352941176471,
+					"wins": 45
+				}
+			},
+			"persona": "BALANCED (Specialist)",
+			"total_runs": 100
+		},
+		{
+			"avg_final_hp": 19.9545454545455,
+			"avg_turns": 48.4848484848485,
+			"clear_rate": 66.0,
+			"completed_runs": 66,
+			"deaths_by_stage": {
+				"ch1_boss": 0,
+				"ch1_elite": 1,
+				"ch1_skirmish": 0,
+				"ch1_tutorial": 0,
+				"ch2_boss": 19,
+				"ch2_elite": 0,
+				"ch2_skirmish": 0,
+				"ch3_boss": 14,
+				"ch3_elite": 0,
+				"ch3_skirmish": 0
+			},
+			"draft_card_stats": {
+				"bone_spikes": {
+					"picks": 21,
+					"win_correlation": 71.4285714285714,
+					"wins": 15
+				},
+				"charnel_sacrifice": {
+					"picks": 14,
+					"win_correlation": 78.5714285714286,
+					"wins": 11
+				},
+				"dark_harvest": {
+					"picks": 137,
+					"win_correlation": 67.8832116788321,
+					"wins": 93
+				},
+				"forbidden_rite": {
+					"picks": 21,
+					"win_correlation": 61.9047619047619,
+					"wins": 13
+				},
+				"grim_harvest": {
+					"picks": 178,
+					"win_correlation": 74.1573033707865,
+					"wins": 132
+				},
+				"pale_guillotine": {
+					"picks": 246,
+					"win_correlation": 74.7967479674797,
+					"wins": 184
+				},
+				"sanguine_curse": {
+					"picks": 14,
+					"win_correlation": 57.1428571428571,
+					"wins": 8
+				},
+				"soul_cleanse": {
+					"picks": 9,
+					"win_correlation": 77.7777777777778,
+					"wins": 7
+				},
+				"soul_roulette": {
+					"picks": 15,
+					"win_correlation": 86.6666666666667,
+					"wins": 13
+				},
+				"soul_surge": {
+					"picks": 82,
+					"win_correlation": 67.0731707317073,
+					"wins": 55
+				},
+				"wither_touch": {
+					"picks": 99,
+					"win_correlation": 63.6363636363636,
+					"wins": 63
+				}
+			},
+			"persona": "AGGRO (Casual)",
+			"total_runs": 100
+		},
+		{
+			"avg_final_hp": 30.5818181818182,
+			"avg_turns": 39.5272727272727,
+			"clear_rate": 55.0,
+			"completed_runs": 55,
+			"deaths_by_stage": {
+				"ch1_boss": 0,
+				"ch1_elite": 6,
+				"ch1_skirmish": 0,
+				"ch1_tutorial": 0,
+				"ch2_boss": 34,
+				"ch2_elite": 3,
+				"ch2_skirmish": 0,
+				"ch3_boss": 2,
+				"ch3_elite": 0,
+				"ch3_skirmish": 0
+			},
+			"draft_card_stats": {
+				"bone_spikes": {
+					"picks": 20,
+					"win_correlation": 70.0,
+					"wins": 14
+				},
+				"charnel_sacrifice": {
+					"picks": 15,
+					"win_correlation": 80.0,
+					"wins": 12
+				},
+				"dark_harvest": {
+					"picks": 129,
+					"win_correlation": 62.015503875969,
+					"wins": 80
+				},
+				"forbidden_rite": {
+					"picks": 19,
+					"win_correlation": 78.9473684210526,
+					"wins": 15
+				},
+				"grim_harvest": {
+					"picks": 154,
+					"win_correlation": 85.7142857142857,
+					"wins": 132
+				},
+				"pale_guillotine": {
+					"picks": 213,
+					"win_correlation": 60.093896713615,
+					"wins": 128
+				},
+				"sanguine_curse": {
+					"picks": 11,
+					"win_correlation": 54.5454545454545,
+					"wins": 6
+				},
+				"soul_cleanse": {
+					"picks": 9,
+					"win_correlation": 88.8888888888889,
+					"wins": 8
+				},
+				"soul_roulette": {
+					"picks": 13,
+					"win_correlation": 76.9230769230769,
+					"wins": 10
+				},
+				"soul_surge": {
+					"picks": 72,
+					"win_correlation": 56.9444444444444,
+					"wins": 41
+				},
+				"wither_touch": {
+					"picks": 89,
+					"win_correlation": 55.0561797752809,
+					"wins": 49
+				}
+			},
+			"persona": "AGGRO (Specialist)",
+			"total_runs": 100
+		},
+		{
+			"avg_final_hp": 16.910447761194,
+			"avg_turns": 56.1940298507463,
+			"clear_rate": 67.0,
+			"completed_runs": 67,
+			"deaths_by_stage": {
+				"ch1_boss": 0,
+				"ch1_elite": 1,
+				"ch1_skirmish": 0,
+				"ch1_tutorial": 0,
+				"ch2_boss": 2,
+				"ch2_elite": 0,
+				"ch2_skirmish": 0,
+				"ch3_boss": 30,
+				"ch3_elite": 0,
+				"ch3_skirmish": 0
+			},
+			"draft_card_stats": {
+				"bone_spikes": {
+					"picks": 263,
+					"win_correlation": 68.0608365019012,
+					"wins": 179
+				},
+				"charnel_sacrifice": {
+					"picks": 46,
+					"win_correlation": 91.304347826087,
+					"wins": 42
+				},
+				"dark_harvest": {
+					"picks": 36,
+					"win_correlation": 72.2222222222222,
+					"wins": 26
+				},
+				"forbidden_rite": {
+					"picks": 47,
+					"win_correlation": 76.5957446808511,
+					"wins": 36
+				},
+				"grim_harvest": {
+					"picks": 195,
+					"win_correlation": 68.7179487179487,
+					"wins": 134
+				},
+				"pale_guillotine": {
+					"picks": 44,
+					"win_correlation": 63.6363636363636,
+					"wins": 28
+				},
+				"sanguine_curse": {
+					"picks": 23,
+					"win_correlation": 73.9130434782609,
+					"wins": 17
+				},
+				"soul_cleanse": {
+					"picks": 126,
+					"win_correlation": 59.5238095238095,
+					"wins": 75
+				},
+				"soul_roulette": {
+					"picks": 35,
+					"win_correlation": 68.5714285714286,
+					"wins": 24
+				},
+				"soul_surge": {
+					"picks": 36,
+					"win_correlation": 61.1111111111111,
+					"wins": 22
+				},
+				"wither_touch": {
+					"picks": 36,
+					"win_correlation": 55.5555555555556,
+					"wins": 20
+				}
+			},
+			"persona": "TURTLE (Casual)",
+			"total_runs": 100
+		},
+		{
+			"avg_final_hp": 23.956043956044,
+			"avg_turns": 53.989010989011,
+			"clear_rate": 91.0,
+			"completed_runs": 91,
+			"deaths_by_stage": {
+				"ch1_boss": 0,
+				"ch1_elite": 2,
+				"ch1_skirmish": 0,
+				"ch1_tutorial": 0,
+				"ch2_boss": 1,
+				"ch2_elite": 0,
+				"ch2_skirmish": 0,
+				"ch3_boss": 5,
+				"ch3_elite": 1,
+				"ch3_skirmish": 0
+			},
+			"draft_card_stats": {
+				"bone_spikes": {
+					"picks": 259,
+					"win_correlation": 92.6640926640927,
+					"wins": 240
+				},
+				"charnel_sacrifice": {
+					"picks": 45,
+					"win_correlation": 95.5555555555556,
+					"wins": 43
+				},
+				"dark_harvest": {
+					"picks": 34,
+					"win_correlation": 100.0,
+					"wins": 34
+				},
+				"forbidden_rite": {
+					"picks": 49,
+					"win_correlation": 89.7959183673469,
+					"wins": 44
+				},
+				"grim_harvest": {
+					"picks": 195,
+					"win_correlation": 92.3076923076923,
+					"wins": 180
+				},
+				"pale_guillotine": {
+					"picks": 44,
+					"win_correlation": 93.1818181818182,
+					"wins": 41
+				},
+				"sanguine_curse": {
+					"picks": 24,
+					"win_correlation": 91.6666666666667,
+					"wins": 22
+				},
+				"soul_cleanse": {
+					"picks": 126,
+					"win_correlation": 93.6507936507936,
+					"wins": 118
+				},
+				"soul_roulette": {
+					"picks": 35,
+					"win_correlation": 97.1428571428571,
+					"wins": 34
+				},
+				"soul_surge": {
+					"picks": 36,
+					"win_correlation": 88.8888888888889,
+					"wins": 32
+				},
+				"wither_touch": {
+					"picks": 35,
+					"win_correlation": 88.5714285714286,
+					"wins": 31
+				}
+			},
+			"persona": "TURTLE (Specialist)",
+			"total_runs": 100
+		},
+		{
+			"avg_final_hp": 19.25,
+			"avg_turns": 49.3392857142857,
+			"clear_rate": 56.0,
+			"completed_runs": 56,
+			"deaths_by_stage": {
+				"ch1_boss": 0,
+				"ch1_elite": 2,
+				"ch1_skirmish": 0,
+				"ch1_tutorial": 0,
+				"ch2_boss": 11,
+				"ch2_elite": 1,
+				"ch2_skirmish": 0,
+				"ch3_boss": 30,
+				"ch3_elite": 0,
+				"ch3_skirmish": 0
+			},
+			"draft_card_stats": {
+				"bone_spikes": {
+					"picks": 83,
+					"win_correlation": 60.2409638554217,
+					"wins": 50
+				},
+				"charnel_sacrifice": {
+					"picks": 78,
+					"win_correlation": 83.3333333333333,
+					"wins": 65
+				},
+				"dark_harvest": {
+					"picks": 86,
+					"win_correlation": 61.6279069767442,
+					"wins": 53
+				},
+				"forbidden_rite": {
+					"picks": 78,
+					"win_correlation": 61.5384615384615,
+					"wins": 48
+				},
+				"grim_harvest": {
+					"picks": 71,
+					"win_correlation": 74.6478873239437,
+					"wins": 53
+				},
+				"pale_guillotine": {
+					"picks": 66,
+					"win_correlation": 53.030303030303,
+					"wins": 35
+				},
+				"sanguine_curse": {
+					"picks": 79,
+					"win_correlation": 49.3670886075949,
+					"wins": 39
+				},
+				"soul_cleanse": {
+					"picks": 65,
+					"win_correlation": 50.7692307692308,
+					"wins": 33
+				},
+				"soul_roulette": {
+					"picks": 76,
+					"win_correlation": 53.9473684210526,
+					"wins": 41
+				},
+				"soul_surge": {
+					"picks": 98,
+					"win_correlation": 52.0408163265306,
+					"wins": 51
+				},
+				"wither_touch": {
+					"picks": 69,
+					"win_correlation": 52.1739130434783,
+					"wins": 36
+				}
+			},
+			"persona": "CHAOS (Casual)",
+			"total_runs": 100
+		},
+		{
+			"avg_final_hp": 27.3809523809524,
+			"avg_turns": 45.8095238095238,
+			"clear_rate": 63.0,
+			"completed_runs": 63,
+			"deaths_by_stage": {
+				"ch1_boss": 0,
+				"ch1_elite": 3,
+				"ch1_skirmish": 0,
+				"ch1_tutorial": 0,
+				"ch2_boss": 19,
+				"ch2_elite": 1,
+				"ch2_skirmish": 0,
+				"ch3_boss": 14,
+				"ch3_elite": 0,
+				"ch3_skirmish": 0
+			},
+			"draft_card_stats": {
+				"bone_spikes": {
+					"picks": 75,
+					"win_correlation": 81.3333333333333,
+					"wins": 61
+				},
+				"charnel_sacrifice": {
+					"picks": 75,
+					"win_correlation": 89.3333333333333,
+					"wins": 67
+				},
+				"dark_harvest": {
+					"picks": 83,
+					"win_correlation": 67.4698795180723,
+					"wins": 56
+				},
+				"forbidden_rite": {
+					"picks": 73,
+					"win_correlation": 75.3424657534247,
+					"wins": 55
+				},
+				"grim_harvest": {
+					"picks": 72,
+					"win_correlation": 87.5,
+					"wins": 63
+				},
+				"pale_guillotine": {
+					"picks": 61,
+					"win_correlation": 60.655737704918,
+					"wins": 37
+				},
+				"sanguine_curse": {
+					"picks": 81,
+					"win_correlation": 58.0246913580247,
+					"wins": 47
+				},
+				"soul_cleanse": {
+					"picks": 66,
+					"win_correlation": 69.6969696969697,
+					"wins": 46
+				},
+				"soul_roulette": {
+					"picks": 69,
+					"win_correlation": 60.8695652173913,
+					"wins": 42
+				},
+				"soul_surge": {
+					"picks": 95,
+					"win_correlation": 60.0,
+					"wins": 57
+				},
+				"wither_touch": {
+					"picks": 68,
+					"win_correlation": 52.9411764705882,
+					"wins": 36
+				}
+			},
+			"persona": "CHAOS (Specialist)",
+			"total_runs": 100
+		}
+	],
+	"timestamp": "2026-10-08T09:57:19",
+	"total_crusade_runs": 800
+}

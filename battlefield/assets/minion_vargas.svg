@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 230" width="170" height="230">
+  <defs>
+    <!-- Spectral Soul Glow -->
+    <radialGradient id="phantomAura" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ghost Armor Shading -->
+    <linearGradient id="ghostSteel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Spectral Shield Metal -->
+    <linearGradient id="shieldGhost" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.75"/>
+      <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.45"/>
+      <stop offset="85%" stop-color="#0c4a6e" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Phantom Edge Glow -->
+    <filter id="soulBloom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ground Spirit Mist / Shadow -->
+  <ellipse cx="85" cy="210" rx="60" ry="12" fill="#020617" opacity="0.7"/>
+  <ellipse cx="85" cy="208" rx="45" ry="8" fill="#0284c7" opacity="0.25"/>
+
+  <!-- Ethereal Body Aura -->
+  <circle cx="85" cy="110" r="85" fill="url(#phantomAura)"/>
+
+  <!-- Spectral Floating Cloak / Mist Tendrils -->
+  <path d="M48 90 C35 130 38 180 52 205 C58 190 62 170 60 145 Z" fill="#0284c7" opacity="0.25"/>
+  <path d="M38 115 C25 150 32 195 44 212 C48 195 50 170 46 145 Z" fill="#38bdf8" opacity="0.18"/>
+
+  <!-- Armored Greaves / Legs in Mist -->
+  <path d="M58 150 L72 150 L68 200 L54 200 Z" fill="url(#ghostSteel)" stroke="#7dd3fc" stroke-width="1.2" opacity="0.65"/>
+  <path d="M82 150 L96 150 L92 200 L78 200 Z" fill="url(#ghostSteel)" stroke="#7dd3fc" stroke-width="1.2" opacity="0.65"/>
+
+  <!-- Spectral Cuirass / Knight Chestplate -->
+  <path d="M50 78 L110 78 L104 152 L56 152 Z" fill="url(#ghostSteel)" stroke="#38bdf8" stroke-width="1.8" filter="url(#soulBloom)"/>
+  <line x1="80" y1="80" x2="80" y2="148" stroke="#bae6fd" stroke-width="2.5" opacity="0.8"/>
+  <path d="M60 105 L80 120 L100 105" fill="none" stroke="#7dd3fc" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Knight Greathelm (Facing Right in Sentinel Guard) -->
+  <path d="M56 38 C56 22 72 16 95 18 C116 20 122 34 120 58 C118 72 108 78 86 78 C66 78 56 64 56 38 Z" fill="url(#ghostSteel)" stroke="#7dd3fc" stroke-width="2" filter="url(#soulBloom)"/>
+
+  <!-- T-Shaped Visor with Glowing Cyan Spirit Fire -->
+  <path d="M90 40 L114 42" stroke="#e0f2fe" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M102 42 L102 62" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
+  <!-- Visor Core Light -->
+  <circle cx="98" cy="41" r="2.5" fill="#ffffff"/>
+  <circle cx="106" cy="42" r="2.5" fill="#ffffff"/>
+
+  <!-- Massive Spectral Vanguard Kite Shield (Facing Right) -->
+  <path d="M98 45 L154 52 L144 175 L106 195 L90 145 Z" fill="url(#shieldGhost)" stroke="#bae6fd" stroke-width="2.2" filter="url(#soulBloom)"/>
+  
+  <!-- Shield Boss & Bone Cross Crest -->
+  <polygon points="125,72 140,92 140,132 125,152 110,132 110,92" fill="#0f172a" fill-opacity="0.4" stroke="#7dd3fc" stroke-width="1.5"/>
+  <line x1="125" y1="78" x2="125" y2="146" stroke="#f0fdf4" stroke-width="2"/>
+  <line x1="114" y1="110" x2="136" y2="110" stroke="#f0fdf4" stroke-width="2"/>
+  <circle cx="125" cy="110" r="5" fill="#38bdf8" stroke="#ffffff" stroke-width="1.2"/>
+</svg>

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncounterData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://battlefield/encounter_data.gd" id="1_encounter"]
+[ext_resource type="Texture2D" path="res://battlefield/assets/bg_combat_crags.webp" id="2_bg"]
+
+[resource]
+script = ExtResource("1_encounter")
+id = "ch2_tile_battle"
+title = "MOUNTAIN PATROL: GALLOWS PASS"
+difficulty = "Moderate"
+bg_texture = ExtResource("2_bg")
+enemies = ["Inquisition Crossbowman", "Templar Halberdier", "Hounds of Mourning"]
+tutorial_dialog = [{
+"speaker": "Templar Halberdier",
+"text": "The corpse-walker enters the Crags! By the Sun-Flame, cleanse him!"
+}, {
+"speaker": "The Hero",
+"text": "Your Sun-Flame went cold the night Alden butchered us. Draw your steel."
+}]
+next_state = 1
+next_dialog_id = ""
+next_encounter_tres = ""
+return_to_map = true

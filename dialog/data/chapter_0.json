@@ -8,7 +8,7 @@
     },
     "lines": [
       {
-        "panel": "res://dialog/assets/panel_1_gates.svg",
+        "panel": "res://dialog/assets/panel_1_gates.png",
         "speaker": "Narrator",
         "text": "Three long years of ash and iron. The Demon Lord's fortress lies in smoldering ruin behind you."
       },
@@ -33,7 +33,7 @@
         "text": "The massive iron portcullis groans open. Bells toll across the High Citadel as you march inside."
       },
       {
-        "panel": "res://dialog/assets/panel_2_banquet.svg",
+        "panel": "res://dialog/assets/panel_2_banquet.png",
         "speaker": "Narrator",
         "text": "Inside the Great Solarium, silver platters overflow with roasted meats and rare vintages. King Alden descends the dais with open arms."
       },
@@ -62,7 +62,7 @@
         "text": "To peace."
       },
       {
-        "panel": "res://dialog/assets/panel_3_poison.svg",
+        "panel": "res://dialog/assets/panel_3_poison.png",
         "speaker": "Narrator",
         "text": "The liquid burns sweet on the tongue... and turns instantly to black frost in your veins.",
         "shake": true
@@ -77,11 +77,12 @@
         "shake": true
       },
       {
+        "panel": "res://dialog/assets/panel_3_betrayal.png",
         "speaker": "King Alden",
         "text": "\"A realm can only wear one crown, boy. Did you truly believe I would let a squad of invincible martyrs walk my streets?\""
       },
       {
-        "panel": "res://dialog/assets/panel_4_halberds.svg",
+        "panel": "res://dialog/assets/panel_4_halberds.png",
         "speaker": "Narrator",
         "text": "Iron boots thunder across the marble. Royal halberdiers emerge from behind the velvet curtains."
       },
@@ -104,7 +105,7 @@
         "text": "The poison claws at your heart. Darkness swallows your vision as cold laughter echoes into the void."
       },
       {
-        "panel": "res://dialog/assets/panel_5_trench_despair.svg",
+        "panel": "res://dialog/assets/panel_4_charnel.png",
         "speaker": "Narrator",
         "text": "Pain. Freezing, putrid mud. The steady percussion of cold rain on your face."
       },
@@ -121,6 +122,7 @@
         "text": "Vargas?! Kaelen?! Lyra?!"
       },
       {
+        "panel": "res://dialog/assets/panel_5_trench_despair.png",
         "speaker": "Narrator",
         "text": "Beside you lies Vargas, his shield snapped in two, dead eyes staring hollowly into the rain. A spear is broken in Kaelen's throat. Lyra's prayer beads are soaked in blackened blood."
       },
@@ -133,7 +135,7 @@
         "text": "You grasp at the sacred light that once crowned you savior, but the heavens remain deaf. The golden warmth has abandoned you."
       },
       {
-        "panel": "res://dialog/assets/panel_6_pale_miracle.svg",
+        "panel": "res://dialog/assets/panel_6_pale_miracle.png",
         "speaker": "Narrator",
         "text": "In your agony, the power inverts—erupting as a blinding, freezing pale flame across the mud!",
         "shake": true
